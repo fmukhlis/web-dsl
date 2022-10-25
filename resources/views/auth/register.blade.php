@@ -7,8 +7,10 @@
 
                 <div class="row">
                     <div class="col-12 text-center mb-4">
-                        <img class="logo-md rounded-pill border border-4" src="{{ asset('assets/auth-logo.jpg') }}"
-                            alt="Logo Perusahaan">
+                        <a href="{{ route('home') }}">
+                            <img class="logo-md rounded-pill border border-4" src="{{ asset('assets/auth-logo.jpg') }}"
+                                alt="Logo Perusahaan">
+                        </a>
                     </div>
                 </div>
 

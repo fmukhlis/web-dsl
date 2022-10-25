@@ -14,30 +14,25 @@
                     </div>
                 </div>
 
-                <form method="POST" action="{{ route('verification.resend') }}">
+                <form method="GET" action="{{ route('home') }}">
                     @csrf
 
                     <div class="row mx-3 mx-sm-0 py-5 bg-light-2 rounded justify-content-center">
 
                         <div class="col-12 text-center mb-4">
                             <h1>
-                                {{ __('Confirm Email') }}
+                                {{ __('Password Changed') }}
                             </h1>
                         </div>
 
                         <div class="col-12 col-sm-11 col-md-10 text-center">
-                            @if (session('resent'))
-                                <div class="alert alert-success" role="alert">
-                                    {{ __('A fresh verification link has been sent to your email address.') }}
-                                </div>
-                            @endif
-
-                            {{ __('Before proceeding, please check your email for a verification link.') }}
-
+                            <div class="alert alert-success" role="alert">
+                                <strong>{{ __('Your password has been successfully updated.') }}</strong>
+                            </div>
+                            {{ __('Thanks for using our application!') }}
                             <hr>
 
-                            {{ __('If you did not receive the email') }},
-                            <button type="submit" class="btn btn-link">{{ __('Click here to request another!') }}</button>
+                            <button type="submit" class="btn btn-link">{{ __('Continue to Homepage') }}</button>
                         </div>
 
                     </div>

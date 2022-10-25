@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-// Route::get('/adm-area/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/admin-area', [App\Http\Controllers\HomeController::class, 'index'])->name('home.auth');
 
 
 
@@ -44,6 +45,8 @@ if ($options['reset'] ?? true) {
     Route::post('password/email', 'App\Http\Controllers\Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
     Route::get('password/reset/{token}', 'App\Http\Controllers\Auth\ResetPasswordController@showResetForm')->name('password.reset');
     Route::post('password/reset', 'App\Http\Controllers\Auth\ResetPasswordController@reset')->name('password.update');
+
+    Route::get('password/resetsuccess', fn () => view('auth.passwords.resetsuccess'))->middleware('auth');
 }
 if ($options['confirm'] ?? true) {
     Route::get('password/confirm', 'App\Http\Controllers\Auth\ConfirmPasswordController@showConfirmForm')->name('password.confirm');
@@ -53,4 +56,6 @@ if ($options['verify'] ?? true) {
     Route::get('email/verify', 'App\Http\Controllers\Auth\VerificationController@show')->name('verification.notice');
     Route::get('email/verify/{id}/{hash}', 'App\Http\Controllers\Auth\VerificationController@verify')->name('verification.verify');
     Route::post('email/resend', 'App\Http\Controllers\Auth\VerificationController@resend')->name('verification.resend');
+
+    Route::get('email/verified', fn () => view('auth.verified'))->middleware('verified');
 }

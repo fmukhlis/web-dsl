@@ -227,25 +227,27 @@
                             <a class="nav-link search-nav-btn d-block" href="#">Search</a>
                         </li>
                         @auth
-                            <hr class="d-block d-lg-none">
-                            <li
-                                class="navbar-profile-container nav-item d-flex align-items-center ms-lg-3 rounded-pill ps-3 p-1 p-lg-0">
-                                <a class="navbar-profile nav-link d-flex align-items-center p-0 ps-lg-3"
-                                    href="{{ route('home') }}">
-                                    <div class="navbar-pp-name me-auto text-truncate">
-                                        Hello, Fajar Mukhlis Imanandaasdasdasdiaasdasdasasdasdasdasd
-                                    </div>
-                                    <img class="navbar-pp rounded-circle" src="{{ asset('assets/profile-picture.jpeg') }}"
-                                        alt="">
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link logout-nav-btn d-block pe-0" href="#"
-                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="post">
-                                    @csrf
-                                </form>
-                            </li>
+                            @if (Auth::user()->email_verified_at)
+                                <hr class="d-block d-lg-none">
+                                <li
+                                    class="navbar-profile-container nav-item d-flex align-items-center ms-lg-3 rounded-pill ps-3 p-1 p-lg-0">
+                                    <a class="navbar-profile nav-link d-flex align-items-center p-0 ps-lg-3"
+                                        href="{{ route('home') }}">
+                                        <div class="navbar-pp-name me-auto text-truncate">
+                                            Hello, Fajar Mukhlis Imanandaasdasdasdiaasdasdasasdasdasdasd
+                                        </div>
+                                        <img class="navbar-pp rounded-circle"
+                                            src="{{ asset('assets/profile-picture.jpeg') }}" alt="">
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link logout-nav-btn d-block pe-0" href="#"
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="post">
+                                        @csrf
+                                    </form>
+                                </li>
+                            @endif
                         @endauth
                     </ul>
                 </div>
