@@ -12,7 +12,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/root-page.js') }}" defer></script>
+    <script src="{{ asset('js/authentication.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -20,7 +20,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/root-page.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/authentication.css') }}" rel="stylesheet">
 
 </head>
 

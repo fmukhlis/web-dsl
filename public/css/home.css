@@ -1,0 +1,94 @@
+body {
+    background-image: linear-gradient(190deg, rgba(10, 5, 35, 1), rgba(30, 20, 90, 0.6), rgba(31, 25, 65, .9));
+    background-repeat: no-repeat;
+}
+
+/* Carousel */
+
+    .carousel.modified {
+        padding-top: .25rem;
+    }
+    .carousel-item {
+        padding: 0 .75rem;
+    }
+    .carousel-image {
+        max-height: 30rem;
+        border-radius: .3rem;
+    }
+    .carousel-caption.modified {
+        background-color: rgba(225, 225, 225, .8);
+        border-radius: .5rem;
+        padding: 1.5rem 0;
+        margin-bottom: 2rem;
+    }
+
+/* End Carousel */
+
+/* Nav Tabs Category */
+
+    /* Hiding Nav Tabs Scrollbar */
+
+        .nav-tabs::-webkit-scrollbar {
+            display: none; /* Chrome Safari and Opera */
+        }
+        .nav-tabs {
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* IE and Edge */
+        }
+
+    /* End */
+
+    .bg-category-1 {
+        background-color: whitesmoke;
+        /* background-image: linear-gradient(180deg, rgba(245, 245, 245, 1), rgba(245, 245, 245, .8), rgba(245, 245, 245, 0)); */
+    }
+    .bg-category-2 {
+        background-color: rgba(150, 150, 150, 1);
+    }
+    .nav-tabs {
+        padding: .2rem;
+        min-height: 3rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+        border: 0;
+    }
+    .nav-tabs .nav-link {
+        border-radius: 0;
+        white-space: nowrap;
+        border: 0;
+        color: black;
+        font-weight: 600;
+        position: relative;
+    }
+    .nav-tabs .nav-link:focus {
+        box-shadow: 0;
+    }
+    .nav-tabs .nav-link::after {
+        content: '';
+        display: block;
+        position: absolute;
+        background-color: black;
+        border-radius: .1rem;
+        width: 0;
+        height: .05rem;
+        left: 50%;
+        bottom: 5%;
+        transition: .2s;
+    }
+    .nav-tabs .nav-link.active::after {
+        width: 85%;
+        height: .15rem;
+        left: 7.5%;
+        bottom: 0;
+    }
+    .nav-tabs .nav-link.active {
+        background-color: rgba(0, 0, 0, 0);
+        border: 0;
+        color: black;
+
+    }
+    .nav-tabs .nav-link:hover {
+        border: 0;
+    }
+
+/* End Nav Tabs Category */

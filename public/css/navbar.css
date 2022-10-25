@@ -13,9 +13,6 @@
     --font-clr-navbar-desktop: rgb(240, 240, 240);
     --med-alpha: .5;
 }
-body {
-    background-color: rgb(66, 66, 169);
-}
 
 /* Mobile Version (The Default) */
 
@@ -279,12 +276,6 @@ body {
 #navbar-menu .dropdown-menu-container .dropdown-menu .dropdown-item .dropdown-item-caption small {
     font-weight: 500;
     color: var(--font-sec-clr-navbar-mobile);
-}
-
-
-/* Main Tag */
-main.authentication {
-    height: 100vh;
 }
 
 

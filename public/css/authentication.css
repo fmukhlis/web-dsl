@@ -1,0 +1,53 @@
+body {
+    background-image: url('../assets/auth-bg.jpg');
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Main Tag */
+main.authentication {
+    padding-top: 0;
+    padding-bottom: 5rem;
+    min-height: 100vh;
+}
+
+/* Logo Perusahaan */
+img.logo-md {
+    max-width: 15rem;
+}
+
+@media (min-width: 992px) {
+    /* Main Tag */
+    main.authentication {
+        padding-top: 5rem;
+    }
+}
+
+/* Form login dan Register */
+.form-floating > .form-control:focus ~ label, .form-floating > .form-control:not(:placeholder-shown) ~ label, .form-floating > .form-control-plaintext ~ label, .form-floating > .form-select ~ label {
+    transform: scale(0.75) translateY(-0.3rem);
+    border-bottom: 1px solid rgba(0, 0, 0, .35);
+    padding: 0 !important;
+    width: auto;
+    height: auto;
+    margin-left: .4rem;
+    margin-top: .5rem;
+}
+.form-floating > .form-control:focus ~ label.invalid-label, .form-floating > .form-control:not(:placeholder-shown) ~ label.invalid-label, .form-floating > .form-control-plaintext ~ label.invalid-label, .form-floating > .form-select ~ label.invalid-label {
+    border-bottom: 1px solid rgba(255, 0, 0, .65);
+    color: red;
+    opacity: 1;
+}
+.form-floating > label {
+    transition: 0.25s ease-out;
+    width: auto;
+    opacity: .65;
+}
+.is-invalid {
+    border: 1.75px solid red;
+}
+.bg-light-2 {
+    background-color: rgb(235, 235, 235);
+}

@@ -22,6 +22,8 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
 
+    @yield('custom_css')
+
 </head>
 
 <body>
@@ -251,7 +253,7 @@
         </nav>
     </header>
 
-    <main class="py-4">
+    <main class="">
         @yield('content')
     </main>
 
@@ -320,6 +322,8 @@
             @yield('content')
         </main>
     </div> --}}
+
+    @yield('custom_js')
 </body>
 
 </html>
