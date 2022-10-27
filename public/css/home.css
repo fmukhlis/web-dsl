@@ -1,63 +1,208 @@
 body {
-    background-image: linear-gradient(190deg, rgba(10, 5, 35, 1), rgba(30, 20, 90, 0.6), rgba(31, 25, 65, .9));
+    background-image: linear-gradient(190deg, rgb(10, 5, 30), rgba(60, 45, 165, 0.7), rgba(31, 25, 65, .9));
     background-repeat: no-repeat;
 }
 
 /* Carousel */
 
-    .carousel.modified {
-        padding-top: .25rem;
+    /* Agar Carousel Tertutup Sempurna Saat Navbar Atas Muncul (Mobile Ver.) */
+    .carousel {
+        padding-top: .13rem;
     }
+
+    /* Agar Ukuran Carousel Proporsional */
     .carousel-item {
-        background-color: rgba(0, 0, 0, .3);
         height: 70vh;
-        padding: 0 .75rem;
-    }
-    .carousel-item.type-1 .carousel-caption {
-        text-align: center;
-        padding: 1.5rem;
-        top: 0;
-        left: .75rem;
-        bottom: 0;
-        right: .75rem;
-        align-items: center;
-    }
-    .carousel-image {
-        border-radius: .3rem;
     }
     @media (min-width:768px) {
-        .carousel-image {
-            height: 35vh;
-            border-radius: .3rem;
+        .carousel-item {
+            height: 40vh;
         }
     }
-    .carousel-caption.modified {
-        background-image: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-        border-radius: .5rem;
-        padding: 1.5rem 0;
+
+    /* Layout Gambar Carousel Tipe 1 */
+    .carousel-image {
+        width: calc(100% - 1.5rem);
+        min-height: 45%;
+        position: absolute;
+        right: .75rem;
+        bottom: 0;
+        left: .75rem;
         border-radius: .3rem;
     }
-    .carousel-caption.modified .title {
+    /* Layout Gambar Carousel Tipe 2 */
+    .carousel-image.height-fit {
+        object-fit: cover;
+        object-position: 65%;
+        height: 70vh;
+    }
+    @media (min-width:768px) {
+        .carousel-image:not(.height-fit) {
+            width: calc(55% - .75rem);
+            min-height: 100%;
+            position: absolute;
+            right: .75rem;
+            bottom: 0;
+            left: 45%;
+        }
+        .carousel-image.height-fit {
+            object-position: 70%;
+            height: 40vh;
+      }
+    }
+    
+    /* Style Default Untuk Caption Pada Carousel */
+    .carousel-caption {
+        display: flex;
+        flex-direction: column;
+        border-radius: .3rem;
+    }
+    /* Mengtransparankan Background Carousel */
+    .carousel-caption.bg-transparent {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)) !important;
+        justify-content: center;
+    }
+
+    /* Tema Caption Light */
+    .carousel-caption.light {
+        /* Ideal image dimension is 4x3 */
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0));
+        color: whitesmoke;
+        padding: 1.5rem;
+        top: 0;
+        right: .75rem;
+        bottom: 0;
+        left: .75rem;
+        align-items: center;
+    }
+    /* Tema Caption Dark */
+    .carousel-caption.dark {
+        /* Ideal image dimension is 4x3 */
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 55%, rgba(255, 255, 255, 0));
+        color: black;
+        padding: 1.5rem;
+        top: 0;
+        right: .75rem;
+        bottom: 0;
+        left: .75rem;
+        align-items: center;
+    }
+    @media (min-width:576px) {
+        .carousel-caption.light {
+            padding-top: 5rem;
+        }
+        .carousel-caption.dark {
+            padding-top: 5rem;
+        }
+    }
+    @media (min-width:768px) {
+        .carousel-caption.light {
+            background-image: linear-gradient(100deg, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0));
+            padding: 3rem;
+            padding-left: 5rem;
+            padding-right: 45%;
+            align-items: flex-start;
+            text-align: left;
+        }
+        .carousel-caption.dark {
+            background-image: linear-gradient(100deg, rgba(255, 255, 255, 1) 55%, rgba(255, 255, 255, 0));
+            padding: 3rem;
+            padding-left: 5rem;
+            padding-right: 45%;
+            align-items: flex-start;
+            text-align: left;
+        }
+    }
+    
+    /* Style Judul Caption */
+    .carousel-caption .title {
         font-weight: 900;
         font-size: 1.75rem;
         margin-bottom: 1rem;
     }
-    .carousel-caption.modified .description {
+    /* Style Deskripsi Caption */
+    .carousel-caption .description {
         margin-bottom: .75rem;
         font-size: .9rem;
     }
-    .carousel-caption.modified .description-small {
+    /* Style Deskripsi Tambahan Caption Light */
+    .carousel-caption.light .description-small {
         margin-bottom: .75rem;
         color: rgb(210, 210, 210) !important;
         font-size: .7rem;
     }
-    .carousel-caption.modified .btn {
-        font-weight: 600;
-        margin-top: 1.5rem;
+    /* Style Deskripsi Tambahan Caption Dark */
+    .carousel-caption.dark .description-small {
+        margin-bottom: .75rem;
+        color: rgb(85, 85, 85) !important;
+        font-size: .7rem;
     }
-    .carousel-caption.modified a:not(.btn) {
+
+    /* Link Pada Caption */
+    .carousel-caption .action {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        margin-top: 1rem;
+        align-items: center;
+    }
+    @media (min-width:768px) {
+        .carousel-caption .action {
+            flex-direction: row;
+        }
+    }
+
+    /* Style Button Caption */
+    .carousel-caption a {
+        margin-bottom: 1rem;
+        text-shadow: none;
         font-weight: 600;
-        padding: 1rem;
+    }
+
+    /* Carousel Indicator */
+    .carousel-indicators {
+        margin: 0;
+        background-color: rgba(0, 0, 0, .75);
+        width: 10rem;
+        border-radius: 1rem;
+        padding: .5rem;
+        margin: auto;
+        bottom: 1rem;
+    }
+    .carousel-indicators [data-bs-target] {
+        margin: 0 .5rem;
+        width: .8rem;
+        height: .8rem;
+        border-radius: .4rem;
+        border: 0;
+    }
+    @media (min-width:768px) {
+        .carousel-indicators [data-bs-target] {
+            width: 3rem;
+            height: .1rem;
+            border-radius: .2rem;
+        }
+        .carousel-indicators {
+            width: auto;
+            background-color: rgba(0, 0, 0, 0);
+        }
+    }
+
+    /* Carousel Prev Next Button */
+    .carousel-control-prev, .carousel-control-next {
+        width: 2.5rem;
+        background-color: rgba(0, 0, 0, .2);
+        margin: auto;
+        height: 2.5rem;
+        border-radius: 2.5rem;
+        opacity: 1;
+    }
+    .carousel-control-prev {
+        left: 1rem;
+    } 
+    .carousel-control-next {
+        right: 1rem;
     }
 
 /* End Carousel */

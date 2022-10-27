@@ -9,47 +9,98 @@
 
 @section('content')
     {{-- Carousel --}}
-    <div id="carousel-indicator" class="carousel carousel-dark slide modified mb-3" data-bs-ride="carousel">
+    <div id="carousel-indicator" class="carousel carousel-light slide modified mb-3" data-bs-ride="carousel">
+        {{-- Carousel Indicator --}}
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carousel-indicator" data-bs-slide-to="0" class="active" aria-current="true"
                 aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carousel-indicator" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carousel-indicator" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carousel-indicator" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carousel-indicator" data-bs-slide-to="4" aria-label="Slide 5"></button>
         </div>
+        {{-- Carousel Content --}}
         <div class="carousel-inner">
-            <div class="carousel-item active type-1" data-bs-interval="5000">
-                <img src="{{ asset('assets/product_carousel.jpg') }}" class="d-block w-100 carousel-image" alt="...">
-                <div class="carousel-caption d-flex flex-column modified text-light">
-                    <div class="title">Galaxy Z Fold4</div>
-                    <div class="description">Get Trade-in cashback up to Rp1,000,000 and Free 1 Year Samsung Care+, Full
-                        Protection Screen &
-                        Device</div>
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img src="{{ asset('assets/hh-e-LwYlLzteMxo-unsplash.jpg') }}" class="d-block carousel-image"
+                    alt="...">
+                <div class="carousel-caption light">
+                    <div class="title">Galaxy Z Fold 4</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
                     <div class="description-small">Device Period : 1-31 October 2022</div>
-                    <a href="" class="btn btn-outline-light col-7">Buy Now</a>
-                    <a href="" class="text-light">Learn more</a>
+                    <div class="action">
+                        <a href="" class="text-light">Learn more</a>
+                        <a href="" class="btn btn-light offset-md-1">Buy Now</a>
+                    </div>
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="5000">
-                <a href="">
-                    <img src="{{ asset('assets/product_carousel.jpg') }}" class="d-block w-100 carousel-image"
-                        alt="...">
-                </a>
-                <div class="carousel-caption d-none d-md-block modified">
-                    <h5>Second slide label</h5>
-                    <div>Some representative placeholder content for the first slide.</div>
+                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                    class="d-block carousel-image height-fit" alt="...">
+                <div class="carousel-caption light bg-transparent">
+                    <div class="title">Galaxy Z Flip 3</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, consectetur.
+                        Quod veritatis optio asperiores voluptatem alias quam provident quas similique ea.</div>
+                    <div class="description-small">Device Period : 1-31 October 2022</div>
+                    <div class="action">
+                        <a href="" class="text-light">Learn more</a>
+                        <a href="" class="btn btn-light offset-md-1">Buy Now</a>
+                    </div>
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="5000">
-                <a href="">
-                    <img src="{{ asset('assets/product_carousel.jpg') }}" class="d-block w-100 carousel-image"
-                        alt="...">
-                </a>
-                <div class="carousel-caption d-none d-md-block modified">
-                    <h5>Third slide label</h5>
-                    <div>Some representative placeholder content for the first slide.</div>
+                <img src="{{ asset('assets/spencer-davis-s4_g2TCyNHM-unsplash.jpg') }}" class="d-block carousel-image"
+                    alt="...">
+                <div class="carousel-caption dark">
+                    <div class="title">Galaxy S22 Ultra</div>
+                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, animi.
+                        Porro laboriosam alias eum?</div>
+                    <div class="description-small">Device Period : 1-31 October 2022</div>
+                    <div class="action">
+                        <a href="" class="text-dark">Learn more</a>
+                        <a href="" class="btn btn-dark offset-md-1">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="{{ asset('assets/spencer-davis-rxTTNlar62o-unsplash.jpg') }}" class="d-block carousel-image"
+                    alt="...">
+                <div class="carousel-caption light">
+                    <div class="title">Galaxy Z Fold 4</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                    <div class="description-small">Device Period : 1-31 October 2022</div>
+                    <div class="action">
+                        <a href="" class="text-light">Learn more</a>
+                        <a href="" class="btn btn-light offset-md-1">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="{{ asset('assets/zhen-hu-Xruf17OrkwM-unsplash.jpg') }}" class="d-block carousel-image height-fit"
+                    alt="...">
+                <div class="carousel-caption dark bg-transparent">
+                    <div class="title">Galaxy Z Flip 3</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, consectetur.
+                        Quod veritatis optio asperiores voluptatem alias quam provident quas similique ea.</div>
+                    <div class="description-small">Device Period : 1-31 October 2022</div>
+                    <div class="action">
+                        <a href="" class="text-dark">Learn more</a>
+                        <a href="" class="btn btn-dark offset-md-1">Buy Now</a>
+                    </div>
                 </div>
             </div>
         </div>
+        {{-- Button Prev & Next  --}}
+        <button class="carousel-control-prev d-none d-md-flex" type="button" data-bs-target="#carousel-indicator"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next d-none d-md-flex" type="button" data-bs-target="#carousel-indicator"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
     {{-- End Carousel --}}
 
@@ -62,16 +113,17 @@
                         type="button" role="tab" aria-controls="home" aria-selected="true">Alat Kesehatan</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
-                        role="tab" aria-controls="profile" aria-selected="false">Alat Laboratorium</button>
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                        type="button" role="tab" aria-controls="profile" aria-selected="false">Alat
+                        Laboratorium</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button"
-                        role="tab" aria-controls="contact" aria-selected="false">Alat Ajaib</button>
+                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
+                        type="button" role="tab" aria-controls="contact" aria-selected="false">Alat Ajaib</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button"
-                        role="tab" aria-controls="contact" aria-selected="false">Lainnya</button>
+                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
+                        type="button" role="tab" aria-controls="contact" aria-selected="false">Lainnya</button>
                 </li>
             </ul>
         </div>
