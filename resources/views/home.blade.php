@@ -17,14 +17,16 @@
             <button type="button" data-bs-target="#carousel-indicator" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="5000">
-                <a href="">
-                    <img src="{{ asset('assets/product_carousel.jpg') }}" class="d-block w-100 carousel-image"
-                        alt="...">
-                </a>
-                <div class="carousel-caption d-none d-md-block modified">
-                    <h5>First slide label</h5>
-                    <div>Some representative placeholder content for the first slide.</div>
+            <div class="carousel-item active type-1" data-bs-interval="5000">
+                <img src="{{ asset('assets/product_carousel.jpg') }}" class="d-block w-100 carousel-image" alt="...">
+                <div class="carousel-caption d-flex flex-column modified text-light">
+                    <div class="title">Galaxy Z Fold4</div>
+                    <div class="description">Get Trade-in cashback up to Rp1,000,000 and Free 1 Year Samsung Care+, Full
+                        Protection Screen &
+                        Device</div>
+                    <div class="description-small">Device Period : 1-31 October 2022</div>
+                    <a href="" class="btn btn-outline-light col-7">Buy Now</a>
+                    <a href="" class="text-light">Learn more</a>
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="5000">
