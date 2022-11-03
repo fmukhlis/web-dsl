@@ -1,0 +1,45 @@
+
+/* Footer */
+footer .img-thumbnail {
+    transition: .2s ease-out;
+}
+footer .img-thumbnail:hover {
+    opacity: .7;
+}
+footer i.bi {
+    transition: .2s ease-out;
+}
+footer i.bi:hover {
+    color: #0d6efd;
+}
+
+.sub-footer .nav-link:not(:hover) {
+    color: #f9f8f7;
+}
+
+
+
+.footer-1 {
+    text-align: center;
+}
+@media (min-width:768px) {
+    .footer-1 {
+        text-align: left;
+    }
+}
+.footer-2 a {
+    text-decoration: none;
+    color: #f9f8f7;
+    margin-left: .3rem;
+    font-size: 1.2rem;
+}
+.footer-2 .col-12 {
+    padding: 0;
+}
+.footer-1 small,
+.footer-2 small {
+    display: block;
+    padding-top: .25rem;
+}
+
+/* Footer */

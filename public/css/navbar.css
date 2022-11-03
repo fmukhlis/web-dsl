@@ -21,10 +21,15 @@
     margin-top: .3rem;
 }
 .navbar .navbar-brand {
-    font-weight: 600;
-    font-size: 2rem;
+    padding: 0;
     margin-right: 2rem;
     margin-left: 2rem;
+}
+.navbar .navbar-brand .img-thumbnail {
+    max-width: 10rem;
+    max-height: 3rem;
+    border-width: 1px;
+    padding: 0;
 }
 .navbar .navbar-brand,
 .navbar button {
@@ -60,8 +65,8 @@
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 5.3rem;
-    bottom: 1.5rem;
+    top: 4.3rem;
+    bottom: .7rem;
     right: .7rem;
     left: .7rem;
     overflow: auto;
@@ -157,6 +162,7 @@
     text-align: center;
 }
 .sign-up-nav-btn {
+    margin-left: 12px;
     display: block;
 }
 #navbar-menu .navbar-nav .sign-up-nav-btn {
@@ -312,7 +318,7 @@
         margin-top: 0.7rem;
     }
     .navbar .navbar-brand {
-        margin-right: 3rem;
+        margin-right: 1rem;
         margin-left: 0;
     }
 
@@ -388,7 +394,7 @@
 
     /* Dropdown Menu */
     #navbar-menu .nav-item.dropdown.show .dropdown-menu-container {
-        transform: translate(-1rem, .5rem);
+        transform: translate(-3rem, .8rem);
         opacity: 1;
         max-height: 50rem;
         padding: 1rem 1.5rem 1.3rem;
