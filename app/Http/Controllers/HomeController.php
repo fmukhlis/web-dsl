@@ -17,12 +17,22 @@ class HomeController extends Controller
     // }
 
     /**
-     * Show the application dashboard.
+     * Show the application Home.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
     {
-        return view('home');
+        return view('home.index');
+    }
+
+    public function products()
+    {
+        return view('home.products');
+    }
+
+    public function product()
+    {
+        return view('home.product');
     }
 }

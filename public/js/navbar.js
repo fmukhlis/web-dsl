@@ -140,6 +140,21 @@
     const navbarToggler = document.querySelector('.navbar .navbar-toggler');
     navbarToggler.addEventListener('click', function(){
         this.classList.toggle('show');
+        const body = document.querySelector('body');
+        body.classList.contains('mod') ? null : body.classList.toggle('overflow-hidden');
+        
+        // Modal Backlight
+        const bgModal = document.querySelector('.bg-modal');
+        let isShowed = bgModal.classList.contains('collapse') && bgModal.classList.contains('show');
+        bgModal.classList.toggle('collapse');
+        isShowed ? bgModal.classList.toggle('show') : null;
+        bgModal.classList.toggle('disappearing');
+            
+        setTimeout(() => {
+            bgModal.classList.toggle('disappearing');
+            bgModal.classList.toggle('collapse');
+            !isShowed ? bgModal.classList.toggle('show') : null;
+        }, (isShowed) ? 550 : 50);
     });
 
     // setTimeout(() => {

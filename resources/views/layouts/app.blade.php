@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-100">
 
 <head>
     <meta charset="utf-8">
@@ -20,6 +20,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/basic-home.css') }}" rel="stylesheet">
     <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
 
@@ -28,12 +29,13 @@
 
 </head>
 
-<body>
-    <header>
+<body class="d-flex flex-column h-100">
+    <div class="bg-grad"></div>
+    <header class="mb-auto">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container px-0 align-items-center align-items-lg-end">
                 <button class="btn btn-outline-light sign-up-nav-btn" type="button">Shop</button>
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{{ route('home') }}">
                     <img class="img-thumbnail" src="{{ asset('assets/auth-logo.jpg') }}" alt="Logo Perusahaan">
                 </a>
                 <button class="navbar-toggler ps-0" type="button" aria-controls="navbar-menu" aria-expanded="false"
@@ -223,12 +225,12 @@
                         </li>
                     </ul>
                     <form>
-                        <input class="form-control" type="search" placeholder="Enter a keyword..."
+                        <input class="form-control" type="search" placeholder="Enter product's name..."
                             aria-label="Search">
                     </form>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link search-nav-btn d-block" href="#">Search</a>
+                            <a class="nav-link search-nav-btn d-block" href="{{ route('products') }}">Search</a>
                         </li>
                         @auth
                             @if (Auth::user()->email_verified_at)
@@ -263,7 +265,7 @@
         @yield('content')
     </main>
 
-    <footer class="text-light">
+    <footer class="text-light mt-auto pt-2">
         <div class="container sub-footer pb-3">
             <div class="row px-lg-3 pt-4 border-top">
 

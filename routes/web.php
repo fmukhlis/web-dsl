@@ -15,6 +15,8 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/products', [App\Http\Controllers\HomeController::class, 'products'])->name('products');
+Route::get('/products/test-prod', [App\Http\Controllers\HomeController::class, 'product'])->name('product');
 
 // Route::get('/admin-area', [App\Http\Controllers\HomeController::class, 'index'])->name('home.auth');
 
