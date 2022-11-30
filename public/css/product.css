@@ -15,7 +15,7 @@
     "product-review"
     "product-discussion";
     grid-template-columns: minmax(0, 1fr);
-    gap: 20px;
+    gap: .5rem;
 }
 @media screen and (min-width:992px) {
     .grid {
@@ -129,7 +129,6 @@ h2 {
 
 .item-rating-filter {
     grid-area: rating-filter;
-    background-color: white;
     padding: 1rem 1.5rem;
 }
 .item-rating-filter .border-start {
@@ -161,6 +160,7 @@ h2 {
 
 .item-discussion {
     grid-area: product-discussion;
+    padding: 1rem 1.5rem;
 }
 
 .product-title {
@@ -169,7 +169,7 @@ h2 {
     font-weight: 900;
 }
 .sticky-container {
-    --container-height: 400px;
+    --container-height: 370px;
     display: flex;
     flex-direction: column;
     position: sticky;

@@ -12,8 +12,6 @@
     <div class="container py-2 product-container">
         <div class="grid">
 
-
-
             <div class="item-media">
                 <div class="sticky-container">
                     <div class="image-container">
@@ -71,11 +69,11 @@
 
                 <hr>
 
-                <div class="price-tag px-3">Rp. 50.000.000 ,-</div>
-                <a href="" class="btn btn-success px-5 py-2 ms-3 my-2">
+                <div class="price-tag ">Rp. 50.000.000 ,-</div>
+                <a href="" class="btn btn-success px-5 py-2 me-3 my-2">
                     <div class="h5 m-0">Buy now</div>
                 </a>
-                <a href="" class="btn btn-outline-secondary px-5 py-2 ms-3 my-2">
+                <a href="" class="btn btn-outline-secondary px-5 py-2 my-2">
                     <div class="h5 m-0">Add to wishlist</div>
                 </a>
 
@@ -288,6 +286,9 @@
             <div class="item-review rounded">
                 <div class="container">
                     <div class="row gy-2">
+                        <div class="col-12 border rounded px-2 py-3 bg-light">
+                            <h2 class="m-0 text-center">Customer Review</h2>
+                        </div>
                         <div class="col-12 border rounded p-2 d-flex flex-column bg-light">
                             <div class="d-flex">
                                 <img src="{{ asset('assets/profile-picture.jpeg') }}" alt=""
@@ -539,28 +540,18 @@
 
 
 
-            <div class="item-discussion">
+            <div class="item-discussion bg-light rounded">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 border rounded p-2 d-flex flex-column bg-light">
-                            <div class="d-flex">
-                                <div class="d-flex flex-column">
-                                    <div class="user-rating-name">Fajar Mukhlis I.</div>
-                                    <small class="text-muted">Asked on February 09, 2022</small>
-                                </div>
-                                <div class="ms-auto text-end d-flex flex-column">
-                                    <small class=" border-end  text-dark">
-                                        234234 People found this helpful
-                                    </small>
-                                </div>
-                            </div>
+                        <div class="col-12 p-0">
+                            <h2 class="border-bottom pb-2 mb-1">Product Discussion</h2>
+                        </div>
 
-                            <hr class="my-2">
-
+                        <div class="col-12 p-0 border rounded d-flex flex-column my-1">
                             <div class="d-flex flex-column">
-                                <div class="d-flex py-2">
-                                    <div class="d-flex align-items-center flex-column pe-2 me-2 border-end">
-                                        <button class="btn btn-outline-secondary">
+                                <div class="d-flex px-3">
+                                    <div class="d-flex align-items-center flex-column pe-3 me-3 border-end">
+                                        <button class="btn btn-secondary mt-3">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
                                                 fill="currentColor" class="logo-svg-2">
                                                 <path
@@ -578,15 +569,16 @@
                                             </svg>
                                         </button>
                                     </div>
-                                    <div class="d-flex flex-column">
+                                    <div class="d-flex flex-column my-2 pt-1">
                                         <strong>Question</strong>
-                                        <a href="#" class="text-decoration-none mb-3">
+                                        <a href="#" class="text-decoration-none">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum eveniet
                                             repellendus
                                             asperiores maxime corrupti facilis nisi. Qui consequatur vero praesentium non
                                             maxime
                                             commodi deleniti ? Thnx
                                         </a>
+                                        <small class="text-muted mb-3">Asked on August 17, 2022 by Sikocik123</small>
 
                                         <strong>Answer</strong>
                                         <div>
@@ -619,84 +611,45 @@
                                         <small class="text-muted mb-1">By Sikocik123 on August 17, 2022</small>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
 
-                                <div class="d-flex py-2">
-                                    <div class="d-flex align-items-center flex-column pe-2 me-2 border-end">
+                        <div class="col-12 p-0 border rounded d-flex flex-column my-1">
+                            <div class="d-flex flex-column">
+                                <div class="d-flex px-3">
+                                    <div class="d-flex align-items-center flex-column pe-3 me-3 border-end">
+                                        <button class="btn btn-outline-secondary mt-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                fill="currentColor" class="logo-svg-2">
+                                                <path
+                                                    d="M 2.8340186,13.154049 0.04398484,12.027118 7.5580801,2.8726213 l 7.8058869,7.2027267 0.501951,2.390791 -2.116646,0.67105 -5.9266111,-3.065251 z" />
+                                            </svg>
+                                        </button>
+                                        <div class="my-2">
+                                            <strong>11</strong>
+                                        </div>
                                         <button class="btn btn-secondary">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
                                                 fill="currentColor" class="logo-svg-2">
                                                 <path
-                                                    d="M 2.8340186,13.154049 0.04398484,12.027118 7.5580801,2.8726213 l 7.8058869,7.2027267 0.501951,2.390791 -2.116646,0.67105 -5.9266111,-3.065251 z" />
-                                            </svg>
-                                        </button>
-                                        <div class="my-2">
-                                            <strong>21</strong>
-                                        </div>
-                                        <button class="btn btn-outline-secondary">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                                                fill="currentColor" class="logo-svg-2">
-                                                <path
                                                     d="m 13.075884,2.8726213 2.790034,1.126931 -7.5140953,9.1544967 -7.80588686,-7.2027267 -0.501951,-2.390791 2.11664596,-0.67105 5.9266111,3.065251 z" />
                                             </svg>
                                         </button>
                                     </div>
-                                    <div class="d-flex flex-column">
+                                    <div class="d-flex flex-column my-2 pt-1">
                                         <strong>Question</strong>
-                                        <a href="#" class="text-decoration-none mb-3">
+                                        <a href="#" class="text-decoration-none">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum eveniet
-                                            repellendus???
+                                            repellendus
+                                            asperiores maxime corrupti facilis nisi. Qui consequatur vero praesentium non
+                                            maxime
+                                            commodi deleniti ? Thnx
                                         </a>
+                                        <small class="text-muted mb-3">Asked on August 17, 2022 by Sikocik123</small>
 
                                         <strong>Answer</strong>
                                         <div>
-                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum quidem
-                                            doloremque
-                                            quas libero necessitatibus error blanditiis soluta consequatur dolorum, et cum
-                                            sed
-                                            porro ea dicta! Error omnis exercitationem incidunt consequatur nihil, beatae
-                                            nostrum adipisci a eum fugit excepturi molestiae sit dolorem veritatis culpa
-                                            sapiente dolores, ex aspernatur sed labore doloribus! Odit laboriosam at
-                                            excepturi
-                                            blanditiis! Maiores molestias aliquid facere ut ratione quaerat esse iure nemo
-                                            in
-                                            assumenda. Asperiores atque quo molestiae, accusamus deleniti earum voluptatum
-                                            esse
-                                            ex eum libero, molestias quod. In rerum sed unde voluptatibus quidem!
-                                        </div>
-                                        <small class="text-muted mb-1">By Sikocik123 on August 17, 2022</small>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex py-2">
-                                    <div class="d-flex align-items-center flex-column pe-2 me-2 border-end">
-                                        <button class="btn btn-outline-secondary">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                                                fill="currentColor" class="logo-svg-2">
-                                                <path
-                                                    d="M 2.8340186,13.154049 0.04398484,12.027118 7.5580801,2.8726213 l 7.8058869,7.2027267 0.501951,2.390791 -2.116646,0.67105 -5.9266111,-3.065251 z" />
-                                            </svg>
-                                        </button>
-                                        <div class="my-2">
-                                            <strong>0</strong>
-                                        </div>
-                                        <button class="btn btn-outline-secondary">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                                                fill="currentColor" class="logo-svg-2">
-                                                <path
-                                                    d="m 13.075884,2.8726213 2.790034,1.126931 -7.5140953,9.1544967 -7.80588686,-7.2027267 -0.501951,-2.390791 2.11664596,-0.67105 5.9266111,3.065251 z" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <strong>Question</strong>
-                                        <a href="#" class="text-decoration-none mb-3">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum eveniet
-                                            repellendus???
-                                        </a>
-
-                                        <strong>Answer</strong>
-                                        <div>
-                                            No one has answered yet.
+                                            No one has answered this question yet.
                                         </div>
                                     </div>
                                 </div>
@@ -706,5 +659,6 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 @endsection
