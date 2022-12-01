@@ -298,7 +298,8 @@
                         <div class="col-12 border rounded px-2 py-3 bg-light">
                             <h2 class="m-0 text-center">Customer Review</h2>
                         </div>
-                        <div class="col-12 border rounded p-2 d-flex flex-column bg-light">
+
+                        <div class="col-12 border rounded p-2 p-md-3 d-flex flex-column bg-light">
                             {{-- User's Information --}}
                             <div class="d-flex align-items-start">
                                 <img src="{{ asset('assets/profile-picture.jpeg') }}" alt=""
@@ -403,7 +404,7 @@
                             </div>
                         </div>
 
-                        <div class="col-12 border rounded p-2 d-flex flex-column bg-light">
+                        <div class="col-12 border rounded p-2 p-md-3 d-flex flex-column bg-light">
                             {{-- User's Information --}}
                             <div class="d-flex align-items-start">
                                 <img src="{{ asset('assets/profile-picture.jpeg') }}" alt=""

@@ -165,7 +165,7 @@ h2 {
 
 .item-discussion {
     grid-area: product-discussion;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1rem .75rem;
 }
 
 .product-title {
