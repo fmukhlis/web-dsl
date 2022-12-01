@@ -157,6 +157,11 @@ h2 {
     object-fit: cover;
     margin: .3em .3em 0 0;
 }
+.item-review .pb-star {
+    padding-bottom: .15rem;
+}
+
+
 
 .item-discussion {
     grid-area: product-discussion;
