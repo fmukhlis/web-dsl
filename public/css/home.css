@@ -90,7 +90,7 @@
             background-image: linear-gradient(100deg, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0));
             padding: 4rem;
             padding-left: 6rem;
-            padding-right: 45%;
+            padding-right: 40%;
             align-items: flex-start;
             text-align: left;
         }
@@ -98,7 +98,7 @@
             background-image: linear-gradient(100deg, rgba(255, 255, 255, 1) 55%, rgba(255, 255, 255, 0));
             padding: 4rem;
             padding-left: 6rem;
-            padding-right: 45%;
+            padding-right: 40%;
             align-items: flex-start;
             text-align: left;
         }
@@ -113,7 +113,7 @@
     /* Style Deskripsi Caption */
     .carousel-caption .description {
         margin-bottom: .75rem;
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     /* Style Deskripsi Tambahan Caption Light */
     .carousel-caption.light .description-small {
@@ -296,4 +296,201 @@
 /* Category Item */
 
 
+/* Product */
+    .card .product-price small {
+        display: block;
+    }
+    .card .slide-top {
+        height: 3.5rem; 
+        overflow: hidden;
+    }
+
+    .card-home {
+        overflow: hidden;
+        height: 17.7rem;
+    }
+    .card-home .card-img-top {
+        width: 100%;
+        object-fit: cover;
+        height: 9rem;
+        transition: .2s ease-in-out;
+    }
+    .card-home .product-title {
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .card-home .disc-badge {
+        z-index: 2;
+        top: .75rem;
+        right: -2.8rem;
+        transform: rotate(45deg);
+        transition: .3s;
+        padding: .7rem;
+    }
+    .card-home .product-price .slide-top {
+        transition: .2s ease-in-out;
+    }
+    .card-home .product-title a {
+        color: rgb(70, 70, 70);
+        text-decoration: none;
+        transition: .2s;
+    }
+    .card-home .product-title a:hover {
+        color: slateblue;
+    }
+    .card-home .product-price {
+        padding-top: .5rem;
+        height: 3.8rem;
+    }
+    .card-home:hover .product-price .slide-top {
+        margin-top: -6rem;
+    }
+    .card-home:hover .card-img-top {
+        transform: scale(1.1);
+    }
+    .card-home:hover .disc-badge {
+        transform: rotate(45deg);
+    }
+
+
+    
+    .card-home.bg-outline-light:hover .card-body::after {
+        background-color: rgba(245, 245, 245, .5);
+    }
+    .card-home.bg-outline-dark:hover .card-body::after {
+        background-color: rgba(50, 50, 50, .5);
+    }
+    
+    .card-home.bg-outline-light:hover .card-body {
+        background-color: whitesmoke;
+        color: black;
+    }    
+    .card-home.bg-outline-dark:hover .card-body {
+        background-color: black;
+        color: whitesmoke;
+    }
+
+    .card-home.bg-outline-light .card-body,
+    .card-home.bg-outline-dark .card-body {
+        transition: .2s;
+    }
+    
+    .bg-outline-light .product-title a {
+        color: whitesmoke;
+    }
+    .bg-outline-dark .product-title a {
+        color: black;
+    }
+    
+    .card-home.bg-outline-light:hover .product-title a {
+        color: black;
+    }
+    .card-home.bg-outline-dark:hover .product-title a {
+        color: whitesmoke;
+    }
+    
+    .bg-outline-light .product-title:hover,
+    .bg-outline-light .card-body .product-title:hover a {
+        color: rgb(100, 100, 100);
+    }
+    .bg-outline-dark .product-title:hover,
+    .bg-outline-dark .card-body .product-title:hover a {
+        color: rgb(195, 195, 195);
+    }
+
+    .bg-outline-light,
+    .bg-outline-dark {
+        background-color: rgba(0, 0, 0, 0) !important;
+    }
+
+    .bg-outline-light {
+        border: 1px solid whitesmoke !important;
+        color: whitesmoke !important;
+    }
+    .bg-outline-dark {
+        border: 1px solid black !important;
+        color: black !important;
+    }
+
+    .bg-outline-light .product-price small {
+        color: rgb(195, 195, 195);
+    }
+    .bg-outline-dark .product-price small {
+        color: rgb(100, 100, 100);
+    }
+    
+    .bg-outline-light .card-body::after,
+    .bg-outline-dark .card-body::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transition: .2s ease-out;
+        z-index: -1;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .bg-outline-light .card-body, 
+    .bg-outline-dark .card-body {
+        z-index: 1;
+    }
+
+
+
+    .card-home-overlay {
+        overflow: hidden;
+        min-height: 25rem;
+    }
+    .card-home-overlay:hover .card-img {
+        transform: scale(1.05);
+    }
+    .card-home-overlay:hover .product-price .slide-top {
+        margin-top: -6.4rem;
+    }
+    .card-home-overlay .product-price .slide-top {
+        transition: .2s ease-in-out;
+    }
+    .card-home-overlay .disc-badge {
+        z-index: 2;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        transform: rotate(0deg);
+        padding: 1rem;
+    }
+    .card-home-overlay .card-img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        transition: .2s ease-in-out;
+    }
+    .card-home-overlay .text-color-dark {
+        text-decoration: none;
+        transition: .2s;
+        color: rgb(70, 70, 70);
+    }
+    .card-home-overlay .text-color-light {
+        text-decoration: none;
+        transition: .2s;
+        color: rgb(230, 230, 230);
+    }
+    .card-home-overlay .text-color-dark:hover,
+    .card-home-overlay .text-color-light:hover {
+        color: slateblue;
+    }
+    .card-home-overlay .product-title {
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .card-home-overlay .product-price {
+        height: 3.8rem;
+        /* background-color: slateblue; */
+    }
+/* End Product */
 
