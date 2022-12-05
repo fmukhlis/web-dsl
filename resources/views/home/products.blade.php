@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('custom_css')
+    <link href="{{ asset('css/basic-home.css') }}" rel="stylesheet">
     <link href="{{ asset('css/products.css') }}" rel="stylesheet">
 @endsection
 
