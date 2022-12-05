@@ -188,7 +188,7 @@
                                                             </div>
                                                         </div>
                                                         <a href="products/test-prod"
-                                                            class="btn px-3 px-sm-5 btn-outline-dark mt-5">Lihat
+                                                            class="btn px-3 px-sm-5 px-md-3 px-md-3 btn-outline-dark mt-5">Lihat
                                                             Detail</a>
                                                     </div>
                                                 </div>
@@ -225,7 +225,7 @@
                                                             </div>
                                                         </div>
                                                         <a href="products/test-prod"
-                                                            class="btn px-3 px-sm-5 btn-outline-dark mt-5">Lihat
+                                                            class="btn px-3 px-sm-5 px-md-3 btn-outline-dark mt-5">Lihat
                                                             Detail</a>
                                                     </div>
                                                 </div>
@@ -255,7 +255,7 @@
                                                         <div class="fs-2 fw-bold">47.981.000</div>
                                                     </div>
                                                 </div>
-                                                <div class="btn px-3 px-sm-5 btn-outline-dark mt-5">Lihat
+                                                <div class="btn px-3 px-sm-5 px-md-3 btn-outline-dark mt-5">Lihat
                                                     Detail</div>
                                             </div>
                                         </a>
@@ -294,7 +294,7 @@
                                                             </div>
                                                         </div>
                                                         <a href="products/test-prod"
-                                                            class="btn px-3 px-sm-5 btn-outline-dark mt-5">Lihat
+                                                            class="btn px-3 px-sm-5 px-md-3 btn-outline-dark mt-5">Lihat
                                                             Detail</a>
                                                     </div>
                                                 </div>
@@ -330,7 +330,7 @@
                                                             </div>
                                                         </div>
                                                         <a href="products/test-prod"
-                                                            class="btn px-3 px-sm-5 btn-outline-dark mt-5">Lihat
+                                                            class="btn px-3 px-sm-5 px-md-3 btn-outline-dark mt-5">Lihat
                                                             Detail</a>
                                                     </div>
                                                 </div>
@@ -366,7 +366,7 @@
                                                         <div class="fs-2 fw-bold">47.981.000</div>
                                                     </div>
                                                 </div>
-                                                <div class="btn px-3 px-sm-5 btn-outline-dark mt-5">Lihat
+                                                <div class="btn px-3 px-sm-5 px-md-3 btn-outline-dark mt-5">Lihat
                                                     Detail</div>
                                             </div>
                                         </a>
@@ -406,7 +406,7 @@
                                                             </div>
                                                         </div>
                                                         <a href="products/test-prod"
-                                                            class="btn px-3 px-sm-5 btn-outline-dark mt-5">Lihat
+                                                            class="btn px-3 px-sm-5 px-md-3 btn-outline-dark mt-5">Lihat
                                                             Detail</a>
                                                     </div>
                                                 </div>
@@ -444,7 +444,7 @@
                                                             </div>
                                                         </div>
                                                         <a href="products/test-prod"
-                                                            class="btn px-3 px-sm-5 btn-outline-dark mt-5">Lihat
+                                                            class="btn px-3 px-sm-5 px-md-3 btn-outline-dark mt-5">Lihat
                                                             Detail</a>
                                                     </div>
                                                 </div>
@@ -482,7 +482,7 @@
                                                             </div>
                                                         </div>
                                                         <a href="products/test-prod"
-                                                            class="btn px-3 px-sm-5 btn-outline-dark mt-5">Lihat
+                                                            class="btn px-3 px-sm-5 px-md-3 btn-outline-dark mt-5">Lihat
                                                             Detail</a>
                                                     </div>
                                                 </div>
@@ -520,7 +520,7 @@
                                                             </div>
                                                         </div>
                                                         <a href="products/test-prod"
-                                                            class="btn px-3 px-sm-5 btn-outline-dark mt-5">Lihat
+                                                            class="btn px-3 px-sm-5 px-md-3 btn-outline-dark mt-5">Lihat
                                                             Detail</a>
                                                     </div>
                                                 </div>
@@ -567,7 +567,7 @@
                                                             </div>
                                                         </div>
                                                         <a href="products/test-prod"
-                                                            class="btn px-3 px-sm-5 btn-outline-dark mt-5">Lihat
+                                                            class="btn px-3 px-sm-5 px-md-3 btn-outline-dark mt-5">Lihat
                                                             Detail</a>
                                                     </div>
                                                 </div>
@@ -605,7 +605,7 @@
                                                             </div>
                                                         </div>
                                                         <a href="products/test-prod"
-                                                            class="btn px-3 px-sm-5 btn-outline-dark mt-5">Lihat
+                                                            class="btn px-3 px-sm-5 px-md-3 btn-outline-dark mt-5">Lihat
                                                             Detail</a>
                                                     </div>
                                                 </div>
@@ -643,7 +643,7 @@
                                                             </div>
                                                         </div>
                                                         <a href="products/test-prod"
-                                                            class="btn px-3 px-sm-5 btn-outline-dark mt-5">Lihat
+                                                            class="btn px-3 px-sm-5 px-md-3 btn-outline-dark mt-5">Lihat
                                                             Detail</a>
                                                     </div>
                                                 </div>
@@ -681,7 +681,7 @@
                                                             </div>
                                                         </div>
                                                         <a href="products/test-prod"
-                                                            class="btn px-3 px-sm-5 btn-outline-dark mt-5">Lihat
+                                                            class="btn px-3 px-sm-5 px-md-3 btn-outline-dark mt-5">Lihat
                                                             Detail</a>
                                                     </div>
                                                 </div>
@@ -711,7 +711,7 @@
                                                         <div class="fs-2 fw-bold">47.981.000</div>
                                                     </div>
                                                 </div>
-                                                <div class="btn px-3 px-sm-5 btn-outline-dark mt-5">Lihat
+                                                <div class="btn px-3 px-sm-5 px-md-3 btn-outline-dark mt-5">Lihat
                                                     Detail</div>
                                             </div>
                                         </a>
@@ -756,7 +756,7 @@
                                                             </div>
                                                         </div>
                                                         <a href="products/test-prod"
-                                                            class="btn px-3 px-sm-5 btn-outline-dark mt-5">Lihat
+                                                            class="btn px-3 px-sm-5 px-md-3 btn-outline-dark mt-5">Lihat
                                                             Detail</a>
                                                     </div>
                                                 </div>
@@ -794,7 +794,7 @@
                                                             </div>
                                                         </div>
                                                         <a href="products/test-prod"
-                                                            class="btn px-3 px-sm-5 btn-outline-dark mt-5">Lihat
+                                                            class="btn px-3 px-sm-5 px-md-3 btn-outline-dark mt-5">Lihat
                                                             Detail</a>
                                                     </div>
                                                 </div>
@@ -824,7 +824,7 @@
                                                         <div class="fs-2 fw-bold">47.981.000</div>
                                                     </div>
                                                 </div>
-                                                <div class="btn px-3 px-sm-5 btn-outline-dark mt-5">Lihat
+                                                <div class="btn px-3 px-sm-5 px-md-3 btn-outline-dark mt-5">Lihat
                                                     Detail</div>
                                             </div>
                                         </a>
@@ -864,7 +864,7 @@
                                                             </div>
                                                         </div>
                                                         <a href="products/test-prod"
-                                                            class="btn px-3 px-sm-5 btn-outline-dark mt-5">Lihat
+                                                            class="btn px-3 px-sm-5 px-md-3 btn-outline-dark mt-5">Lihat
                                                             Detail</a>
                                                     </div>
                                                 </div>
@@ -902,7 +902,7 @@
                                                             </div>
                                                         </div>
                                                         <a href="products/test-prod"
-                                                            class="btn px-3 px-sm-5 btn-outline-dark mt-5">Lihat
+                                                            class="btn px-3 px-sm-5 px-md-3 btn-outline-dark mt-5">Lihat
                                                             Detail</a>
                                                     </div>
                                                 </div>
@@ -929,880 +929,290 @@
     {{-- Category Tabs --}}
     <div class="container-fluid">
         <div class="container category">
-            <div class="row pb-3 mb-4 border-bottom border-3">
+            <div class="row pb-3 border-bottom border-3">
                 <div class="col-12 category-title text-light">
                     <h2>Alat Kesehatan</h2>
                     <small>Temukan produk terbaru dalam etalase alat kesehatan disini</small>
                 </div>
             </div>
-            <div class="row g-2">
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-light">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
+
+            <div class="container product">
+                <div class="row g-2 mb-2 mt-1 flex-nowrap flex-md-wrap">
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-light">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
                                 <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
                                 </a>
                             </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
                                 </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-dark mt-5">Lihat
-                                    Detail</a>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-dark mt-5">Lihat
+                                        Detail</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-light">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">75%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-light">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
                                 <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
                                 </a>
                             </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
                                 </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-dark mt-5">Lihat
-                                    Detail</a>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-dark mt-5">Lihat
+                                        Detail</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-light">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-light">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
                                 <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
                                 </a>
                             </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
                                 </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-dark mt-5">Lihat
-                                    Detail</a>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-dark mt-5">Lihat
+                                        Detail</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-light">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-light">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
                                 <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
                                 </a>
                             </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
                                 </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-dark mt-5">Lihat
-                                    Detail</a>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-dark mt-5">Lihat
+                                        Detail</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-light">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-light">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
                                 <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
                                 </a>
                             </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
                                 </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-dark mt-5">Lihat
-                                    Detail</a>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-dark mt-5">Lihat
+                                        Detail</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-light">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-light">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
                                 <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
                                 </a>
                             </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
                                 </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-dark mt-5">Lihat
-                                    Detail</a>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-dark mt-5">Lihat
+                                        Detail</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-light">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-light">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
                                 <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
                                 </a>
                             </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
                                 </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-dark mt-5">Lihat
-                                    Detail</a>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-dark mt-5">Lihat
+                                        Detail</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-light">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-light">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
                                 <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
                                 </a>
                             </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
                                 </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-dark mt-5">Lihat
-                                    Detail</a>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-dark mt-5">Lihat
+                                        Detail</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-12 d-flex">
-                    <a href="" class="btn btn-outline-light w-100 py-2 py-md-3 fw-bold fs-5">Lihat semua produk</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    {{-- End Category Tabs --}}
-
-
-
-
-
-    {{-- Category Tabs --}}
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 40 1440 180">
-        <path fill="#f8f9fa" fill-opacity="1" d="M 0,58.899128 1440,171.18039 V 320 H 0 Z"></path>
-    </svg>
-    <div class="container-fluid bg-light">
-        <div class="container category">
-            <div class="row pb-3 mb-4 border-bottom border-3 border-secondary">
-                <div class="col-12 category-title">
-                    <h2>Alat Laboratorium</h2>
-                    <small>Temukan produk terbaru dalam etalase alat laboratorium disini</small>
-                </div>
-            </div>
-            <div class="row g-2">
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-dark">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
-                                <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
-                                </a>
-                            </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
-                                </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-light mt-5">Lihat
-                                    Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-dark">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
-                                <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
-                                </a>
-                            </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
-                                </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-light mt-5">Lihat
-                                    Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-dark">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
-                                <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
-                                </a>
-                            </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
-                                </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-light mt-5">Lihat
-                                    Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-dark">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
-                                <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
-                                </a>
-                            </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
-                                </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-light mt-5">Lihat
-                                    Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-dark">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
-                                <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
-                                </a>
-                            </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
-                                </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-light mt-5">Lihat
-                                    Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-dark">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
-                                <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
-                                </a>
-                            </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
-                                </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-light mt-5">Lihat
-                                    Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-dark">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
-                                <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
-                                </a>
-                            </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
-                                </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-light mt-5">Lihat
-                                    Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-dark">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
-                                <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
-                                </a>
-                            </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
-                                </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-light mt-5">Lihat
-                                    Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 d-flex">
-                    <a href="" class="btn btn-outline-dark w-100 py-2 py-md-3 fw-bold fs-5">Lihat semua produk</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 120 1440 160">
-        <path fill="#f8f9fa" fill-opacity="1" d="M 0,139.50827 1440,256 V 0 H 0 Z"></path>
-    </svg>
-    {{-- End Category Tabs --}}
-
-
-
-
-
-    {{-- Category Tabs --}}
-    <div class="container-fluid">
-        <div class="container category">
-            <div class="row pb-3 mb-4 border-bottom border-3">
-                <div class="col-12 category-title text-light">
-                    <h2>Alat Kimia</h2>
-                    <small>Temukan produk terbaru dalam etalase alat kimia disini</small>
                 </div>
             </div>
 
-            <div class="row g-2">
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-light">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
-                                <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
-                                </a>
-                            </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
-                                </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-dark mt-5">Lihat
-                                    Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-light">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
-                                <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
-                                </a>
-                            </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
-                                </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-dark mt-5">Lihat
-                                    Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-light">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
-                                <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
-                                </a>
-                            </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
-                                </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-dark mt-5">Lihat
-                                    Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-light">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
-                                <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
-                                </a>
-                            </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
-                                </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-dark mt-5">Lihat
-                                    Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-light">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
-                                <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
-                                </a>
-                            </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
-                                </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-dark mt-5">Lihat
-                                    Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-light">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
-                                <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
-                                </a>
-                            </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
-                                </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-dark mt-5">Lihat
-                                    Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-light">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
-                                <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
-                                </a>
-                            </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
-                                </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-dark mt-5">Lihat
-                                    Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-light">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
-                                <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
-                                </a>
-                            </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
-                                </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-dark mt-5">Lihat
-                                    Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="row">
                 <div class="col-12 d-flex">
                     <a href="" class="btn btn-outline-light w-100 py-2 py-md-3 fw-bold fs-5">Lihat semua
                         produk</a>
@@ -1822,286 +1232,897 @@
     </svg>
     <div class="container-fluid bg-light">
         <div class="container category">
-            <div class="row pb-3 mb-4 border-bottom border-3 border-secondary">
+            <div class="row pb-3 border-bottom border-3 border-secondary">
+                <div class="col-12 category-title">
+                    <h2>Alat Laboratorium</h2>
+                    <small>Temukan produk terbaru dalam etalase alat laboratorium disini</small>
+                </div>
+            </div>
+
+            <div class="container product">
+                <div class="row g-2 mb-2 mt-1 flex-nowrap flex-md-wrap">
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-dark">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
+                                <a href="products/test-prod">
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
+                                </a>
+                            </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
+                                </div>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-light mt-5">Lihat
+                                        Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-dark">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
+                                <a href="products/test-prod">
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
+                                </a>
+                            </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
+                                </div>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-light mt-5">Lihat
+                                        Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-dark">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
+                                <a href="products/test-prod">
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
+                                </a>
+                            </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
+                                </div>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-light mt-5">Lihat
+                                        Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-dark">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
+                                <a href="products/test-prod">
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
+                                </a>
+                            </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
+                                </div>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-light mt-5">Lihat
+                                        Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-dark">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
+                                <a href="products/test-prod">
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
+                                </a>
+                            </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
+                                </div>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-light mt-5">Lihat
+                                        Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-dark">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
+                                <a href="products/test-prod">
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
+                                </a>
+                            </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
+                                </div>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-light mt-5">Lihat
+                                        Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-dark">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
+                                <a href="products/test-prod">
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
+                                </a>
+                            </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
+                                </div>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-light mt-5">Lihat
+                                        Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-dark">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
+                                <a href="products/test-prod">
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
+                                </a>
+                            </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
+                                </div>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-light mt-5">Lihat
+                                        Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex">
+                    <a href="" class="btn btn-outline-dark w-100 py-2 py-md-3 fw-bold fs-5">Lihat semua
+                        produk</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 120 1440 160">
+        <path fill="#f8f9fa" fill-opacity="1" d="M 0,139.50827 1440,256 V 0 H 0 Z"></path>
+    </svg>
+    {{-- End Category Tabs --}}
+
+
+
+
+
+    {{-- Category Tabs --}}
+    <div class="container-fluid">
+        <div class="container category">
+            <div class="row pb-3 border-bottom border-3">
+                <div class="col-12 category-title text-light">
+                    <h2>Alat Kimia</h2>
+                    <small>Temukan produk terbaru dalam etalase alat kimia disini</small>
+                </div>
+            </div>
+
+            <div class="container product">
+                <div class="row g-2 mb-2 mt-1 flex-nowrap flex-md-wrap">
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-light">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
+                                <a href="products/test-prod">
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
+                                </a>
+                            </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
+                                </div>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-dark mt-5">Lihat
+                                        Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-light">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
+                                <a href="products/test-prod">
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
+                                </a>
+                            </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
+                                </div>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-dark mt-5">Lihat
+                                        Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-light">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
+                                <a href="products/test-prod">
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
+                                </a>
+                            </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
+                                </div>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-dark mt-5">Lihat
+                                        Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-light">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
+                                <a href="products/test-prod">
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
+                                </a>
+                            </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
+                                </div>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-dark mt-5">Lihat
+                                        Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-light">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
+                                <a href="products/test-prod">
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
+                                </a>
+                            </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
+                                </div>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-dark mt-5">Lihat
+                                        Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-light">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
+                                <a href="products/test-prod">
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
+                                </a>
+                            </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
+                                </div>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-dark mt-5">Lihat
+                                        Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-light">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
+                                <a href="products/test-prod">
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
+                                </a>
+                            </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
+                                </div>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-dark mt-5">Lihat
+                                        Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-light">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
+                                <a href="products/test-prod">
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
+                                </a>
+                            </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
+                                </div>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-dark mt-5">Lihat
+                                        Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 d-flex">
+                    <a href="" class="btn btn-outline-light w-100 py-2 py-md-3 fw-bold fs-5">Lihat semua
+                        produk</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- End Category Tabs --}}
+
+
+
+
+
+    {{-- Category Tabs --}}
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 40 1440 180">
+        <path fill="#f8f9fa" fill-opacity="1" d="M 0,58.899128 1440,171.18039 V 320 H 0 Z"></path>
+    </svg>
+    <div class="container-fluid bg-light">
+        <div class="container category">
+            <div class="row pb-3  border-bottom border-3 border-secondary">
                 <div class="col-12 category-title">
                     <h2>Lainnya</h2>
                     <small>Temukan produk terbaru dalam etalase lainnya disini</small>
                 </div>
             </div>
 
-            <div class="row g-2">
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-dark">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
+            <div class="container product">
+
+                <div class="row g-2 mb-2 mt-1 flex-nowrap flex-md-wrap">
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-dark">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
                                 <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
                                 </a>
                             </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
                                 </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-light mt-5">Lihat
-                                    Detail</a>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-light mt-5">Lihat
+                                        Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-dark">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
+                                <a href="products/test-prod">
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
+                                </a>
+                            </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
+                                </div>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-light mt-5">Lihat
+                                        Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-dark">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
+                                <a href="products/test-prod">
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
+                                </a>
+                            </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
+                                </div>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-light mt-5">Lihat
+                                        Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-dark">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
+                                <a href="products/test-prod">
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
+                                </a>
+                            </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
+                                </div>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-light mt-5">Lihat
+                                        Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-dark">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
+                                <a href="products/test-prod">
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
+                                </a>
+                            </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
+                                </div>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-light mt-5">Lihat
+                                        Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-dark">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
+                                <a href="products/test-prod">
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
+                                </a>
+                            </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
+                                </div>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-light mt-5">Lihat
+                                        Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-dark">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
+                                <a href="products/test-prod">
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
+                                </a>
+                            </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
+                                </div>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod" class="btn px-3 px-sm-5 px-md-3 btn-light mt-5">Lihat
+                                        Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card card-home bg-outline-dark">
+                            <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
+                                Off</span>
+                            <div class="overflow-hidden">
+                                <a href="products/test-prod">
+                                    <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
+                                        class="card-img-top" alt="...">
+                                </a>
+                            </div>
+                            <div class="card-body p-2 text-center d-flex flex-column">
+                                <div class="fs-5 mb-0 product-title">
+                                    <a href="products/test-prod">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptate cumque amet maiores
+                                    </a>
+                                </div>
+                                <div class="overflow-hidden product-price">
+                                    <div class="slide-top">
+                                        <small><span class="d-none d-lg-inline">Harga
+                                                Jual :</span><span class="text-decoration-line-through ms-1">Rp
+                                                50.000.000</span></small>
+                                        <div class="d-flex align-items-end justify-content-center">
+                                            <div class="pb-2 fs-6 fw-bold">Rp</div>
+                                            <div class="fs-4 fw-bold">47.981.000</div>
+                                        </div>
+                                    </div>
+                                    <a href="products/test-prod"
+                                        class="btn px-3 px-sm-5 px-md-3 px-md-3 btn-light mt-5">Lihat
+                                        Detail</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-dark">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
-                                <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
-                                </a>
-                            </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
-                                </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-light mt-5">Lihat
-                                    Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-dark">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
-                                <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
-                                </a>
-                            </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
-                                </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-light mt-5">Lihat
-                                    Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-dark">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
-                                <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
-                                </a>
-                            </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
-                                </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-light mt-5">Lihat
-                                    Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-dark">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
-                                <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
-                                </a>
-                            </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
-                                </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-light mt-5">Lihat
-                                    Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-dark">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
-                                <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
-                                </a>
-                            </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
-                                </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-light mt-5">Lihat
-                                    Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-dark">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
-                                <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
-                                </a>
-                            </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
-                                </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-light mt-5">Lihat
-                                    Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card card-home bg-outline-dark">
-                        <span class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">35%
-                            Off</span>
-                        <div class="overflow-hidden">
-                            <a href="products/test-prod">
-                                <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                    class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <div class="card-body p-2 text-center d-flex flex-column">
-                            <div class="fs-5 mb-0 product-title">
-                                <a href="products/test-prod">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptate cumque amet maiores
-                                </a>
-                            </div>
-                            <div class="overflow-hidden product-price">
-                                <div class="slide-top">
-                                    <small><span class="d-none d-lg-inline">Harga
-                                            Jual :</span><span class="text-decoration-line-through ms-1">Rp
-                                            50.000.000</span></small>
-                                    <div class="d-flex align-items-end justify-content-center">
-                                        <div class="pb-2 fs-6 fw-bold">Rp</div>
-                                        <div class="fs-4 fw-bold">47.981.000</div>
-                                    </div>
-                                </div>
-                                <a href="products/test-prod" class="btn px-3 px-sm-5 btn-light mt-5">Lihat
-                                    Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="row">
                 <div class="col-12 d-flex">
                     <a href="" class="btn btn-outline-dark w-100 py-2 py-md-3 fw-bold fs-5">Lihat semua
                         produk</a>

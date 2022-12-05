@@ -296,7 +296,40 @@
 /* Category Item */
 
 
-/* Product */
+/* Product Home */
+    .product.container {
+        overflow: auto;
+        position: relative;
+        padding: 0;
+    }
+    .product.container .col-12  {
+        max-width: 18rem;
+    }
+    @media only screen and (min-width:768px) {
+        .product.container {
+            overflow: visible;
+        }
+    }
+    @media only screen and (max-width:767px) {
+        .product.container .col-12:nth-last-child(1) {
+            padding-right: calc(-0.5 * var(--bs-gutter-x));
+        }
+    }
+
+    /* Hiding Product Container Scrollbar */
+        .product.container::-webkit-scrollbar {
+            display: none; /* Chrome Safari and Opera */
+        }
+        .product.container {
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* IE and Edge */
+        }
+    /* End */
+
+    .card {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    }
+
     .card .product-price small {
         display: block;
     }
@@ -354,15 +387,6 @@
         transform: rotate(45deg);
     }
 
-
-    
-    .card-home.bg-outline-light:hover .card-body::after {
-        background-color: rgba(245, 245, 245, .5);
-    }
-    .card-home.bg-outline-dark:hover .card-body::after {
-        background-color: rgba(50, 50, 50, .5);
-    }
-    
     .card-home.bg-outline-light:hover .card-body {
         background-color: whitesmoke;
         color: black;
@@ -408,10 +432,13 @@
     .bg-outline-light {
         border: 1px solid whitesmoke !important;
         color: whitesmoke !important;
+        box-shadow: none;
+
     }
     .bg-outline-dark {
         border: 1px solid black !important;
         color: black !important;
+        box-shadow: none;
     }
 
     .bg-outline-light .product-price small {
@@ -419,19 +446,6 @@
     }
     .bg-outline-dark .product-price small {
         color: rgb(100, 100, 100);
-    }
-    
-    .bg-outline-light .card-body::after,
-    .bg-outline-dark .card-body::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        transition: .2s ease-out;
-        z-index: -1;
-        background-color: rgba(0, 0, 0, 0);
     }
 
     .bg-outline-light .card-body, 
@@ -492,5 +506,5 @@
         height: 3.8rem;
         /* background-color: slateblue; */
     }
-/* End Product */
+/* End Product Home */
 
