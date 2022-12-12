@@ -18,7 +18,10 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::get('/products', [App\Http\Controllers\HomeController::class, 'products'])->name('products');
 Route::get('/products/test-prod', [App\Http\Controllers\HomeController::class, 'product'])->name('product');
 
-// Route::get('/admin-area', [App\Http\Controllers\HomeController::class, 'index'])->name('home.auth');
+Route::get('/admin/dashboard', [App\Http\Controllers\Admin\AdminController::class, 'index'])->name('admin.index');
+Route::get('/admin/products', [App\Http\Controllers\Admin\AdminController::class, 'products'])->name('admin.products');
+Route::get('/admin/products/product', [App\Http\Controllers\Admin\AdminController::class, 'product'])->name('admin.product');
+// Route::get('/admin/dashboard-content', [App\Http\Controllers\Admin\AdminController::class, 'dashboardView'])->name('admin.dashboardView');
 
 
 
