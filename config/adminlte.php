@@ -335,12 +335,13 @@ return [
         ['header' => 'PRODUCTS MANAGEMENT'],
         [
             'text'        => 'Products',
-            'url'         => 'admin/products',
+            'url'         => 'admin/product',
             'icon'        => 'fas mr-2 fa-box fa-fw',
         ],
         [
             'text'        => 'Orders',
-            'url'         => 'admin/orders',
+            // 'url'         => 'admin/order',
+            'url' => '#',
             'icon'        => 'fas mr-2 fa-cart-arrow-down fa-fw',
             'label'       => 36,
             'label_color' => 'success',
@@ -349,19 +350,22 @@ return [
         ['header' => 'PROFIT MANAGEMENT'],
         [
             'text'        => 'Sales',
-            'url'         => 'admin/sales',
+            // 'url'         => 'admin/sales',
+            'url' => '#',
             'icon'        => 'fas mr-2 fa-comments-dollar fa-fw',
         ],
 
         ['header' => 'WEBSITE MANAGEMENT'],
         [
             'text'        => 'Visitors',
-            'url'         => 'admin/visitors',
+            // 'url'         => 'admin/visitors',
+            'url' => '#',
             'icon'        => 'fa mr-2 fa-users fa-fw',
         ],
         [
             'text'        => 'Community',
-            'url'         => 'admin/community',
+            // 'url'         => 'admin/community',
+            'url' => '#',
             'icon'        => 'fas mr-2 fa-comments fa-fw',
             'label'       => 9,
             'label_color' => 'danger',
@@ -374,12 +378,14 @@ return [
             'submenu' => [
                 [
                     'text' => 'Profile',
-                    'url'  => 'admin/account/profile',
+                    // 'url'  => 'admin/account/profile',
+                    'url' => '#',
                     'icon' => 'fas fa-fw fa-user',
                 ],
                 [
                     'text' => 'Change Password',
-                    'url'  => 'admin/account/manage-password',
+                    // 'url'  => 'admin/account/manage-password',
+                    'url' => '#',
                     'icon' => 'fas fa-fw fa-lock',
                 ],
             ],

@@ -66,6 +66,10 @@
                             <!-- /.row -->
                         </div>
                         <!-- /.card-footer -->
+
+                        <div class="overlay dark">
+                            <i class="fas fa-2x fa-ban"></i>
+                        </div>
                     </div>
                     <!-- /.card -->
                 </div>
@@ -94,6 +98,10 @@
                             </div>
                             <!-- /.d-flex -->
                         </div>
+
+                        <div class="overlay dark">
+                            <i class="fas fa-2x fa-ban"></i>
+                        </div>
                     </div>
                     <!-- /.card -->
 
@@ -104,7 +112,7 @@
                                 <button type="button" class="btn btn-tool" data-card-widget="collapse">
                                     <i class="fas fa-minus"></i>
                                 </button>
-                                <a href="#" class="btn btn-tool btn-sm">
+                                <a href="{{ route('admin.product') }}" class="btn btn-tool btn-sm">
                                     <i class="fas fa-bars"></i>
                                 </a>
                             </div>
@@ -260,6 +268,10 @@
                             </div>
                             <!-- /.d-flex -->
                         </div>
+
+                        <div class="overlay dark">
+                            <i class="fas fa-2x fa-ban"></i>
+                        </div>
                     </div>
                     <!-- /.card -->
 
@@ -335,6 +347,10 @@
                                 </tbody>
                             </table>
                         </div>
+
+                        <div class="overlay dark">
+                            <i class="fas fa-2x fa-ban"></i>
+                        </div>
                     </div>
                     <!-- /.card -->
                 </div>
@@ -357,7 +373,7 @@
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <div class="chat-name p-2 text-center bg-light w-100 border-bottom">Fajar Mukhlis
+                            <div class="chat-name p-2 text-center w-100">Fajar Mukhlis
                                 Imananda
                                 <small class="d-block text-muted">Last seen 12.15</small>
                             </div>
@@ -558,6 +574,10 @@
                             </form>
                         </div>
                         <!-- /.card-footer-->
+
+                        <div class="overlay dark">
+                            <i class="fas fa-2x fa-ban"></i>
+                        </div>
                     </div>
                     <!--/.direct-chat -->
                 </div>
@@ -646,6 +666,10 @@
                             <a href="javascript:">View All Users</a>
                         </div>
                         <!-- /.card-footer -->
+
+                        <div class="overlay dark">
+                            <i class="fas fa-2x fa-ban"></i>
+                        </div>
                     </div>
                     <!--/.card -->
                 </div>
@@ -664,11 +688,5 @@
 @stop
 
 @section('css')
-    {{-- <link rel="stylesheet" href="/css/admin_custom.css"> --}}
-@stop
-
-@section('js')
-    {{-- <script>
-        console.log('Hi!');
-    </script> --}}
+    <link rel="stylesheet" href="{{ asset('css') }}/app.css" type="text/css" />
 @stop

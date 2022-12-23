@@ -4,6 +4,10 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use Illuminate\Support\Facades\DB;
+
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Storage;
 
 class Kernel extends ConsoleKernel
 {
@@ -16,6 +20,15 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
+
+        // Delete Temporary Product Image
+        $schedule->call(function () {
+            $now = Carbon::now();
+            $validTime = 2; // Hours
+            $invalidFile = DB::table('temp_product_images')->whereDate('created_at', '<=', $now->subHours($validTime))->first();
+            DB::table('temp_product_images')->whereDate('created_at', '<=', $now)->delete();
+            Storage::deleteDirectory($invalidFile->directory_path);
+        })->everyTwoHours();
     }
 
     /**
@@ -25,7 +38,7 @@ class Kernel extends ConsoleKernel
      */
     protected function commands()
     {
-        $this->load(__DIR__.'/Commands');
+        $this->load(__DIR__ . '/Commands');
 
         require base_path('routes/console.php');
     }

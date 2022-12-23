@@ -2,6 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
+// Controllers
+use App\Http\Controllers\Admin\ProductController as APC;
+
+// Models
+use App\Models\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +25,40 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::get('/products', [App\Http\Controllers\HomeController::class, 'products'])->name('products');
 Route::get('/products/test-prod', [App\Http\Controllers\HomeController::class, 'product'])->name('product');
 
-Route::get('/admin/dashboard', [App\Http\Controllers\Admin\AdminController::class, 'index'])->name('admin.index');
-Route::get('/admin/products', [App\Http\Controllers\Admin\AdminController::class, 'products'])->name('admin.products');
-Route::get('/admin/products/product', [App\Http\Controllers\Admin\AdminController::class, 'product'])->name('admin.product');
+Route::post('/product-temp-img', [App\Http\Controllers\HomeController::class, 'storeTempImg']);
+Route::delete('/product-temp-img/{fileName}', [App\Http\Controllers\HomeController::class, 'deleteTempImg']);
+
+Route::prefix('admin')
+    ->name('admin.')
+    ->group(function () {
+
+        // Admin
+        // Dashboard
+        Route::view('/dashboard', 'admin.dashboard.index')->name('dashboardView');
+
+        // Product
+        Route::view('/product', 'admin.product.index', [
+            'products' => Product::get(),
+        ])->name('product');
+        Route::view('/product/new', 'admin.product.add-product')->name('addProduct');
+        Route::get(
+            '/product/{product:slug}',
+            fn (Product $product) =>
+            view('admin.product.edit-product', [
+                'product' => $product,
+                'productImages' => Storage::allFiles($product->image_path),
+            ])
+        )->name('editProduct');
+
+        Route::controller(APC::class)->group(function () {
+            Route::post('/product/new', 'store');
+            Route::patch('/product/{product:slug}', 'update');
+        });
+    });
+
+// Route::get('/admin/dashboard', [App\Http\Controllers\Admin\AdminController::class, 'index'])->name('admin.index');
+// Route::get('/admin/products', [App\Http\Controllers\Admin\AdminController::class, 'products'])->name('admin.products');
+// Route::get('/admin/products/slug-product', [App\Http\Controllers\Admin\AdminController::class, 'product'])->name('admin.product');
 // Route::get('/admin/dashboard-content', [App\Http\Controllers\Admin\AdminController::class, 'dashboardView'])->name('admin.dashboardView');
 
 

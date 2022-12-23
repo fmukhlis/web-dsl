@@ -3,6 +3,9 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Blade;
+
+use DateTime;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +26,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // 
+        Blade::directive('dateToCustomDate', function ($dateTime) {
+            return "<?php echo DateTime::createFromFormat('Y-m-d', $dateTime)->format('d/m/Y'); ?>";
+        });
+        Blade::directive('moneyFormatToNumeric', function ($moneyFormat) {
+            return "<?php echo preg_replace('/[^0-9]/', '', $moneyFormat); ?>";
+        });
+        Blade::directive('numericToMoneyFormat', function ($numeric) {
+            return "<?php echo 'Rp' . number_format($numeric, 0); ?>";
+        });
     }
 }
