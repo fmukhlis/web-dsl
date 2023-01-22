@@ -13,7 +13,8 @@ const mix = require('laravel-mix');
 
 // Compile All Node Modules Vendor Libraries (Listed in package.json file)
 // mix.extract();
-mix.js('resources/js/app.js', 'public/js');
+mix.js('resources/js/product-management.js', 'public/js');
+mix.js('resources/js/dashboard.js', 'public/js');
 
 mix.sass('resources/sass/app.scss', 'public/css');
 

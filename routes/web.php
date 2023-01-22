@@ -31,13 +31,13 @@ Route::prefix('admin')
 
         // Admin
         // Dashboard
-        Route::view('/dashboard', 'admin.dashboard.index')->name('dashboardView');
+        Route::view('/dashboard', 'admin.dashboard.index', [
+            'products' => Product::paginate(7),
+        ])->name('dashboardView');
 
         // Product
         Route::view('/product', 'admin.product.index', [
-            'products' => Product::paginate(1),
-            // 'products' => Product::simplePaginate(10),
-            // 'products' => Product::get(),
+            'products' => Product::paginate(10),
         ])->name('product');
         Route::view('/product/new', 'admin.product.add-product')->name('addProduct');
         Route::get(

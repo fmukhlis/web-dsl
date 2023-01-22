@@ -524,12 +524,11 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css') }}/app.css" type="text/css" />
-    <link rel="stylesheet" href="{{ asset('css') }}/form.css">
-    <link rel="stylesheet" href="{{ asset('css') }}/product-gallery.css">
+    <link rel="stylesheet" href="{{ asset('css') }}/product-management.css" type="text/css" />
 @stop
 
 @section('js')
     <script src="{{ mix('js/manifest.js') }}" defer></script>
     <script src="{{ mix('js/vendor.js') }}" defer></script>
-    <script src="{{ mix('js/app.js') }}" defer></script>
+    <script src="{{ mix('js/product-management.js') }}" defer></script>
 @stop

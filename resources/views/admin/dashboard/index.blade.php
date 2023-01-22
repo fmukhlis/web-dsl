@@ -112,9 +112,13 @@
                                 <button type="button" class="btn btn-tool" data-card-widget="collapse">
                                     <i class="fas fa-minus"></i>
                                 </button>
-                                <a href="{{ route('admin.product') }}" class="btn btn-tool btn-sm">
-                                    <i class="fas fa-bars"></i>
-                                </a>
+
+                                @if ($products->hasPages())
+                                    <a type="button" class="btn btn-tool" href="{{ route('admin.product') }}"
+                                        data-toggle="tooltip" data-placement="left" title="See all">
+                                        <i class="fas fa-bars"></i>
+                                    </a>
+                                @endif
                             </div>
                         </div>
                         <div class="card-body table-responsive p-0">
@@ -122,128 +126,45 @@
                                 <thead>
                                     <tr>
                                         <th style="width: 38%;">Name</th>
-                                        <th class="text-nowrap" style="width: 30%;">Price (IDR)</th>
+                                        <th class="text-nowrap" style="width: 30%;">Total Price (IDR)</th>
                                         <th style="width: 27%;">Sales</th>
                                         <th style="width: 5%;">More</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="truncate-1">
-                                                Lorem ipsum nsectetur adipising
-                                            </div>
-                                        </td>
-                                        <td>50.000.000</td>
-                                        <td class="text-nowrap">
-                                            <div class="d-flex">
-                                                193 Sold
-                                                <small class="text-success d-inline-block ml-1">
-                                                    <i class="fas fa-arrow-up"></i>
-                                                    12%
-                                                </small>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <a href="#" class="text-muted">
-                                                <i class="fas fa-search"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="truncate-1">
-                                                Lorem, sit amet consectetur adipisicing
-                                            </div>
-                                        </td>
-                                        <td>3.999.999</td>
-                                        <td class="text-nowrap">
-                                            <div class="d-flex">
-                                                28 Sold
-                                                <small class="text-danger d-inline-block ml-1">
-                                                    <i class="fas fa-arrow-down"></i>
-                                                    5%
-                                                </small>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <a href="#" class="text-muted">
-                                                <i class="fas fa-search"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="truncate-1">
-                                                Lorem ipsumectetur adipisicing
-                                            </div>
-                                        </td>
-                                        <td>1.873.999</td>
-                                        <td class="text-nowrap">
-                                            <div class="d-flex">
-                                                13 Sold
-                                                <small class="text-success d-inline-block ml-1">
-                                                    <i class="fas fa-arrow-up"></i>
-                                                    22%
-                                                </small>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <a href="#" class="text-muted">
-                                                <i class="fas fa-search"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="truncate-1">
-                                                Lorem ipsum dolor, sit amet consectetur adipisicing
-                                            </div>
-                                        </td>
-                                        <td>5.167.189</td>
-                                        <td class="text-nowrap">
-                                            <div class="d-flex">
-                                                9.120 Sold
-                                                <small class="text-success d-inline-block ml-1">
-                                                    <i class="fas fa-arrow-up"></i>
-                                                    5%
-                                                </small>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <a href="#" class="text-muted">
-                                                <i class="fas fa-search"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="truncate-1">
-                                                Lorem ipsum nsectetur adipising
-                                            </div>
-                                        </td>
-                                        <td>50.000.000</td>
-                                        <td class="text-nowrap">
-                                            <div class="d-flex">
-                                                193 Sold
-                                                <small class="text-success d-inline-block ml-1">
-                                                    <i class="fas fa-arrow-up"></i>
-                                                    12%
-                                                </small>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <a href="#" class="text-muted">
-                                                <i class="fas fa-search"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                    @php $num = 1; @endphp
+                                    @foreach ($products as $product)
+                                        <tr>
+                                            <td>
+                                                <div class="truncate-1">
+                                                    {{ $product->name }}
+                                                </div>
+                                            </td>
+                                            <td>@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</td>
+                                            <td class="text-nowrap">
+                                                <div class="d-flex">
+                                                    0 Sold
+                                                    <small class="text-success d-inline-block ml-1">
+                                                        <i class="fas fa-arrow-up"></i>
+                                                        0%
+                                                    </small>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="{{ route('admin.editProduct', [$product->slug]) }}"
+                                                    class="text-muted">
+                                                    <i class="fas fa-search"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
                     </div>
                     <!-- /.card -->
                 </div>
+
                 <!-- /.col-md-6 -->
                 <div class="col-lg-6">
                     <div class="card">
@@ -689,4 +610,10 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css') }}/app.css" type="text/css" />
+@stop
+
+@section('js')
+    <script src="{{ mix('js/manifest.js') }}" defer></script>
+    <script src="{{ mix('js/vendor.js') }}" defer></script>
+    <script src="{{ mix('js/dashboard.js') }}" defer></script>
 @stop
