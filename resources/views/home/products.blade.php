@@ -319,12 +319,13 @@
                                                         style="background-image: url('../{{ $product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($product->image_path))[0]->getFileName() }}');">
                                                     </a>
                                                     <div class="col-8">
-                                                        <div class="card-body">
+                                                        <div class="card-body products-info d-flex flex-column py-2">
                                                             <a href="{{ route('product') }}" class="card-link">
-                                                                <h5 class="card-title m-0">{{ $product->name }}</h5>
+                                                                <h5 class="card-title truncate-2 mb-0">{{ $product->name }}
+                                                                </h5>
                                                             </a>
                                                             <a href="#"
-                                                                class="d-flex m-0 mb-3 card-link align-items-center">
+                                                                class="d-flex m-0 card-link align-items-center">
                                                                 <small>Rating : </small>
                                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                                     viewBox="0 0 16 16" fill="orange"
@@ -332,13 +333,17 @@
                                                                     <path
                                                                         d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
                                                                 </svg>
-                                                                <small>4.9 (1 Review)</small>
+                                                                <small>--</small>
                                                             </a>
-                                                            <p class="card-text m-0">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</p>
-                                                            <a class="" href="{{ route('product') }}"><small
-                                                                    class="">Lihat
-                                                                    Lebih
-                                                                    Detail</small>
+                                                            <div class="d-flex flex-column mt-auto">
+                                                                <small class="text-muted"><span
+                                                                        class="badge bg-danger p-1 me-1">{{ $product->discount }}%</span><del>@numericToMoneyFormat($product->price)</del></small>
+                                                                <span class="total-price">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</span>
+                                                            </div>
+                                                            <a class="text-center mt-auto btn btn-outline-primary btn-sm"
+                                                                href="{{ route('product') }}">Lihat
+                                                                Lebih
+                                                                Detail
                                                             </a>
                                                         </div>
                                                     </div>
@@ -371,12 +376,14 @@
                                                         style="background-image: url('../{{ $product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($product->image_path))[0]->getFileName() }}');">
                                                     </a>
                                                     <div class="col-8">
-                                                        <div class="card-body">
+                                                        <div class="card-body products-info d-flex flex-column py-2">
                                                             <a href="{{ route('product') }}" class="card-link">
-                                                                <h5 class="card-title m-0">{{ $product->name }}</h5>
+                                                                <h5 class="card-title truncate-2 mb-0">
+                                                                    {{ $product->name }}
+                                                                </h5>
                                                             </a>
                                                             <a href="#"
-                                                                class="d-flex m-0 mb-3 card-link align-items-center">
+                                                                class="d-flex m-0 card-link align-items-center">
                                                                 <small>Rating : </small>
                                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                                     viewBox="0 0 16 16" fill="orange"
@@ -384,13 +391,17 @@
                                                                     <path
                                                                         d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
                                                                 </svg>
-                                                                <small>4.9 (1 Review)</small>
+                                                                <small>--</small>
                                                             </a>
-                                                            <p class="card-text m-0">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</p>
-                                                            <a class="" href="{{ route('product') }}"><small
-                                                                    class="">Lihat
-                                                                    Lebih
-                                                                    Detail</small>
+                                                            <div class="d-flex flex-column mt-auto">
+                                                                <small class="text-muted"><span
+                                                                        class="badge bg-danger p-1 me-1">{{ $product->discount }}%</span><del>@numericToMoneyFormat($product->price)</del></small>
+                                                                <span class="total-price">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</span>
+                                                            </div>
+                                                            <a class="text-center mt-auto btn btn-outline-primary btn-sm"
+                                                                href="{{ route('product') }}">Lihat
+                                                                Lebih
+                                                                Detail
                                                             </a>
                                                         </div>
                                                     </div>
@@ -422,12 +433,14 @@
                                                         style="background-image: url('../{{ $product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($product->image_path))[0]->getFileName() }}');">
                                                     </a>
                                                     <div class="col-8">
-                                                        <div class="card-body">
+                                                        <div class="card-body products-info d-flex flex-column py-2">
                                                             <a href="{{ route('product') }}" class="card-link">
-                                                                <h5 class="card-title m-0">{{ $product->name }}</h5>
+                                                                <h5 class="card-title truncate-2 mb-0">
+                                                                    {{ $product->name }}
+                                                                </h5>
                                                             </a>
                                                             <a href="#"
-                                                                class="d-flex m-0 mb-3 card-link align-items-center">
+                                                                class="d-flex m-0 card-link align-items-center">
                                                                 <small>Rating : </small>
                                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                                     viewBox="0 0 16 16" fill="orange"
@@ -435,13 +448,17 @@
                                                                     <path
                                                                         d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
                                                                 </svg>
-                                                                <small>4.9 (1 Review)</small>
+                                                                <small>--</small>
                                                             </a>
-                                                            <p class="card-text m-0">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</p>
-                                                            <a class="" href="{{ route('product') }}"><small
-                                                                    class="">Lihat
-                                                                    Lebih
-                                                                    Detail</small>
+                                                            <div class="d-flex flex-column mt-auto">
+                                                                <small class="text-muted"><span
+                                                                        class="badge bg-danger p-1 me-1">{{ $product->discount }}%</span><del>@numericToMoneyFormat($product->price)</del></small>
+                                                                <span class="total-price">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</span>
+                                                            </div>
+                                                            <a class="text-center mt-auto btn btn-outline-primary btn-sm"
+                                                                href="{{ route('product') }}">Lihat
+                                                                Lebih
+                                                                Detail
                                                             </a>
                                                         </div>
                                                     </div>
@@ -473,12 +490,14 @@
                                                         style="background-image: url('../{{ $product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($product->image_path))[0]->getFileName() }}');">
                                                     </a>
                                                     <div class="col-8">
-                                                        <div class="card-body py-2">
+                                                        <div class="card-body products-info d-flex flex-column py-2">
                                                             <a href="{{ route('product') }}" class="card-link">
-                                                                <h5 class="card-title m-0">{{ $product->name }}</h5>
+                                                                <h5 class="card-title truncate-2 mb-0">
+                                                                    {{ $product->name }}
+                                                                </h5>
                                                             </a>
                                                             <a href="#"
-                                                                class="d-flex m-0 mb-3 card-link align-items-center">
+                                                                class="d-flex m-0 card-link align-items-center">
                                                                 <small>Rating : </small>
                                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                                     viewBox="0 0 16 16" fill="orange"
@@ -486,13 +505,17 @@
                                                                     <path
                                                                         d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
                                                                 </svg>
-                                                                <small>4.9 (1 Review)</small>
+                                                                <small>--</small>
                                                             </a>
-                                                            <p class="card-text m-0">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</p>
-                                                            <a class="" href="{{ route('product') }}"><small
-                                                                    class="">Lihat
-                                                                    Lebih
-                                                                    Detail</small>
+                                                            <div class="d-flex flex-column mx-auto">
+                                                                <small class="text-muted"><span
+                                                                        class="badge bg-danger p-1 me-1">{{ $product->discount }}%</span><del>@numericToMoneyFormat($product->price)</del></small>
+                                                                <span class="total-price">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</span>
+                                                            </div>
+                                                            <a class="text-center btn btn-outline-primary btn-sm"
+                                                                href="{{ route('product') }}">Lihat
+                                                                Lebih
+                                                                Detail
                                                             </a>
                                                         </div>
                                                     </div>
