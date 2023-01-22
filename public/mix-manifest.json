@@ -1,7 +1,9 @@
 {
     "/js/product-management.js": "/js/product-management.js",
     "/js/dashboard.js": "/js/dashboard.js",
+    "/js/products.js": "/js/products.js",
     "/js/manifest.js": "/js/manifest.js",
+    "/css/products.css": "/css/products.css",
     "/css/product-management.css": "/css/product-management.css",
     "/css/app.css": "/css/app.css",
     "/js/vendor.js": "/js/vendor.js"

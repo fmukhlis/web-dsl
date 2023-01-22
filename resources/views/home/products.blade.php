@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('custom_css')
-    <link href="{{ asset('css/basic-home.css') }}" rel="stylesheet">
     <link href="{{ asset('css/products.css') }}" rel="stylesheet">
-@endsection
+@stop
 
 @section('custom_js')
-    <script src="{{ asset('js/products.js') }}" defer></script>
-@endsection
+    <script src="{{ mix('js/manifest.js') }}" defer></script>
+    <script src="{{ mix('js/products.js') }}" defer></script>
+@stop
 
 @section('content')
     <div class="container pt-2 pb-4 product-container">
@@ -15,7 +15,7 @@
             {{-- Kolom Filter --}}
             <div id="filter-container" class="d-none d-md-block col-md-4 col-lg-3">
                 <div class="filter-modal-backlight"></div>
-                <div class="row ps-3 filter-bar">
+                <div class="row ps-md-3 filter-bar ps-0">
                     <div class="d-none d-md-block col-12 p-0">
                         <h5 class="column-title">Filter</h5>
                     </div>

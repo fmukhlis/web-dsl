@@ -1,4 +1,2 @@
-/* @import '~bootstrap-icons/font/bootstrap-icons'; */
-
-@import url("form.css");
-@import url("product-gallery.css");
+@import url("./product-management/form.css");
+@import url("./product-management/product-gallery.css");
