@@ -78,16 +78,7 @@
                             </table>
                         </div>
                         <div class="card-footer">
-                            {{-- {{ dd($products->onEachSide(0)->links()) }} --}}
-                            {{ $products->onEachSide(1)->links() }}
-                            {{-- <ul class="pagination mb-0 align-items-center">
-                                <li class="mr-auto">Showing 1 to 10 of 91224 data</li>
-                                <li class="page-item"><a href="#" class="page-link">«</a></li>
-                                <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                                <li class="page-item"><a href="#" class="page-link">2</a></li>
-                                <li class="page-item"><a href="#" class="page-link">3</a></li>
-                                <li class="page-item"><a href="#" class="page-link">»</a></li>
-                            </ul> --}}
+                            {{ $products->onEachSide(2)->links() }}
                         </div>
                     </div>
                 </div>

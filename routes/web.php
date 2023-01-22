@@ -22,7 +22,8 @@ use App\Models\Product;
 */
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/products', [App\Http\Controllers\HomeController::class, 'products'])->name('products');
+Route::view('/products', 'home.products')->name('products');
+
 Route::get('/products/test-prod', [App\Http\Controllers\HomeController::class, 'product'])->name('product');
 
 Route::prefix('admin')
