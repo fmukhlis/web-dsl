@@ -5,8 +5,12 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Validator;
 
 use DateTime;
+
+// Models
+use App\Models\Product;
 
 class AdminProductRequest extends FormRequest
 {
@@ -30,6 +34,10 @@ class AdminProductRequest extends FormRequest
         $this->merge([
             'price' => preg_replace('/[^0-9]/', '', $this->input('price')), // Change Rpx.xxx to Int
             'cost' => preg_replace('/[^0-9]/', '', $this->input('cost')), // Change Rpx.xxx to Int
+            'slug' => preg_replace('/\s+/', ' ', strtolower($this->input('name'))), // Remove Multiple Whitespaces To One Whitespace
+        ]);
+        $this->merge([
+            'slug' => preg_replace('/[ ]/', '-', $this->input('slug')), // Create Slug Based On Product's Name
         ]);
         $this->input('discount')
             ? $this->merge(['discount' => preg_replace('/[^0-9]/', '', $this->input('discount'))]) // Change xx% to Int
@@ -49,7 +57,17 @@ class AdminProductRequest extends FormRequest
      */
     public function rules()
     {
+        $slugRule = 'required|string';
+        $isExists = (bool) $this->route('product');
+
+        if ($this->input('slug') != ($isExists ? $this->route('product')->slug : null)) {
+            $slugRule .= '|unique:App\Models\Product,slug';
+        }
+
         return [
+            'is_available' => 'required|boolean',
+            'is_new' => 'required|boolean',
+            'slug' => $slugRule,
             'directory_path' => "required|unique:products,image_path",
             'name' => "required|string|max:255",
             'category' => "required|in:Alat Kesehatan,Alat Laboratorium,Alat Kimia,Lainnya",
@@ -61,6 +79,8 @@ class AdminProductRequest extends FormRequest
             'cost' => 'required|numeric|min:1000|lt:price',
             'stock' => 'required|numeric|min:1',
             'product_code' => 'required|string',
+            'spec_key.*' => 'nullable|required_with:spec_val.*|string',
+            'spec_val.*' => 'nullable|required_with:spec_key.*|string',
         ];
     }
 }

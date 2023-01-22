@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Storage;
 
 // Controllers
 use App\Http\Controllers\Admin\ProductController as APC;
-
+use App\Http\Controllers\Admin\DropzoneController as DzC;
 // Models
 use App\Models\Product;
 
@@ -25,9 +25,6 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::get('/products', [App\Http\Controllers\HomeController::class, 'products'])->name('products');
 Route::get('/products/test-prod', [App\Http\Controllers\HomeController::class, 'product'])->name('product');
 
-Route::post('/product-temp-img', [App\Http\Controllers\HomeController::class, 'storeTempImg']);
-Route::delete('/product-temp-img/{fileName}', [App\Http\Controllers\HomeController::class, 'deleteTempImg']);
-
 Route::prefix('admin')
     ->name('admin.')
     ->group(function () {
@@ -38,7 +35,9 @@ Route::prefix('admin')
 
         // Product
         Route::view('/product', 'admin.product.index', [
-            'products' => Product::get(),
+            'products' => Product::paginate(1),
+            // 'products' => Product::simplePaginate(10),
+            // 'products' => Product::get(),
         ])->name('product');
         Route::view('/product/new', 'admin.product.add-product')->name('addProduct');
         Route::get(
@@ -53,6 +52,11 @@ Route::prefix('admin')
         Route::controller(APC::class)->group(function () {
             Route::post('/product/new', 'store');
             Route::patch('/product/{product:slug}', 'update');
+        });
+
+        Route::controller(DzC::class)->group(function () {
+            Route::post('/product-temp-img', 'storeTempImg');
+            Route::delete('/product-temp-img/{fileName}', 'deleteTempImg');
         });
     });
 

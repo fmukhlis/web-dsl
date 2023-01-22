@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Pagination\Paginator;
 
 use DateTime;
 
@@ -35,5 +36,7 @@ class AppServiceProvider extends ServiceProvider
         Blade::directive('numericToMoneyFormat', function ($numeric) {
             return "<?php echo 'Rp' . number_format($numeric, 0); ?>";
         });
+
+        Paginator::defaultView('vendor/pagination/custom-bs');
     }
 }

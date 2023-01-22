@@ -27,10 +27,17 @@ class Product extends Model
         'cost',
         'stock',
         'product_code',
+        'is_available',
+        'is_new',
     ];
 
     public function productImage()
     {
         return $this->hasMany(ProductImage::class, 'product_image_path', 'image_path');
+    }
+
+    public function productSpecification()
+    {
+        return $this->hasMany(ProductSpecification::class, 'product_id', 'id');
     }
 }

@@ -188,7 +188,7 @@
                     <a class="nav-link" href="https://web.whatsapp.com/">About Us</a>
                 </li>
             </ul>
-            <form>
+            <form class="ml-auto">
                 <input class="form-control" type="search" placeholder="Enter product's name..."
                     aria-label="Search">
             </form>

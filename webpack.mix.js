@@ -11,7 +11,18 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css')
-    .sourceMaps()
-    .webpackConfig({ devtool: 'inline-source-map'});
+// Compile All Node Modules Vendor Libraries (Listed in package.json file)
+// mix.extract();
+mix.js('resources/js/app.js', 'public/js');
+
+mix.sass('resources/sass/app.scss', 'public/css');
+
+mix.css('resources/css/product-management.css', 'public/css');
+
+mix.webpackConfig({ 
+        devtool: 'inline-source-map'
+    });
+    
+mix.extract();
+
+mix.browserSync('127.0.0.1::8000');

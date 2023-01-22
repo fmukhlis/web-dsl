@@ -255,29 +255,26 @@
                     <div class="col-12">
                         <ul class="nav nav-tabs flex-nowrap" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
-                                    data-bs-target="#home" type="button" role="tab" aria-controls="home"
-                                    aria-selected="true">Alat
+                                <button class="nav-link active" id="tab-alat-kesehatan" data-bs-toggle="tab"
+                                    data-bs-target="#alat-kesehatan" type="button" role="tab"
+                                    aria-controls="alat-kesehatan" aria-selected="true">Alat
                                     Kesehatan</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
-                                    type="button" role="tab" aria-controls="profile" aria-selected="false">Alat
+                                <button class="nav-link" id="tab-alat-laboratorium" data-bs-toggle="tab"
+                                    data-bs-target="#alat-laboratorium" type="button" role="tab"
+                                    aria-controls="alat-laboratorium" aria-selected="false">Alat
                                     Laboratorium</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
-                                    type="button" role="tab" aria-controls="contact" aria-selected="false">Alat
+                                <button class="nav-link" id="tab-alat-kimia" data-bs-toggle="tab"
+                                    data-bs-target="#alat-kimia" type="button" role="tab"
+                                    aria-controls="alat-kimia" aria-selected="false">Alat
                                     Kimia</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
-                                    type="button" role="tab" aria-controls="home" aria-selected="true">Alat
-                                    Sulap</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
-                                    type="button" role="tab" aria-controls="contact"
+                                <button class="nav-link" id="tab-lainnya" data-bs-toggle="tab" data-bs-target="#lainnya"
+                                    type="button" role="tab" aria-controls="lainnya"
                                     aria-selected="false">Lainnya</button>
                             </li>
                         </ul>
@@ -302,311 +299,504 @@
                         </ul>
                     </div>
 
-                    <div class="col-12 col-lg-6">
-                        <div class="card">
-                            <div class="row g-0">
-                                <a href="{{ route('product') }}" class="col-4 rounded-start product-thumbnail"
-                                    style="background-image: url('../assets/ousa-chea-gKUC4TMhOiY-unsplash.jpg');">
-                                </a>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <a href="{{ route('product') }}" class="card-link">
-                                            <h5 class="card-title m-0">Hematology Analyzer 5 Diff</h5>
-                                        </a>
-                                        <a href="#" class="d-flex m-0 mb-3 card-link align-items-center">
-                                            <small>Rating : </small>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="orange"
-                                                class="logo-svg mx-1">
-                                                <path
-                                                    d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
-                                            </svg>
-                                            <small>4.9 (1 Review)</small>
-                                        </a>
-                                        <p class="card-text m-0">Rp. 15.000.000 ,-</p>
-                                        <a class="" href="{{ route('product') }}"><small class="">Lihat
-                                                Lebih
-                                                Detail</small>
-                                        </a>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="alat-kesehatan" role="tabpanel"
+                            aria-labelledby="tab-alat-kesehatan">
+                            <div class="container">
+                                <div class="row g-2">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="card">
+                                            <div class="row g-0">
+                                                <a href="{{ route('product') }}"
+                                                    class="col-4 rounded-start product-thumbnail"
+                                                    style="background-image: url('../assets/ousa-chea-gKUC4TMhOiY-unsplash.jpg');">
+                                                </a>
+                                                <div class="col-8">
+                                                    <div class="card-body">
+                                                        <a href="{{ route('product') }}" class="card-link">
+                                                            <h5 class="card-title m-0">Hematology Analyzer 5 Diff</h5>
+                                                        </a>
+                                                        <a href="#"
+                                                            class="d-flex m-0 mb-3 card-link align-items-center">
+                                                            <small>Rating : </small>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                                fill="orange" class="logo-svg mx-1">
+                                                                <path
+                                                                    d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
+                                                            </svg>
+                                                            <small>4.9 (1 Review)</small>
+                                                        </a>
+                                                        <p class="card-text m-0">Rp. 15.000.000 ,-</p>
+                                                        <a class="" href="{{ route('product') }}"><small
+                                                                class="">Lihat
+                                                                Lebih
+                                                                Detail</small>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-lg-6">
+                                        <div class="card">
+                                            <div class="row g-0">
+                                                <a href="{{ route('product') }}"
+                                                    class="col-4 rounded-start product-thumbnail"
+                                                    style="background-image: url('../assets/ousa-chea-gKUC4TMhOiY-unsplash.jpg');">
+                                                </a>
+                                                <div class="col-8">
+                                                    <div class="card-body">
+                                                        <a href="{{ route('product') }}" class="card-link">
+                                                            <h5 class="card-title m-0">Hematology Analyzer 5 Diff</h5>
+                                                        </a>
+                                                        <a href="#"
+                                                            class="d-flex m-0 mb-3 card-link align-items-center">
+                                                            <small>Rating : </small>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                                fill="orange" class="logo-svg mx-1">
+                                                                <path
+                                                                    d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
+                                                            </svg>
+                                                            <small>4.9 (1 Review)</small>
+                                                        </a>
+                                                        <p class="card-text m-0">Rp. 15.000.000 ,-</p>
+                                                        <a class="" href="{{ route('product') }}"><small
+                                                                class="">Lihat
+                                                                Lebih
+                                                                Detail</small>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-lg-6">
+                                        <div class="card">
+                                            <div class="row g-0">
+                                                <a href="{{ route('product') }}"
+                                                    class="col-4 rounded-start product-thumbnail"
+                                                    style="background-image: url('../assets/ousa-chea-gKUC4TMhOiY-unsplash.jpg');">
+                                                </a>
+                                                <div class="col-8">
+                                                    <div class="card-body">
+                                                        <a href="{{ route('product') }}" class="card-link">
+                                                            <h5 class="card-title m-0">Hematology Analyzer 5 Diff</h5>
+                                                        </a>
+                                                        <a href="#"
+                                                            class="d-flex m-0 mb-3 card-link align-items-center">
+                                                            <small>Rating : </small>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                                fill="orange" class="logo-svg mx-1">
+                                                                <path
+                                                                    d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
+                                                            </svg>
+                                                            <small>4.9 (1 Review)</small>
+                                                        </a>
+                                                        <p class="card-text m-0">Rp. 15.000.000 ,-</p>
+                                                        <a class="" href="{{ route('product') }}"><small
+                                                                class="">Lihat
+                                                                Lebih
+                                                                Detail</small>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-lg-6">
+                                        <div class="card">
+                                            <div class="row g-0">
+                                                <a href="{{ route('product') }}"
+                                                    class="col-4 rounded-start product-thumbnail"
+                                                    style="background-image: url('../assets/ousa-chea-gKUC4TMhOiY-unsplash.jpg');">
+                                                </a>
+                                                <div class="col-8">
+                                                    <div class="card-body">
+                                                        <a href="{{ route('product') }}" class="card-link">
+                                                            <h5 class="card-title m-0">Hematology Analyzer 5 Diff</h5>
+                                                        </a>
+                                                        <a href="#"
+                                                            class="d-flex m-0 mb-3 card-link align-items-center">
+                                                            <small>Rating : </small>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                                fill="orange" class="logo-svg mx-1">
+                                                                <path
+                                                                    d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
+                                                            </svg>
+                                                            <small>4.9 (1 Review)</small>
+                                                        </a>
+                                                        <p class="card-text m-0">Rp. 15.000.000 ,-</p>
+                                                        <a class="" href="{{ route('product') }}"><small
+                                                                class="">Lihat
+                                                                Lebih
+                                                                Detail</small>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-12 col-lg-6">
-                        <div class="card">
-                            <div class="row g-0">
-                                <a href="{{ route('product') }}" class="col-4 rounded-start product-thumbnail"
-                                    style="background-image: url('../assets/ousa-chea-gKUC4TMhOiY-unsplash.jpg');">
-                                </a>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <a href="{{ route('product') }}" class="card-link">
-                                            <h5 class="card-title m-0">Hematology Analyzer 5 Diff</h5>
-                                        </a>
-                                        <a href="#" class="d-flex m-0 mb-3 card-link align-items-center">
-                                            <small>Rating : </small>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="orange"
-                                                class="logo-svg mx-1">
-                                                <path
-                                                    d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
-                                            </svg>
-                                            <small>4.9 (1 Review)</small>
-                                        </a>
-                                        <p class="card-text m-0">Rp. 15.000.000 ,-</p>
-                                        <a class="" href="{{ route('product') }}"><small class="">Lihat Lebih
-                                                Detail</small>
-                                        </a>
+                        <div class="tab-pane fade" id="alat-laboratorium" role="tabpanel"
+                            aria-labelledby="tab-alat-laboratorium">
+                            <div class="container">
+                                <div class="row g-2">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="card">
+                                            <div class="row g-0">
+                                                <a href="{{ route('product') }}"
+                                                    class="col-4 rounded-start product-thumbnail"
+                                                    style="background-image: url('../assets/ousa-chea-gKUC4TMhOiY-unsplash.jpg');">
+                                                </a>
+                                                <div class="col-8">
+                                                    <div class="card-body">
+                                                        <a href="{{ route('product') }}" class="card-link">
+                                                            <h5 class="card-title m-0">Hematology Analyzer 5 Diff</h5>
+                                                        </a>
+                                                        <a href="#"
+                                                            class="d-flex m-0 mb-3 card-link align-items-center">
+                                                            <small>Rating : </small>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                                fill="orange" class="logo-svg mx-1">
+                                                                <path
+                                                                    d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
+                                                            </svg>
+                                                            <small>4.9 (1 Review)</small>
+                                                        </a>
+                                                        <p class="card-text m-0">Rp. 15.000.000 ,-</p>
+                                                        <a class="" href="{{ route('product') }}"><small
+                                                                class="">Lihat
+                                                                Lebih
+                                                                Detail</small>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-lg-6">
+                                        <div class="card">
+                                            <div class="row g-0">
+                                                <a href="{{ route('product') }}"
+                                                    class="col-4 rounded-start product-thumbnail"
+                                                    style="background-image: url('../assets/ousa-chea-gKUC4TMhOiY-unsplash.jpg');">
+                                                </a>
+                                                <div class="col-8">
+                                                    <div class="card-body">
+                                                        <a href="{{ route('product') }}" class="card-link">
+                                                            <h5 class="card-title m-0">Hematology Analyzer 5 Diff</h5>
+                                                        </a>
+                                                        <a href="#"
+                                                            class="d-flex m-0 mb-3 card-link align-items-center">
+                                                            <small>Rating : </small>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                                fill="orange" class="logo-svg mx-1">
+                                                                <path
+                                                                    d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
+                                                            </svg>
+                                                            <small>4.9 (1 Review)</small>
+                                                        </a>
+                                                        <p class="card-text m-0">Rp. 15.000.000 ,-</p>
+                                                        <a class="" href="{{ route('product') }}"><small
+                                                                class="">Lihat
+                                                                Lebih
+                                                                Detail</small>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
+                        <div class="tab-pane fade" id="alat-kimia" role="tabpanel" aria-labelledby="tab-alat-kimia">
+                            <div class="container">
+                                <div class="row g-2">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="card">
+                                            <div class="row g-0">
+                                                <a href="{{ route('product') }}"
+                                                    class="col-4 rounded-start product-thumbnail"
+                                                    style="background-image: url('../assets/ousa-chea-gKUC4TMhOiY-unsplash.jpg');">
+                                                </a>
+                                                <div class="col-8">
+                                                    <div class="card-body">
+                                                        <a href="{{ route('product') }}" class="card-link">
+                                                            <h5 class="card-title m-0">Hematology Analyzer 5 Diff</h5>
+                                                        </a>
+                                                        <a href="#"
+                                                            class="d-flex m-0 mb-3 card-link align-items-center">
+                                                            <small>Rating : </small>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                                fill="orange" class="logo-svg mx-1">
+                                                                <path
+                                                                    d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
+                                                            </svg>
+                                                            <small>4.9 (1 Review)</small>
+                                                        </a>
+                                                        <p class="card-text m-0">Rp. 15.000.000 ,-</p>
+                                                        <a class="" href="{{ route('product') }}"><small
+                                                                class="">Lihat
+                                                                Lebih
+                                                                Detail</small>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
+                                    <div class="col-12 col-lg-6">
+                                        <div class="card">
+                                            <div class="row g-0">
+                                                <a href="{{ route('product') }}"
+                                                    class="col-4 rounded-start product-thumbnail"
+                                                    style="background-image: url('../assets/ousa-chea-gKUC4TMhOiY-unsplash.jpg');">
+                                                </a>
+                                                <div class="col-8">
+                                                    <div class="card-body">
+                                                        <a href="{{ route('product') }}" class="card-link">
+                                                            <h5 class="card-title m-0">Hematology Analyzer 5 Diff</h5>
+                                                        </a>
+                                                        <a href="#"
+                                                            class="d-flex m-0 mb-3 card-link align-items-center">
+                                                            <small>Rating : </small>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                                fill="orange" class="logo-svg mx-1">
+                                                                <path
+                                                                    d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
+                                                            </svg>
+                                                            <small>4.9 (1 Review)</small>
+                                                        </a>
+                                                        <p class="card-text m-0">Rp. 15.000.000 ,-</p>
+                                                        <a class="" href="{{ route('product') }}"><small
+                                                                class="">Lihat
+                                                                Lebih
+                                                                Detail</small>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                    <div class="col-12 col-lg-6">
-                        <div class="card">
-                            <div class="row g-0">
-                                <a href="{{ route('product') }}" class="col-4 rounded-start product-thumbnail"
-                                    style="background-image: url('../assets/ousa-chea-gKUC4TMhOiY-unsplash.jpg');">
-                                </a>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <a href="{{ route('product') }}" class="card-link">
-                                            <h5 class="card-title m-0">Hematology Analyzer 5 Diff</h5>
-                                        </a>
-                                        <a href="#" class="d-flex m-0 mb-3 card-link align-items-center">
-                                            <small>Rating : </small>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="orange"
-                                                class="logo-svg mx-1">
-                                                <path
-                                                    d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
-                                            </svg>
-                                            <small>4.9 (1 Review)</small>
-                                        </a>
-                                        <p class="card-text m-0">Rp. 15.000.000 ,-</p>
-                                        <a class="" href="{{ route('product') }}"><small class="">Lihat
-                                                Lebih
-                                                Detail</small>
-                                        </a>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="card">
+                                            <div class="row g-0">
+                                                <a href="{{ route('product') }}"
+                                                    class="col-4 rounded-start product-thumbnail"
+                                                    style="background-image: url('../assets/ousa-chea-gKUC4TMhOiY-unsplash.jpg');">
+                                                </a>
+                                                <div class="col-8">
+                                                    <div class="card-body">
+                                                        <a href="{{ route('product') }}" class="card-link">
+                                                            <h5 class="card-title m-0">Hematology Analyzer 5 Diff</h5>
+                                                        </a>
+                                                        <a href="#"
+                                                            class="d-flex m-0 mb-3 card-link align-items-center">
+                                                            <small>Rating : </small>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                                fill="orange" class="logo-svg mx-1">
+                                                                <path
+                                                                    d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
+                                                            </svg>
+                                                            <small>4.9 (1 Review)</small>
+                                                        </a>
+                                                        <p class="card-text m-0">Rp. 15.000.000 ,-</p>
+                                                        <a class="" href="{{ route('product') }}"><small
+                                                                class="">Lihat
+                                                                Lebih
+                                                                Detail</small>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-12 col-lg-6">
-                        <div class="card">
-                            <div class="row g-0">
-                                <a href="{{ route('product') }}" class="col-4 rounded-start product-thumbnail"
-                                    style="background-image: url('../assets/ousa-chea-gKUC4TMhOiY-unsplash.jpg');">
-                                </a>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <a href="{{ route('product') }}" class="card-link">
-                                            <h5 class="card-title m-0">Hematology Analyzer 5 Diff</h5>
-                                        </a>
-                                        <a href="#" class="d-flex m-0 mb-3 card-link align-items-center">
-                                            <small>Rating : </small>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="orange"
-                                                class="logo-svg mx-1">
-                                                <path
-                                                    d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
-                                            </svg>
-                                            <small>4.9 (1 Review)</small>
-                                        </a>
-                                        <p class="card-text m-0">Rp. 15.000.000 ,-</p>
-                                        <a class="" href="{{ route('product') }}"><small class="">Lihat
-                                                Lebih
-                                                Detail</small>
-                                        </a>
+                        <div class="tab-pane fade" id="lainnya" role="tabpanel" aria-labelledby="tab-lainnya">
+                            <div class="container">
+                                <div class="row g-2">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="card">
+                                            <div class="row g-0">
+                                                <a href="{{ route('product') }}"
+                                                    class="col-4 rounded-start product-thumbnail"
+                                                    style="background-image: url('../assets/ousa-chea-gKUC4TMhOiY-unsplash.jpg');">
+                                                </a>
+                                                <div class="col-8">
+                                                    <div class="card-body">
+                                                        <a href="{{ route('product') }}" class="card-link">
+                                                            <h5 class="card-title m-0">Hematology Analyzer 5 Diff</h5>
+                                                        </a>
+                                                        <a href="#"
+                                                            class="d-flex m-0 mb-3 card-link align-items-center">
+                                                            <small>Rating : </small>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                                fill="orange" class="logo-svg mx-1">
+                                                                <path
+                                                                    d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
+                                                            </svg>
+                                                            <small>4.9 (1 Review)</small>
+                                                        </a>
+                                                        <p class="card-text m-0">Rp. 15.000.000 ,-</p>
+                                                        <a class="" href="{{ route('product') }}"><small
+                                                                class="">Lihat
+                                                                Lebih
+                                                                Detail</small>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-12 col-lg-6">
-                        <div class="card">
-                            <div class="row g-0">
-                                <a href="{{ route('product') }}" class="col-4 rounded-start product-thumbnail"
-                                    style="background-image: url('../assets/ousa-chea-gKUC4TMhOiY-unsplash.jpg');">
-                                </a>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <a href="{{ route('product') }}" class="card-link">
-                                            <h5 class="card-title m-0">Hematology Analyzer 5 Diff</h5>
-                                        </a>
-                                        <a href="#" class="d-flex m-0 mb-3 card-link align-items-center">
-                                            <small>Rating : </small>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="orange"
-                                                class="logo-svg mx-1">
-                                                <path
-                                                    d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
-                                            </svg>
-                                            <small>4.9 (1 Review)</small>
-                                        </a>
-                                        <p class="card-text m-0">Rp. 15.000.000 ,-</p>
-                                        <a class="" href="{{ route('product') }}"><small class="">Lihat
-                                                Lebih
-                                                Detail</small>
-                                        </a>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="card">
+                                            <div class="row g-0">
+                                                <a href="{{ route('product') }}"
+                                                    class="col-4 rounded-start product-thumbnail"
+                                                    style="background-image: url('../assets/ousa-chea-gKUC4TMhOiY-unsplash.jpg');">
+                                                </a>
+                                                <div class="col-8">
+                                                    <div class="card-body">
+                                                        <a href="{{ route('product') }}" class="card-link">
+                                                            <h5 class="card-title m-0">Hematology Analyzer 5 Diff</h5>
+                                                        </a>
+                                                        <a href="#"
+                                                            class="d-flex m-0 mb-3 card-link align-items-center">
+                                                            <small>Rating : </small>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                                fill="orange" class="logo-svg mx-1">
+                                                                <path
+                                                                    d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
+                                                            </svg>
+                                                            <small>4.9 (1 Review)</small>
+                                                        </a>
+                                                        <p class="card-text m-0">Rp. 15.000.000 ,-</p>
+                                                        <a class="" href="{{ route('product') }}"><small
+                                                                class="">Lihat
+                                                                Lebih
+                                                                Detail</small>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-12 col-lg-6">
-                        <div class="card">
-                            <div class="row g-0">
-                                <a href="{{ route('product') }}" class="col-4 rounded-start product-thumbnail"
-                                    style="background-image: url('../assets/ousa-chea-gKUC4TMhOiY-unsplash.jpg');">
-                                </a>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <a href="{{ route('product') }}" class="card-link">
-                                            <h5 class="card-title m-0">Hematology Analyzer 5 Diff</h5>
-                                        </a>
-                                        <a href="#" class="d-flex m-0 mb-3 card-link align-items-center">
-                                            <small>Rating : </small>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="orange"
-                                                class="logo-svg mx-1">
-                                                <path
-                                                    d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
-                                            </svg>
-                                            <small>4.9 (1 Review)</small>
-                                        </a>
-                                        <p class="card-text m-0">Rp. 15.000.000 ,-</p>
-                                        <a class="" href="{{ route('product') }}"><small class="">Lihat
-                                                Lebih
-                                                Detail</small>
-                                        </a>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="card">
+                                            <div class="row g-0">
+                                                <a href="{{ route('product') }}"
+                                                    class="col-4 rounded-start product-thumbnail"
+                                                    style="background-image: url('../assets/ousa-chea-gKUC4TMhOiY-unsplash.jpg');">
+                                                </a>
+                                                <div class="col-8">
+                                                    <div class="card-body">
+                                                        <a href="{{ route('product') }}" class="card-link">
+                                                            <h5 class="card-title m-0">Hematology Analyzer 5 Diff</h5>
+                                                        </a>
+                                                        <a href="#"
+                                                            class="d-flex m-0 mb-3 card-link align-items-center">
+                                                            <small>Rating : </small>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                                fill="orange" class="logo-svg mx-1">
+                                                                <path
+                                                                    d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
+                                                            </svg>
+                                                            <small>4.9 (1 Review)</small>
+                                                        </a>
+                                                        <p class="card-text m-0">Rp. 15.000.000 ,-</p>
+                                                        <a class="" href="{{ route('product') }}"><small
+                                                                class="">Lihat
+                                                                Lebih
+                                                                Detail</small>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-12 col-lg-6">
-                        <div class="card">
-                            <div class="row g-0">
-                                <a href="{{ route('product') }}" class="col-4 rounded-start product-thumbnail"
-                                    style="background-image: url('../assets/ousa-chea-gKUC4TMhOiY-unsplash.jpg');">
-                                </a>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <a href="{{ route('product') }}" class="card-link">
-                                            <h5 class="card-title m-0">Hematology Analyzer 5 Diff</h5>
-                                        </a>
-                                        <a href="#" class="d-flex m-0 mb-3 card-link align-items-center">
-                                            <small>Rating : </small>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="orange"
-                                                class="logo-svg mx-1">
-                                                <path
-                                                    d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
-                                            </svg>
-                                            <small>4.9 (1 Review)</small>
-                                        </a>
-                                        <p class="card-text m-0">Rp. 15.000.000 ,-</p>
-                                        <a class="" href="{{ route('product') }}"><small class="">Lihat
-                                                Lebih
-                                                Detail</small>
-                                        </a>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="card">
+                                            <div class="row g-0">
+                                                <a href="{{ route('product') }}"
+                                                    class="col-4 rounded-start product-thumbnail"
+                                                    style="background-image: url('../assets/ousa-chea-gKUC4TMhOiY-unsplash.jpg');">
+                                                </a>
+                                                <div class="col-8">
+                                                    <div class="card-body">
+                                                        <a href="{{ route('product') }}" class="card-link">
+                                                            <h5 class="card-title m-0">Hematology Analyzer 5 Diff</h5>
+                                                        </a>
+                                                        <a href="#"
+                                                            class="d-flex m-0 mb-3 card-link align-items-center">
+                                                            <small>Rating : </small>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                                fill="orange" class="logo-svg mx-1">
+                                                                <path
+                                                                    d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
+                                                            </svg>
+                                                            <small>4.9 (1 Review)</small>
+                                                        </a>
+                                                        <p class="card-text m-0">Rp. 15.000.000 ,-</p>
+                                                        <a class="" href="{{ route('product') }}"><small
+                                                                class="">Lihat
+                                                                Lebih
+                                                                Detail</small>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-12 col-lg-6">
-                        <div class="card">
-                            <div class="row g-0">
-                                <a href="{{ route('product') }}" class="col-4 rounded-start product-thumbnail"
-                                    style="background-image: url('../assets/ousa-chea-gKUC4TMhOiY-unsplash.jpg');">
-                                </a>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <a href="{{ route('product') }}" class="card-link">
-                                            <h5 class="card-title m-0">Hematology Analyzer 5 Diff</h5>
-                                        </a>
-                                        <a href="#" class="d-flex m-0 mb-3 card-link align-items-center">
-                                            <small>Rating : </small>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="orange"
-                                                class="logo-svg mx-1">
-                                                <path
-                                                    d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
-                                            </svg>
-                                            <small>4.9 (1 Review)</small>
-                                        </a>
-                                        <p class="card-text m-0">Rp. 15.000.000 ,-</p>
-                                        <a class="" href="{{ route('product') }}"><small class="">Lihat
-                                                Lebih
-                                                Detail</small>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-lg-6">
-                        <div class="card">
-                            <div class="row g-0">
-                                <a href="{{ route('product') }}" class="col-4 rounded-start product-thumbnail"
-                                    style="background-image: url('../assets/ousa-chea-gKUC4TMhOiY-unsplash.jpg');">
-                                </a>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <a href="{{ route('product') }}" class="card-link">
-                                            <h5 class="card-title m-0">Hematology Analyzer 5 Diff</h5>
-                                        </a>
-                                        <a href="#" class="d-flex m-0 mb-3 card-link align-items-center">
-                                            <small>Rating : </small>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="orange"
-                                                class="logo-svg mx-1">
-                                                <path
-                                                    d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
-                                            </svg>
-                                            <small>4.9 (1 Review)</small>
-                                        </a>
-                                        <p class="card-text m-0">Rp. 15.000.000 ,-</p>
-                                        <a class="" href="{{ route('product') }}"><small class="">Lihat
-                                                Lebih
-                                                Detail</small>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-lg-6">
-                        <div class="card">
-                            <div class="row g-0">
-                                <a href="{{ route('product') }}" class="col-4 rounded-start product-thumbnail"
-                                    style="background-image: url('../assets/ousa-chea-gKUC4TMhOiY-unsplash.jpg');">
-                                </a>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <a href="{{ route('product') }}" class="card-link">
-                                            <h5 class="card-title m-0">Hematology Analyzer 5 Diff</h5>
-                                        </a>
-                                        <a href="#" class="d-flex m-0 mb-3 card-link align-items-center">
-                                            <small>Rating : </small>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="orange"
-                                                class="logo-svg mx-1">
-                                                <path
-                                                    d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
-                                            </svg>
-                                            <small>4.9 (1 Review)</small>
-                                        </a>
-                                        <p class="card-text m-0">Rp. 15.000.000 ,-</p>
-                                        <a class="" href="{{ route('product') }}"><small class="">Lihat
-                                                Lebih
-                                                Detail</small>
-                                        </a>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="card">
+                                            <div class="row g-0">
+                                                <a href="{{ route('product') }}"
+                                                    class="col-4 rounded-start product-thumbnail"
+                                                    style="background-image: url('../assets/ousa-chea-gKUC4TMhOiY-unsplash.jpg');">
+                                                </a>
+                                                <div class="col-8">
+                                                    <div class="card-body">
+                                                        <a href="{{ route('product') }}" class="card-link">
+                                                            <h5 class="card-title m-0">Hematology Analyzer 5 Diff</h5>
+                                                        </a>
+                                                        <a href="#"
+                                                            class="d-flex m-0 mb-3 card-link align-items-center">
+                                                            <small>Rating : </small>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                                fill="orange" class="logo-svg mx-1">
+                                                                <path
+                                                                    d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
+                                                            </svg>
+                                                            <small>4.9 (1 Review)</small>
+                                                        </a>
+                                                        <p class="card-text m-0">Rp. 15.000.000 ,-</p>
+                                                        <a class="" href="{{ route('product') }}"><small
+                                                                class="">Lihat
+                                                                Lebih
+                                                                Detail</small>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

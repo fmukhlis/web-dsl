@@ -1,0 +1,50 @@
+.top-right {
+    top: 0;
+    right: 0;
+}
+
+.position-bottom-right.fill {
+    left: 50%;
+}
+
+.position-bottom-left{
+    bottom: 0;
+    left: 0;
+}
+
+.position-bottom-left.fill{
+    right: 50%;
+}
+
+.position-bottom-fill {
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.product-preview {
+    max-height: 9rem;
+    max-width: 100%;
+}
+
+.opacity-75 {
+    opacity: .75;
+}
+
+.overflow-x-o-auto {
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.overflow-y-o-auto {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.obj-fit-cover {
+    object-fit: cover;
+}
+
+.obj-fit-content {
+    object-fit: content;
+}

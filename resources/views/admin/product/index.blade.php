@@ -42,11 +42,10 @@
                                         <th class="text-center p-0" style="width: 5%">#</th>
                                         <th style="width: 25%;">Name</th>
                                         <th style="width: 7%;">Stock</th>
-                                        <th class="text-nowrap text-center" style="width: 13%;">Cost (IDR)</th>
-                                        <th class="text-nowrap text-center" style="width: 7%;">Disc.</th>
-                                        <th class="text-nowrap text-center" style="width: 13%;">Price (IDR)</th>
+                                        <th class="text-nowrap text-center" style="width: 15%;">Cost (IDR)</th>
+                                        <th class="text-nowrap text-center" style="width: 15%;">Total Price (IDR)</th>
                                         <th class="text-center" style="width: 15%;">Sales</th>
-                                        <th class="text-nowrap text-center p-0" style="width: 15%;">Total Income (IDR)</th>
+                                        <th class="text-nowrap text-center p-0" style="width: 18%;">Total Income (IDR)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -62,8 +61,7 @@
                                             </td>
                                             <td class="text-center">{{ $product->stock }}</td>
                                             <td class="text-right">@numericToMoneyFormat($product->cost)</td>
-                                            <td class="text-center">{{ $product->discount }}%</td>
-                                            <td class="text-right">@numericToMoneyFormat($product->price)</td>
+                                            <td class="text-right">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</td>
                                             <td class="text-nowrap">
                                                 <div class="d-flex justify-content-end">
                                                     0 Sold
@@ -80,15 +78,16 @@
                             </table>
                         </div>
                         <div class="card-footer">
-                            <ul class="pagination mb-0 align-items-center">
+                            {{-- {{ dd($products->onEachSide(0)->links()) }} --}}
+                            {{ $products->onEachSide(1)->links() }}
+                            {{-- <ul class="pagination mb-0 align-items-center">
                                 <li class="mr-auto">Showing 1 to 10 of 91224 data</li>
                                 <li class="page-item"><a href="#" class="page-link">«</a></li>
                                 <li class="page-item active"><a href="#" class="page-link">1</a></li>
                                 <li class="page-item"><a href="#" class="page-link">2</a></li>
                                 <li class="page-item"><a href="#" class="page-link">3</a></li>
                                 <li class="page-item"><a href="#" class="page-link">»</a></li>
-                            </ul>
-
+                            </ul> --}}
                         </div>
                     </div>
                 </div>

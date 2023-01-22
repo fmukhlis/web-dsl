@@ -27,6 +27,8 @@ class CreateProductsTable extends Migration
             $table->integer('cost');
             $table->integer('stock');
             $table->string('product_code');
+            $table->boolean('is_available');
+            $table->boolean('is_new');
             $table->timestamps();
         });
     }
@@ -38,6 +40,6 @@ class CreateProductsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('temp_product_images');
+        Schema::dropIfExists('products');
     }
 }

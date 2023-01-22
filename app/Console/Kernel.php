@@ -27,8 +27,8 @@ class Kernel extends ConsoleKernel
             $validTime = 2; // Hours
             $invalidFile = DB::table('temp_product_images')->whereDate('created_at', '<=', $now->subHours($validTime))->first();
             DB::table('temp_product_images')->whereDate('created_at', '<=', $now)->delete();
-            Storage::deleteDirectory($invalidFile->directory_path);
-        })->everyTwoHours();
+            Storage::deleteDirectory('temp-product-images/' . $invalidFile->directory_path);
+        })->everyMinute();
     }
 
     /**

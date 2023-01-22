@@ -22,10 +22,6 @@
     <!-- Main content -->
     <div class="content">
 
-        {{-- @if ($errors->any())
-            {!! implode('', $errors->all('<div>:message</div>')) !!}
-        @endif --}}
-
         <form action="{{ route('admin.addProduct') }}" method="post">
             @csrf
             <input type="hidden" name="directory_path" readonly value="{{ md5(Auth::id() . microtime()) }}">
@@ -36,6 +32,16 @@
                         @if ($errors->has('no_product_image'))
                             <div class="alert alert-danger alert-dismissible fade show d-flex p-3" role="alert">
                                 {{ $errors->first('no_product_image') }}
+                                <button type="button" class="close position-relative p-0 ml-auto" data-dismiss="alert"
+                                    aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        @endif
+
+                        @if ($errors->has('slug_conflict'))
+                            <div class="alert alert-danger alert-dismissible fade show d-flex p-3" role="alert">
+                                {{ $errors->first('slug_conflict') }}
                                 <button type="button" class="close position-relative p-0 ml-auto" data-dismiss="alert"
                                     aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
@@ -139,8 +145,8 @@
                                                                 <title>Error</title>
                                                                 <g stroke="none" stroke-width="1" fill="none"
                                                                     fill-rule="evenodd">
-                                                                    <g stroke="#747474" stroke-opacity="0.75" fill="#FFFFFF"
-                                                                        fill-opacity="0.816519475">
+                                                                    <g stroke="#747474" stroke-opacity="0.75"
+                                                                        fill="#FFFFFF" fill-opacity="0.816519475">
                                                                         <path
                                                                             d="M32.6568542,29 L38.3106978,23.3461564 C39.8771021,21.7797521 39.8758057,19.2483887 38.3137085,17.6862915 C36.7547899,16.1273729 34.2176035,16.1255422 32.6538436,17.6893022 L27,23.3431458 L21.3461564,17.6893022 C19.7823965,16.1255422 17.2452101,16.1273729 15.6862915,17.6862915 C14.1241943,19.2483887 14.1228979,21.7797521 15.6893022,23.3461564 L21.3431458,29 L15.6893022,34.6538436 C14.1228979,36.2202479 14.1241943,38.7516113 15.6862915,40.3137085 C17.2452101,41.8726271 19.7823965,41.8744578 21.3461564,40.3106978 L27,34.6568542 L32.6538436,40.3106978 C34.2176035,41.8744578 36.7547899,41.8726271 38.3137085,40.3137085 C39.8758057,38.7516113 39.8771021,36.2202479 38.3106978,34.6538436 L32.6568542,29 Z M27,53 C41.3594035,53 53,41.3594035 53,27 C53,12.6405965 41.3594035,1 27,1 C12.6405965,1 1,12.6405965 1,27 C1,41.3594035 12.6405965,53 27,53 Z">
                                                                         </path>
@@ -210,7 +216,7 @@
                                     <div class="col-md-12 mb-3">
                                         <label for="description">Product's Description</label>
                                         <textarea class="@error('description') is-invalid @enderror form-control mh-medium" id="description"
-                                            name="description" placeholder="Tulis deskripsi..." required>{{ old('description') }}</textarea>
+                                            name="description" placeholder="Write description..." required>{{ old('description') }}</textarea>
                                         @error('description')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
@@ -379,66 +385,107 @@
                                         </div>
                                         <small class="text-muted">*Example : 31/12/2022</small>
                                     </div>
+
+                                    <div class="col-md-6">
+                                        <label>Product's Availability</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Product's Used Condition</label>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="border p-2 rounded d-flex">
+                                            <div class="form-check form-check-inline mr-5">
+                                                <input class="form-check-input" type="radio" name="is_available"
+                                                    id="availability_ready" value="1"
+                                                    @if (old('is_available', 1) == 1) checked @endif>
+                                                <label class="form-check-label" for="availability_ready">Ready
+                                                    Stock</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="is_available"
+                                                    id="availability_preorder" value="0"
+                                                    @if (old('is_available', 1) == 0) checked @endif>
+                                                <label class="form-check-label"
+                                                    for="availability_preorder">Pre-Order</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="border p-2 rounded d-flex">
+                                            <div class="form-check form-check-inline mr-5">
+                                                <input class="form-check-input" type="radio" name="is_new"
+                                                    id="used_condition_new" value="1"
+                                                    @if (old('is_new', 1) == 1) checked @endif>
+                                                <label class="form-check-label" for="used_condition_new">New</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="is_new"
+                                                    id="used_condition_second" value="0"
+                                                    @if (old('is_new', 1) == 0) checked @endif>
+                                                <label class="form-check-label"
+                                                    for="used_condition_second">Second-Hand</label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="form-row">
                                     <div class="col-12">
                                         <label>Product's Specification(s)</label>
-                                        <a href="javascript:void(0)" class="btn btn-tool text-purple">
+                                        <a href="javascript:void(0)" id="add-spec-btn" class="btn btn-tool text-purple">
                                             <i class="fa fa-plus-circle" aria-hidden="true"></i>
                                         </a>
                                     </div>
                                 </div>
 
-                                <div class="form-row border rounded m-0 p-2 mb-2">
-                                    {{-- <div class="col-12 mb-1">#1</div>
-                                    <div class="col-md-3 mb-2">
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text bg-purple"><i class="fa fa-key"></i></span>
+                                <div id="product-specification-container" class="border rounded m-0 p-2 mb-2">
+                                    @if (old('spec_key') || old('spec_val'))
+                                        @foreach (old('spec_key') as $spec_keyKey => $spec_keyVal)
+                                            <div class="form-row">
+                                                <div class="col-md-3 my-2">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text bg-purple"><i
+                                                                    class="fa fa-key"></i></span>
+                                                        </div>
+                                                        <input type="text"
+                                                            class="form-control @error('spec_key.' . $spec_keyKey) is-invalid @enderror spec"
+                                                            name="spec_key[]" placeholder="Kata Kunci"
+                                                            value="{{ old('spec_key')[$spec_keyKey] }}">
+                                                        @error('spec_key.' . $spec_keyKey)
+                                                            <div class="invalid-feedback">
+                                                                {{ $message }}
+                                                            </div>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 my-2">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text bg-purple"><i
+                                                                    class="fa fa-file"></i></span>
+                                                        </div>
+                                                        <input type="text"
+                                                            class="form-control @error('spec_val.' . $spec_keyKey) is-invalid @enderror spec"
+                                                            name="spec_val[]" placeholder="Nilai"
+                                                            value="{{ old('spec_val')[$spec_keyKey] }}">
+                                                        @error('spec_val.' . $spec_keyKey)
+                                                            <div class="invalid-feedback">
+                                                                {{ $message }}
+                                                            </div>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1 my-2 d-flex">
+                                                    <a href="javascript:void(0)" data-controll="remove-spec"
+                                                        class="btn btn-danger ml-auto mb-auto" data-toggle="tooltip"
+                                                        data-placement="left" title="Remove">
+                                                        <i class="fa fa-times"></i>
+                                                    </a>
+                                                </div>
                                             </div>
-                                            <input type="text" class="form-control" required>
-                                        </div>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid zip.
-                                        </div>
-                                    </div>
-                                    <div class="col-md-9 mb-2">
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text bg-purple"><i class="fa fa-file"></i></span>
-                                            </div>
-                                            <input type="text" class="form-control" required>
-                                        </div>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid zip.
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-12 mb-1">#2</div>
-                                    <div class="col-md-3 mb-2">
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text bg-purple"><i class="fa fa-key"></i></span>
-                                            </div>
-                                            <input type="text" class="form-control" required>
-                                        </div>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid zip.
-                                        </div>
-                                    </div>
-                                    <div class="col-md-9 mb-2">
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text bg-purple"><i class="fa fa-file"></i></span>
-                                            </div>
-                                            <input type="text" class="form-control" required>
-                                        </div>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid zip.
-                                        </div>
-                                    </div> --}}
+                                        @endforeach
+                                    @endif
                                 </div>
 
                             </div>
@@ -482,28 +529,7 @@
 @stop
 
 @section('js')
-    <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (function() {
-            'use strict';
-            window.addEventListener('load', function() {
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.getElementsByClassName('needs-validation');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function(form) {
-                    form.addEventListener('submit', function(event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
-    </script>
+    <script src="{{ mix('js/manifest.js') }}" defer></script>
+    <script src="{{ mix('js/vendor.js') }}" defer></script>
     <script src="{{ mix('js/app.js') }}" defer></script>
-    <script src="{{ asset('js') }}/product-management.js" defer></script>
-    <script src="{{ asset('js') }}/inputmask.js"></script>
-    <script src="{{ asset('js') }}/inputmask.binding.js"></script>
 @stop

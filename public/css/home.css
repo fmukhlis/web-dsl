@@ -106,7 +106,7 @@
     
     /* Style Judul Caption */
     .carousel-caption .title {
-        font-weight: 900;
+        font-weight: 800;
         font-size: 2.5rem;
         margin-bottom: 1rem;
     }
@@ -284,7 +284,7 @@
     }
     .category-title h2 {
         margin-bottom: .75rem;
-        font-weight: 900;
+        font-weight: 800;
     }
     .container.category {
         padding-top: 2.5rem;
@@ -334,13 +334,13 @@
         display: block;
     }
     .card .slide-top {
-        height: 3.5rem; 
+        min-height: 3.7rem; 
         overflow: hidden;
     }
 
     .card-home {
         overflow: hidden;
-        height: 17.7rem;
+        height: 17.9rem;
     }
     .card-home .card-img-top {
         width: 100%;
@@ -375,7 +375,7 @@
     }
     .card-home .product-price {
         padding-top: .5rem;
-        height: 3.8rem;
+        height: 4.2rem;
     }
     .card-home:hover .product-price .slide-top {
         margin-top: -6rem;

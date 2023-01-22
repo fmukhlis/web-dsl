@@ -13,6 +13,7 @@ use App\Http\Requests\AdminProductRequest;
 // Models
 use App\Models\Product;
 use App\Models\TempProductImage;
+use Illuminate\Contracts\Cache\Store;
 
 class ProductController extends Controller
 {
@@ -58,7 +59,20 @@ class ProductController extends Controller
         // (Optional) 
         unset($validated['directory_path']);
 
-        Product::create($validated);
+        $product = Product::create($validated);
+
+        if ($request->input('spec_key')) {
+            foreach ($validated['spec_key'] as $key => $value) {
+                if ($value) {
+                    $product->productSpecification()->create(
+                        [
+                            'spec_key' => $validated['spec_key'][$key],
+                            'spec_val' => $validated['spec_val'][$key],
+                        ]
+                    );
+                }
+            }
+        }
 
         return redirect()->back()->with('add_product_success', '[Success] Product added successfully.');
     }
@@ -70,9 +84,46 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(AdminProductRequest $request, Product $product)
     {
-        dd($request);
+        $validated = $request->validated();
+
+        // Check if user has uploaded product's image
+        if (Storage::exists('temp-product-images/' . $validated['directory_path'])) {
+            // Insert new key and value pair to store fixed image path
+            $validated['image_path'] = 'public/product-images/' . $validated['directory_path'];
+
+            // Delete existing (old) file
+            Storage::deleteDirectory($validated['image_path']);
+
+            // Move temporary product image's folder to public folder (product's image_path)
+            Storage::move('temp-product-images/' . $validated['directory_path'], $validated['image_path']);
+
+            // Remove temporary file record on db
+            TempProductImage::where('directory_path', $validated['directory_path'])->delete();
+        }
+
+        // (Optional) 
+        unset($validated['directory_path']);
+
+        $product->update($validated);
+
+        $product->productSpecification()->delete();
+
+        if ($request->input('spec_key')) {
+            foreach ($validated['spec_key'] as $key => $value) {
+                if ($value) {
+                    $product->productSpecification()->create(
+                        [
+                            'spec_key' => $validated['spec_key'][$key],
+                            'spec_val' => $validated['spec_val'][$key],
+                        ]
+                    );
+                }
+            }
+        }
+
+        return redirect()->route('admin.editProduct', [$product->slug])->with('add_product_success', '[Success] Product updated successfully.');
     }
 
     /**
