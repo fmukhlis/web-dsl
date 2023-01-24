@@ -66,7 +66,7 @@
                             </li>
                         </ul>
                         <ul class="dropdown-menu min-gap" aria-labelledby="navbarDropdown">
-                            <li>
+                            <li class="disabled">
                                 Explore
                             </li>
                             <li>
@@ -105,7 +105,7 @@
                     </a>
                     <div class="dropdown-menu-container type-1 d-none">
                         <ul class="dropdown-menu min-gap border-bottom border-2" aria-labelledby="navbarDropdown">
-                            <li>
+                            <li class="disabled">
                                 By Plan
                             </li>
                             <li>
@@ -131,7 +131,7 @@
                             </li>
                         </ul>
                         <ul class="dropdown-menu min-gap border-bottom border-2" aria-labelledby="navbarDropdown">
-                            <li>
+                            <li class="disabled">
                                 By Solution
                             </li>
                             <li>
@@ -157,7 +157,7 @@
                             </li>
                         </ul>
                         <ul class="dropdown-menu min-gap" aria-labelledby="navbarDropdown">
-                            <li>
+                            <li class="disabled">
                                 Case Studies
                             </li>
                             <li>
@@ -188,13 +188,14 @@
                     <a class="nav-link" href="https://web.whatsapp.com/">About Us</a>
                 </li>
             </ul>
-            <form class="ml-auto">
-                <input class="form-control" type="search" placeholder="Enter product's name..."
-                    aria-label="Search">
+            <form id="search-form" class="ml-auto" action="{{ route('products') }}">
+                <input class="form-control" type="search" placeholder="Enter product's name..." aria-label="Search"
+                    name="search">
             </form>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link search-nav-btn d-block" href="{{ route('products') }}">Search</a>
+                    <a class="nav-link search-nav-btn d-block"
+                        onclick="document.querySelector('#search-form').submit()">Search</a>
                 </li>
                 @auth
                     @if (Auth::user()->email_verified_at)
