@@ -31,6 +31,11 @@ class Product extends Model
         'is_new',
     ];
 
+    public function scopeSearch($query, $searchedProduct)
+    {
+        return $query->where('name', 'like', '%' . $searchedProduct . '%');
+    }
+
     public function productImage()
     {
         return $this->hasMany(ProductImage::class, 'product_image_path', 'image_path');

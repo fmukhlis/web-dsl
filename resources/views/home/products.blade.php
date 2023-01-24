@@ -258,27 +258,37 @@
                     <div class="col-12">
                         <ul class="nav nav-tabs flex-nowrap" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="tab-alat-kesehatan" data-bs-toggle="tab"
-                                    data-bs-target="#alat-kesehatan" type="button" role="tab"
-                                    aria-controls="alat-kesehatan" aria-selected="true">Alat
+                                <button class="nav-link @if (!(request('medical') || request('laboratory') || request('chemical') || request('others'))) active @endif" id="tab-semua"
+                                    data-bs-toggle="tab" data-bs-target="#semua" type="button" role="tab"
+                                    aria-controls="semua"
+                                    aria-selected="@if (request('medical') || request('laboratory') || request('chemical') || request('others')) false @else true @endif">Semua</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link @if (request('medical')) active @endif"
+                                    id="tab-alat-kesehatan" data-bs-toggle="tab" data-bs-target="#alat-kesehatan"
+                                    type="button" role="tab" aria-controls="alat-kesehatan"
+                                    aria-selected="@if (request('medical')) true @else false @endif">Alat
                                     Kesehatan</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="tab-alat-laboratorium" data-bs-toggle="tab"
-                                    data-bs-target="#alat-laboratorium" type="button" role="tab"
-                                    aria-controls="alat-laboratorium" aria-selected="false">Alat
+                                <button class="nav-link @if (request('laboratory')) active @endif"
+                                    id="tab-alat-laboratorium" data-bs-toggle="tab" data-bs-target="#alat-laboratorium"
+                                    type="button" role="tab" aria-controls="alat-laboratorium"
+                                    aria-selected="@if (request('laboratory')) true @else false @endif">Alat
                                     Laboratorium</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="tab-alat-kimia" data-bs-toggle="tab"
-                                    data-bs-target="#alat-kimia" type="button" role="tab"
-                                    aria-controls="alat-kimia" aria-selected="false">Alat
+                                <button class="nav-link @if (request('chemical')) active @endif"
+                                    id="tab-alat-kimia" data-bs-toggle="tab" data-bs-target="#alat-kimia" type="button"
+                                    role="tab" aria-controls="alat-kimia"
+                                    aria-selected="@if (request('chemical')) true @else false @endif">Alat
                                     Kimia</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="tab-lainnya" data-bs-toggle="tab" data-bs-target="#lainnya"
-                                    type="button" role="tab" aria-controls="lainnya"
-                                    aria-selected="false">Lainnya</button>
+                                <button class="nav-link @if (request('others')) active @endif" id="tab-lainnya"
+                                    data-bs-toggle="tab" data-bs-target="#lainnya" type="button" role="tab"
+                                    aria-controls="lainnya"
+                                    aria-selected="@if (request('others')) true @else false @endif">Lainnya</button>
                             </li>
                         </ul>
                     </div>
@@ -303,226 +313,409 @@
                     </div>
 
                     <div class="tab-content">
-                        <div class="tab-pane fade show active" id="alat-kesehatan" role="tabpanel"
-                            aria-labelledby="tab-alat-kesehatan">
+                        <div class="tab-pane fade @if (!(request('medical') || request('laboratory') || request('chemical') || request('others'))) show active @endif" id="semua"
+                            role="tabpanel" aria-labelledby="tab-semua">
                             <div class="px-1">
                                 <div class="row g-2">
                                     @php
-                                        $medDevices = \App\Models\Product::where('category', 'Alat Kesehatan')->paginate(8);
+                                        $allDevices = \App\Models\Product::search(request('search'))->paginate($perPage = 8, $columns = ['*'], $pageName = 'all');
                                     @endphp
-                                    @foreach ($medDevices as $product)
-                                        <div class="col-12 col-lg-6">
-                                            <div class="card">
-                                                <div class="row g-0">
-                                                    <a href="{{ route('product') }}"
-                                                        class="col-4 rounded-start product-thumbnail"
-                                                        style="background-image: url('../{{ $product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($product->image_path))[0]->getFileName() }}');">
-                                                    </a>
-                                                    <div class="col-8">
-                                                        <div class="card-body products-info d-flex flex-column py-2">
-                                                            <a href="{{ route('product') }}" class="card-link">
-                                                                <h5 class="card-title truncate-2 mb-0">{{ $product->name }}
-                                                                </h5>
-                                                            </a>
-                                                            <a href="#"
-                                                                class="d-flex m-0 card-link align-items-center">
-                                                                <small>Rating : </small>
-                                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                                    viewBox="0 0 16 16" fill="orange"
-                                                                    class="logo-svg mx-1">
-                                                                    <path
-                                                                        d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
-                                                                </svg>
-                                                                <small>--</small>
-                                                            </a>
-                                                            <div class="d-flex flex-column mt-auto">
-                                                                <small class="text-muted"><span
-                                                                        class="badge bg-danger p-1 me-1">{{ $product->discount }}%</span><del>@numericToMoneyFormat($product->price)</del></small>
-                                                                <span class="total-price">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</span>
+                                    @if ($allDevices->total())
+                                        @foreach ($allDevices as $product)
+                                            <div class="col-12 col-lg-6">
+                                                <div class="card">
+                                                    <div class="row g-0">
+                                                        <a href="{{ route('product') }}"
+                                                            class="col-4 rounded-start product-thumbnail"
+                                                            style="background-image: url('../{{ $product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($product->image_path))[0]->getFileName() }}');">
+                                                        </a>
+                                                        <div class="col-8">
+                                                            <div class="card-body products-info d-flex flex-column py-2">
+                                                                <a href="{{ route('product') }}" class="card-link">
+                                                                    <h5 class="card-title truncate-2 mb-0">
+                                                                        {{ $product->name }}
+                                                                    </h5>
+                                                                </a>
+                                                                <a href="#"
+                                                                    class="d-flex m-0 card-link align-items-center">
+                                                                    <small>Rating : </small>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        viewBox="0 0 16 16" fill="orange"
+                                                                        class="logo-svg mx-1">
+                                                                        <path
+                                                                            d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
+                                                                    </svg>
+                                                                    <small>--</small>
+                                                                </a>
+                                                                <div class="d-flex flex-column mt-auto">
+                                                                    <small class="text-muted"><span
+                                                                            class="badge bg-danger p-1 me-1">{{ $product->discount }}%</span><del>@numericToMoneyFormat($product->price)</del></small>
+                                                                    <span class="total-price">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</span>
+                                                                </div>
+                                                                <a class="text-center mt-auto btn btn-outline-primary btn-sm"
+                                                                    href="{{ route('product') }}">Lihat
+                                                                    Lebih
+                                                                    Detail
+                                                                </a>
                                                             </div>
-                                                            <a class="text-center mt-auto btn btn-outline-primary btn-sm"
-                                                                href="{{ route('product') }}">Lihat
-                                                                Lebih
-                                                                Detail
-                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                        @endforeach
+                                    @else
+                                        <div class="col-12">
+                                            <div class="card p-4">
+                                                <div class="row g-0">
+                                                    <div class="col-12 d-flex align-items-center justify-content-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                            height="16" fill="currentColor" class="me-2"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                                        </svg>
+                                                        <span>
+                                                            "{{ request('search') }}"
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-12 text-center fw-bold mt-3">
+                                                        Maaf, produk yang anda cari tidak dapat ditemukan.
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    @endforeach
+                                    @endif
+                                    @if ($allDevices->hasPages())
+                                        <div class="col-12 mt-4 d-flex overflow-auto justify-content-center">
+                                            {{ $allDevices->onEachSide(2)->links() }}
+                                        </div>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade @if (request('medical')) show active @endif"
+                            id="alat-kesehatan" role="tabpanel" aria-labelledby="tab-alat-kesehatan">
+                            <div class="px-1">
+                                <div class="row g-2">
+                                    @php
+                                        $medDevices = \App\Models\Product::search(request('search'))
+                                            ->where('category', 'Alat Kesehatan')
+                                            ->paginate($perPage = 8, $columns = ['*'], $pageName = 'medical');
+                                    @endphp
+                                    @if ($medDevices->total())
+                                        @foreach ($medDevices as $product)
+                                            <div class="col-12 col-lg-6">
+                                                <div class="card">
+                                                    <div class="row g-0">
+                                                        <a href="{{ route('product') }}"
+                                                            class="col-4 rounded-start product-thumbnail"
+                                                            style="background-image: url('../{{ $product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($product->image_path))[0]->getFileName() }}');">
+                                                        </a>
+                                                        <div class="col-8">
+                                                            <div class="card-body products-info d-flex flex-column py-2">
+                                                                <a href="{{ route('product') }}" class="card-link">
+                                                                    <h5 class="card-title truncate-2 mb-0">
+                                                                        {{ $product->name }}
+                                                                    </h5>
+                                                                </a>
+                                                                <a href="#"
+                                                                    class="d-flex m-0 card-link align-items-center">
+                                                                    <small>Rating : </small>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        viewBox="0 0 16 16" fill="orange"
+                                                                        class="logo-svg mx-1">
+                                                                        <path
+                                                                            d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
+                                                                    </svg>
+                                                                    <small>--</small>
+                                                                </a>
+                                                                <div class="d-flex flex-column mt-auto">
+                                                                    <small class="text-muted"><span
+                                                                            class="badge bg-danger p-1 me-1">{{ $product->discount }}%</span><del>@numericToMoneyFormat($product->price)</del></small>
+                                                                    <span class="total-price">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</span>
+                                                                </div>
+                                                                <a class="text-center mt-auto btn btn-outline-primary btn-sm"
+                                                                    href="{{ route('product') }}">Lihat
+                                                                    Lebih
+                                                                    Detail
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    @else
+                                        <div class="col-12">
+                                            <div class="card p-4">
+                                                <div class="row g-0">
+                                                    <div class="col-12 d-flex align-items-center justify-content-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                            height="16" fill="currentColor" class="me-2"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                                        </svg>
+                                                        <span>
+                                                            "{{ request('search') }}"
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-12 text-center fw-bold mt-3">
+                                                        Maaf, produk yang anda cari tidak dapat ditemukan.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endif
                                     @if ($medDevices->hasPages())
                                         <div class="col-12 mt-5 d-flex overflow-auto justify-content-center">
-                                            {{ $otherDevices->onEachSide(2)->links() }}
+                                            {{ $medDevices->onEachSide(2)->links() }}
                                         </div>
                                     @endif
                                 </div>
                             </div>
                         </div>
 
-                        <div class="tab-pane fade" id="alat-laboratorium" role="tabpanel"
-                            aria-labelledby="tab-alat-laboratorium">
+                        <div class="tab-pane fade @if (request('laboratory')) show active @endif"
+                            id="alat-laboratorium" role="tabpanel" aria-labelledby="tab-alat-laboratorium">
                             <div class="px-1">
                                 <div class="row g-2">
                                     @php
-                                        $labDevices = \App\Models\Product::where('category', 'Alat Laboratorium')->paginate(8);
+                                        $labDevices = \App\Models\Product::search(request('search'))
+                                            ->where('category', 'Alat Laboratorium')
+                                            ->paginate($perPage = 8, $columns = ['*'], $pageName = 'laboratory');
                                     @endphp
-                                    @foreach ($labDevices as $product)
-                                        <div class="col-12 col-lg-6">
-                                            <div class="card">
-                                                <div class="row g-0">
-                                                    <a href="{{ route('product') }}"
-                                                        class="col-4 rounded-start product-thumbnail"
-                                                        style="background-image: url('../{{ $product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($product->image_path))[0]->getFileName() }}');">
-                                                    </a>
-                                                    <div class="col-8">
-                                                        <div class="card-body products-info d-flex flex-column py-2">
-                                                            <a href="{{ route('product') }}" class="card-link">
-                                                                <h5 class="card-title truncate-2 mb-0">
-                                                                    {{ $product->name }}
-                                                                </h5>
-                                                            </a>
-                                                            <a href="#"
-                                                                class="d-flex m-0 card-link align-items-center">
-                                                                <small>Rating : </small>
-                                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                                    viewBox="0 0 16 16" fill="orange"
-                                                                    class="logo-svg mx-1">
-                                                                    <path
-                                                                        d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
-                                                                </svg>
-                                                                <small>--</small>
-                                                            </a>
-                                                            <div class="d-flex flex-column mt-auto">
-                                                                <small class="text-muted"><span
-                                                                        class="badge bg-danger p-1 me-1">{{ $product->discount }}%</span><del>@numericToMoneyFormat($product->price)</del></small>
-                                                                <span class="total-price">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</span>
+                                    @if ($labDevices->total())
+                                        @foreach ($labDevices as $product)
+                                            <div class="col-12 col-lg-6">
+                                                <div class="card">
+                                                    <div class="row g-0">
+                                                        <a href="{{ route('product') }}"
+                                                            class="col-4 rounded-start product-thumbnail"
+                                                            style="background-image: url('../{{ $product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($product->image_path))[0]->getFileName() }}');">
+                                                        </a>
+                                                        <div class="col-8">
+                                                            <div class="card-body products-info d-flex flex-column py-2">
+                                                                <a href="{{ route('product') }}" class="card-link">
+                                                                    <h5 class="card-title truncate-2 mb-0">
+                                                                        {{ $product->name }}
+                                                                    </h5>
+                                                                </a>
+                                                                <a href="#"
+                                                                    class="d-flex m-0 card-link align-items-center">
+                                                                    <small>Rating : </small>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        viewBox="0 0 16 16" fill="orange"
+                                                                        class="logo-svg mx-1">
+                                                                        <path
+                                                                            d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
+                                                                    </svg>
+                                                                    <small>--</small>
+                                                                </a>
+                                                                <div class="d-flex flex-column mt-auto">
+                                                                    <small class="text-muted"><span
+                                                                            class="badge bg-danger p-1 me-1">{{ $product->discount }}%</span><del>@numericToMoneyFormat($product->price)</del></small>
+                                                                    <span class="total-price">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</span>
+                                                                </div>
+                                                                <a class="text-center mt-auto btn btn-outline-primary btn-sm"
+                                                                    href="{{ route('product') }}">Lihat
+                                                                    Lebih
+                                                                    Detail
+                                                                </a>
                                                             </div>
-                                                            <a class="text-center mt-auto btn btn-outline-primary btn-sm"
-                                                                href="{{ route('product') }}">Lihat
-                                                                Lebih
-                                                                Detail
-                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                        @endforeach
+                                    @else
+                                        <div class="col-12">
+                                            <div class="card p-4">
+                                                <div class="row g-0">
+                                                    <div class="col-12 d-flex align-items-center justify-content-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                            height="16" fill="currentColor" class="me-2"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                                        </svg>
+                                                        <span>
+                                                            "{{ request('search') }}"
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-12 text-center fw-bold mt-3">
+                                                        Maaf, produk yang anda cari tidak dapat ditemukan.
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    @endforeach
+                                    @endif
                                     @if ($labDevices->hasPages())
                                         <div class="col-12 mt-5 d-flex overflow-auto justify-content-center">
-                                            {{ $otherDevices->onEachSide(2)->links() }}
+                                            {{ $labDevices->onEachSide(2)->links() }}
                                         </div>
                                     @endif
                                 </div>
                             </div>
                         </div>
 
-                        <div class="tab-pane fade" id="alat-kimia" role="tabpanel" aria-labelledby="tab-alat-kimia">
+                        <div class="tab-pane fade @if (request('chemical')) show active @endif" id="alat-kimia"
+                            role="tabpanel" aria-labelledby="tab-alat-kimia">
                             <div class="px-1">
                                 <div class="row g-2">
                                     @php
-                                        $chemDevices = \App\Models\Product::where('category', 'Alat Kimia')->paginate(8);
+                                        $chemDevices = \App\Models\Product::search(request('search'))
+                                            ->where('category', 'Alat Kimia')
+                                            ->paginate($perPage = 8, $columns = ['*'], $pageName = 'chemical');
                                     @endphp
-                                    @foreach ($chemDevices as $product)
-                                        <div class="col-12 col-lg-6">
-                                            <div class="card">
-                                                <div class="row g-0">
-                                                    <a href="{{ route('product') }}"
-                                                        class="col-4 rounded-start product-thumbnail"
-                                                        style="background-image: url('../{{ $product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($product->image_path))[0]->getFileName() }}');">
-                                                    </a>
-                                                    <div class="col-8">
-                                                        <div class="card-body products-info d-flex flex-column py-2">
-                                                            <a href="{{ route('product') }}" class="card-link">
-                                                                <h5 class="card-title truncate-2 mb-0">
-                                                                    {{ $product->name }}
-                                                                </h5>
-                                                            </a>
-                                                            <a href="#"
-                                                                class="d-flex m-0 card-link align-items-center">
-                                                                <small>Rating : </small>
-                                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                                    viewBox="0 0 16 16" fill="orange"
-                                                                    class="logo-svg mx-1">
-                                                                    <path
-                                                                        d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
-                                                                </svg>
-                                                                <small>--</small>
-                                                            </a>
-                                                            <div class="d-flex flex-column mt-auto">
-                                                                <small class="text-muted"><span
-                                                                        class="badge bg-danger p-1 me-1">{{ $product->discount }}%</span><del>@numericToMoneyFormat($product->price)</del></small>
-                                                                <span class="total-price">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</span>
+                                    @if ($chemDevices->total())
+                                        @foreach ($chemDevices as $product)
+                                            <div class="col-12 col-lg-6">
+                                                <div class="card">
+                                                    <div class="row g-0">
+                                                        <a href="{{ route('product') }}"
+                                                            class="col-4 rounded-start product-thumbnail"
+                                                            style="background-image: url('../{{ $product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($product->image_path))[0]->getFileName() }}');">
+                                                        </a>
+                                                        <div class="col-8">
+                                                            <div class="card-body products-info d-flex flex-column py-2">
+                                                                <a href="{{ route('product') }}" class="card-link">
+                                                                    <h5 class="card-title truncate-2 mb-0">
+                                                                        {{ $product->name }}
+                                                                    </h5>
+                                                                </a>
+                                                                <a href="#"
+                                                                    class="d-flex m-0 card-link align-items-center">
+                                                                    <small>Rating : </small>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        viewBox="0 0 16 16" fill="orange"
+                                                                        class="logo-svg mx-1">
+                                                                        <path
+                                                                            d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
+                                                                    </svg>
+                                                                    <small>--</small>
+                                                                </a>
+                                                                <div class="d-flex flex-column mt-auto">
+                                                                    <small class="text-muted"><span
+                                                                            class="badge bg-danger p-1 me-1">{{ $product->discount }}%</span><del>@numericToMoneyFormat($product->price)</del></small>
+                                                                    <span class="total-price">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</span>
+                                                                </div>
+                                                                <a class="text-center mt-auto btn btn-outline-primary btn-sm"
+                                                                    href="{{ route('product') }}">Lihat
+                                                                    Lebih
+                                                                    Detail
+                                                                </a>
                                                             </div>
-                                                            <a class="text-center mt-auto btn btn-outline-primary btn-sm"
-                                                                href="{{ route('product') }}">Lihat
-                                                                Lebih
-                                                                Detail
-                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                        @endforeach
+                                    @else
+                                        <div class="col-12">
+                                            <div class="card p-4">
+                                                <div class="row g-0">
+                                                    <div class="col-12 d-flex align-items-center justify-content-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                            height="16" fill="currentColor" class="me-2"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                                        </svg>
+                                                        <span>
+                                                            "{{ request('search') }}"
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-12 text-center fw-bold mt-3">
+                                                        Maaf, produk yang anda cari tidak dapat ditemukan.
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    @endforeach
+                                    @endif
                                     @if ($chemDevices->hasPages())
                                         <div class="col-12 mt-5 d-flex overflow-auto justify-content-center">
-                                            {{ $otherDevices->onEachSide(2)->links() }}
+                                            {{ $chemDevices->onEachSide(2)->links() }}
                                         </div>
                                     @endif
                                 </div>
                             </div>
                         </div>
-
-                        <div class="tab-pane fade" id="lainnya" role="tabpanel" aria-labelledby="tab-lainnya">
+                        <div class="tab-pane fade @if (request('others')) show active @endif" id="lainnya"
+                            role="tabpanel" aria-labelledby="tab-lainnya">
                             <div class="px-1">
                                 <div class="row g-2">
                                     @php
-                                        $otherDevices = \App\Models\Product::where('category', 'Lainnya')->paginate(6);
+                                        $otherDevices = \App\Models\Product::search(request('search'))
+                                            ->where('category', 'Lainnya')
+                                            ->paginate($perPage = 8, $columns = ['*'], $pageName = 'others');
                                     @endphp
-                                    @foreach ($otherDevices as $product)
-                                        <div class="col-12 col-lg-6">
-                                            <div class="card">
-                                                <div class="row g-0">
-                                                    <a href="{{ route('product') }}"
-                                                        class="col-4 rounded-start product-thumbnail"
-                                                        style="background-image: url('../{{ $product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($product->image_path))[0]->getFileName() }}');">
-                                                    </a>
-                                                    <div class="col-8">
-                                                        <div class="card-body products-info d-flex flex-column py-2">
-                                                            <a href="{{ route('product') }}" class="card-link">
-                                                                <h5 class="card-title truncate-2 mb-0">
-                                                                    {{ $product->name }}
-                                                                </h5>
-                                                            </a>
-                                                            <a href="#"
-                                                                class="d-flex m-0 card-link align-items-center">
-                                                                <small>Rating : </small>
-                                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                                    viewBox="0 0 16 16" fill="orange"
-                                                                    class="logo-svg mx-1">
-                                                                    <path
-                                                                        d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
-                                                                </svg>
-                                                                <small>--</small>
-                                                            </a>
-                                                            <div class="d-flex flex-column mx-auto">
-                                                                <small class="text-muted"><span
-                                                                        class="badge bg-danger p-1 me-1">{{ $product->discount }}%</span><del>@numericToMoneyFormat($product->price)</del></small>
-                                                                <span class="total-price">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</span>
+                                    @if ($otherDevices->total())
+                                        @foreach ($otherDevices as $product)
+                                            <div class="col-12 col-lg-6">
+                                                <div class="card">
+                                                    <div class="row g-0">
+                                                        <a href="{{ route('product') }}"
+                                                            class="col-4 rounded-start product-thumbnail"
+                                                            style="background-image: url('../{{ $product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($product->image_path))[0]->getFileName() }}');">
+                                                        </a>
+                                                        <div class="col-8">
+                                                            <div class="card-body products-info d-flex flex-column py-2">
+                                                                <a href="{{ route('product') }}" class="card-link">
+                                                                    <h5 class="card-title truncate-2 mb-0">
+                                                                        {{ $product->name }}
+                                                                    </h5>
+                                                                </a>
+                                                                <a href="#"
+                                                                    class="d-flex m-0 card-link align-items-center">
+                                                                    <small>Rating : </small>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        viewBox="0 0 16 16" fill="orange"
+                                                                        class="logo-svg mx-1">
+                                                                        <path
+                                                                            d="M 7.1215532,1.757177 5.932506,4.5173426 C 5.6730714,5.3874182 5.441377,5.3659218 4.6392719,5.4978375 L 2.1605701,5.9054893 C -0.69383312,6.2750267 -0.41206004,6.251444 1.9334542,7.648332 l 1.811161,1.0786502 c 1.040283,0.4913776 0.9696288,0.623797 0.7694903,1.7226488 l -0.6140786,3.371571 c -0.5925161,2.68624 -0.4577319,2.341694 1.4211256,0.751386 L 7.155927,13.019593 c 0.7601043,-0.746318 0.7933569,-0.731895 1.5558376,-0.08678 l 2.1840724,1.84788 c 1.79294,1.630693 1.611107,1.429848 1.196333,-0.847456 L 11.45575,10.438999 C 11.160665,9.3484382 11.252162,9.3076598 12.130935,8.7842999 L 14.2686,7.5111976 c 2.13814,-1.2367883 2.328547,-1.14753 -0.126195,-1.5512413 L 11.439281,5.5153955 C 10.596048,5.4579746 10.42237,5.4065555 10.097486,4.6529801 L 8.8484063,1.7557166 C 7.9565718,-0.51691667 8.0413644,-0.37800418 7.1215532,1.757177 Z" />
+                                                                    </svg>
+                                                                    <small>--</small>
+                                                                </a>
+                                                                <div class="d-flex flex-column mt-auto">
+                                                                    <small class="text-muted"><span
+                                                                            class="badge bg-danger p-1 me-1">{{ $product->discount }}%</span><del>@numericToMoneyFormat($product->price)</del></small>
+                                                                    <span class="total-price">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</span>
+                                                                </div>
+                                                                <a class="text-center mt-auto btn btn-outline-primary btn-sm"
+                                                                    href="{{ route('product') }}">Lihat
+                                                                    Lebih
+                                                                    Detail
+                                                                </a>
                                                             </div>
-                                                            <a class="text-center btn btn-outline-primary btn-sm"
-                                                                href="{{ route('product') }}">Lihat
-                                                                Lebih
-                                                                Detail
-                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                        @endforeach
+                                    @else
+                                        <div class="col-12">
+                                            <div class="card p-4">
+                                                <div class="row g-0">
+                                                    <div class="col-12 d-flex align-items-center justify-content-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                            height="16" fill="currentColor" class="me-2"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                                        </svg>
+                                                        <span>
+                                                            "{{ request('search') }}"
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-12 text-center fw-bold mt-3">
+                                                        Maaf, produk yang anda cari tidak dapat ditemukan.
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    @endforeach
+                                    @endif
                                     @if ($otherDevices->hasPages())
                                         <div class="col-12 mt-5 d-flex overflow-auto justify-content-center">
                                             {{ $otherDevices->onEachSide(2)->links() }}

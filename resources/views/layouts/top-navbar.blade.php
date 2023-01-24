@@ -190,7 +190,7 @@
             </ul>
             <form id="search-form" class="ml-auto" action="{{ route('products') }}">
                 <input class="form-control" type="search" placeholder="Enter product's name..." aria-label="Search"
-                    name="search">
+                    name="search" value="{{ request('search') }}">
             </form>
             <ul class="navbar-nav">
                 <li class="nav-item">
