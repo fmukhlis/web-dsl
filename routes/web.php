@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Storage;
 // Controllers
 use App\Http\Controllers\Admin\ProductController as APC;
 use App\Http\Controllers\Admin\DropzoneController as DzC;
+
 // Models
 use App\Models\Product;
 
@@ -21,7 +22,12 @@ use App\Models\Product;
 |
 */
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::view('/', 'home.index', [
+    'medDevices' => Product::where('category', 'Alat Kesehatan')->get(),
+    'labDevices' => Product::where('category', 'Alat Laboratorium')->get(),
+    'chemDevices' => Product::where('category', 'Alat Kimia')->get(),
+    'otherDevices' => Product::where('category', 'Lainnya')->get(),
+])->name('home');
 Route::view('/products', 'home.products')->name('products');
 
 Route::get('/products/test-prod', [App\Http\Controllers\HomeController::class, 'product'])->name('product');

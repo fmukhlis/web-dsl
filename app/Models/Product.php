@@ -50,14 +50,6 @@ class Product extends Model
 
     public function scopeRating($query, $rating = null)
     {
-        // if ($rating) {
-        //     if (count($rating) > 1) {
-        //         return $query->whereIn('rating', $rating);
-        //     } else {
-        //         return $query->where('rating', $rating[0]);
-        //     }
-        // }
-
         return $query;
     }
 

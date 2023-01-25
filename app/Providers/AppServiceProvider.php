@@ -36,6 +36,9 @@ class AppServiceProvider extends ServiceProvider
         Blade::directive('numericToMoneyFormat', function ($numeric) {
             return "<?php echo 'Rp' . number_format($numeric, 0); ?>";
         });
+        Blade::directive('numericToMoneyFormatWithoutPrefix', function ($expression) {
+            return "<?php echo number_format($expression, 0); ?>";
+        });
 
         Paginator::defaultView('vendor/pagination/custom-bs');
     }
