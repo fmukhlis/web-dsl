@@ -1214,7 +1214,8 @@
 
             <div class="row">
                 <div class="col-12 d-flex">
-                    <a href="{{ route('products') }}" class="btn btn-outline-light w-100 py-2 py-md-3 fw-bold fs-5">Lihat
+                    <a href="{{ route('products', ['medical' => 1]) }}"
+                        class="btn btn-outline-light w-100 py-2 py-md-3 fw-bold fs-5">Lihat
                         semua
                         produk</a>
                 </div>
@@ -1517,7 +1518,8 @@
             </div>
             <div class="row">
                 <div class="col-12 d-flex">
-                    <a href="{{ route('products') }}" class="btn btn-outline-dark w-100 py-2 py-md-3 fw-bold fs-5">Lihat
+                    <a href="{{ route('products', ['laboratory' => 1]) }}"
+                        class="btn btn-outline-dark w-100 py-2 py-md-3 fw-bold fs-5">Lihat
                         semua
                         produk</a>
                 </div>
@@ -1821,7 +1823,7 @@
 
             <div class="row">
                 <div class="col-12 d-flex">
-                    <a href="{{ route('products') }}"
+                    <a href="{{ route('products', ['chemical' => 1]) }}"
                         class="btn btn-outline-light w-100 py-2 py-md-3 fw-bold fs-5">Lihat semua
                         produk</a>
                 </div>
@@ -2127,7 +2129,7 @@
 
             <div class="row">
                 <div class="col-12 d-flex">
-                    <a href="{{ route('products') }}"
+                    <a href="{{ route('products', ['others' => 1]) }}"
                         class="btn btn-outline-dark w-100 py-2 py-md-3 fw-bold fs-5">Lihat semua
                         produk</a>
                 </div>
