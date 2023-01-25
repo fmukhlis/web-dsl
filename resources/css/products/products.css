@@ -35,11 +35,14 @@
     font-weight: 600;
     font-size: 1rem;
 }
+.page-item:not(.active) .page-link {
+    color: rgb(140, 120, 170);
+}
 .page-item.active .page-link {
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgb(140, 120, 170);
+    border-color: rgb(255, 255, 255);
     margin-left: .2rem;
     margin-right: .25rem;
-    border: 0;
     opacity: 1;
 }
 .filter-dropdown-container {
