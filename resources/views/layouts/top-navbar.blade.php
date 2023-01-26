@@ -2,7 +2,7 @@
     <div class="container px-0 align-items-center align-items-lg-end">
         <button class="btn btn-outline-light sign-up-nav-btn" type="button">Shop</button>
         <a class="navbar-brand" href="{{ route('home') }}">
-            <img class="img-thumbnail" src="{{ asset('assets/auth-logo.jpg') }}" alt="Logo Perusahaan">
+            <img class="logo-navbar" src="{{ asset('assets/Logo-DSL.png') }}" alt="Logo PT Dharma Sejahtera Lestari">
         </a>
         <button class="navbar-toggler ps-0" type="button" aria-controls="navbar-menu" aria-expanded="false"
             aria-label="Toggle navigation">

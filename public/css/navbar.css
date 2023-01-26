@@ -25,11 +25,10 @@
     margin-right: 2rem;
     margin-left: 2rem;
 }
-.navbar .navbar-brand .img-thumbnail {
+.navbar .navbar-brand .logo-navbar {
     max-width: 10rem;
     max-height: 3rem;
-    border-width: 1px;
-    padding: 0;
+    width: 100%;
 }
 .navbar .navbar-brand,
 .navbar button {
