@@ -12,3 +12,13 @@
 .dropzone {
     min-height: unset;
 }
+
+@for $i from 1 through 5 {
+    .border-#{$i} {
+        border-width: #{$i}px;
+    }
+
+    .z-#{$i} {
+        z-index: #{$i};
+    }
+}

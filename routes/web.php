@@ -5,8 +5,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 // Controllers
-use App\Http\Controllers\Admin\ProductController as APC;
+use App\Http\Controllers\Admin\ProductController as PC;
 use App\Http\Controllers\Admin\DropzoneController as DzC;
+use App\Http\Controllers\Admin\HighlightedProductController as HPC;
 
 // Models
 use App\Models\Product;
@@ -47,16 +48,18 @@ Route::prefix('admin')
             'products' => Product::paginate(10),
         ])->name('product');
         Route::view('/product/new', 'admin.product.add-product')->name('addProduct');
+        Route::view('/product/carousel', 'admin.product.carousel-products')->name('carouselProducts');
+        Route::view('/product/featured', 'admin.product.featured-products')->name('featuredProducts');
         Route::get(
             '/product/{product:slug}',
             fn (Product $product) =>
             view('admin.product.edit-product', [
                 'product' => $product,
-                'productImages' => Storage::allFiles($product->image_path),
+                'productImages' => \Illuminate\Support\Facades\File::allFiles(public_path($product->image_path)),
             ])
         )->name('editProduct');
 
-        Route::controller(APC::class)->group(function () {
+        Route::controller(PC::class)->group(function () {
             Route::post('/product/new', 'store');
             Route::patch('/product/{product:slug}', 'update');
         });
@@ -64,6 +67,11 @@ Route::prefix('admin')
         Route::controller(DzC::class)->group(function () {
             Route::post('/product-temp-img', 'storeTempImg');
             Route::delete('/product-temp-img/{fileName}', 'deleteTempImg');
+        });
+
+        Route::controller(HPC::class)->group(function () {
+            Route::post('/product/carousel/AJAX/{product:slug}', 'store');
+            Route::delete('/product/carousel/AJAX/{product:slug}', 'destroy');
         });
     });
 

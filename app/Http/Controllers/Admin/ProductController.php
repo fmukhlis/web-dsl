@@ -45,7 +45,7 @@ class ProductController extends Controller
         }
 
         // Insert new key and value pair to store fixed image path
-        $validated['image_path'] = 'storage/product-images/' . $validated['directory_path'];
+        $validated['image_path'] = 'public/product-images/' . $validated['directory_path'];
 
         // Insert new key and value pair to store slug name
         $validated['slug'] = preg_replace('/[ ]/', '-', strtolower($validated['name']));
@@ -55,6 +55,9 @@ class ProductController extends Controller
 
         // Remove temporary file record on db
         TempProductImage::where('directory_path', $validated['directory_path'])->delete();
+
+        // Modify image path
+        $validated['image_path'] = 'storage/product-images/' . $validated['directory_path'];
 
         // (Optional) 
         unset($validated['directory_path']);

@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Products | Dharma Sejahtera Lestari')
+@section('title', 'Edit Product | Dharma Sejahtera Lestari')
 
 @section('content_header')
     <div class="container-fluid">
@@ -179,15 +179,15 @@
                                                 @foreach ($productImages as $productImage)
                                                     <div class="dz-preview my-3 mr-0 ml-3 dz-image-preview">
                                                         <div class="dz-image border border-3">
-                                                            <img data-dz-thumbnail alt="Product Photo"
+                                                            <img data-dz-thumbnail alt="Gambar {{ $product->name }} 1"
                                                                 class="w-100 h-100 obj-fit-cover"
-                                                                src="{{ asset(str_replace('public/', 'storage/', $productImage)) }}">
+                                                                src="{{ asset($product->image_path) . '/' . $productImage->getFileName() }}">
                                                         </div>
                                                         <div
                                                             class="dz-details d-flex flex-column h-100 py-3 align-items-center justify-content-center">
                                                             <div class="dz-filename">
                                                                 <span
-                                                                    data-dz-name="">{{ str_replace($product->image_path . '/', '', $productImage) }}</span>
+                                                                    data-dz-name="">{{ $productImage->getFileName() }}</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -627,5 +627,5 @@
 @section('js')
     <script src="{{ mix('js/manifest.js') }}" defer></script>
     <script src="{{ mix('js/vendor.js') }}" defer></script>
-    <script src="{{ mix('js/product-management.js') }}" defer></script>
+    <script src="{{ mix('js/admin/product-management.js') }}" defer></script>
 @stop

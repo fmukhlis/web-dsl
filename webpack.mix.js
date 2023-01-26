@@ -11,8 +11,11 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/product-management.js', 'public/js');
-mix.js('resources/js/dashboard.js', 'public/js');
+mix.js('resources/js/admin/product-management.js', 'public/js/admin');
+mix.js('resources/js/admin/dashboard.js', 'public/js/admin');
+mix.js('resources/js/admin/products.js', 'public/js/admin');
+mix.js('resources/js/admin/product-carousel.js', 'public/js/admin');
+
 mix.js('resources/js/products.js', 'public/js');
 
 mix.sass('resources/sass/app.scss', 'public/css');

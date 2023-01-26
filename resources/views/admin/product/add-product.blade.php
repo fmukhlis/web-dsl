@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Products | Dharma Sejahtera Lestari')
+@section('title', 'Add Product | Dharma Sejahtera Lestari')
 
 @section('content_header')
     <div class="container-fluid">
@@ -530,5 +530,5 @@
 @section('js')
     <script src="{{ mix('js/manifest.js') }}" defer></script>
     <script src="{{ mix('js/vendor.js') }}" defer></script>
-    <script src="{{ mix('js/product-management.js') }}" defer></script>
+    <script src="{{ mix('js/admin/product-management.js') }}" defer></script>
 @stop

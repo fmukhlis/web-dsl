@@ -1,6 +1,8 @@
 {
-    "/js/product-management.js": "/js/product-management.js",
-    "/js/dashboard.js": "/js/dashboard.js",
+    "/js/admin/product-management.js": "/js/admin/product-management.js",
+    "/js/admin/dashboard.js": "/js/admin/dashboard.js",
+    "/js/admin/products.js": "/js/admin/products.js",
+    "/js/admin/product-carousel.js": "/js/admin/product-carousel.js",
     "/js/products.js": "/js/products.js",
     "/js/manifest.js": "/js/manifest.js",
     "/css/products.css": "/css/products.css",
