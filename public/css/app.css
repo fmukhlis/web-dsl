@@ -9513,41 +9513,41 @@ h3 {
 }
 
 .border-1 {
-  border-width: 1px;
+  border-width: 1px !important;
 }
 
 .z-1 {
-  z-index: 1;
+  z-index: 1 !important;
 }
 
 .border-2 {
-  border-width: 2px;
+  border-width: 2px !important;
 }
 
 .z-2 {
-  z-index: 2;
+  z-index: 2 !important;
 }
 
 .border-3 {
-  border-width: 3px;
+  border-width: 3px !important;
 }
 
 .z-3 {
-  z-index: 3;
+  z-index: 3 !important;
 }
 
 .border-4 {
-  border-width: 4px;
+  border-width: 4px !important;
 }
 
 .z-4 {
-  z-index: 4;
+  z-index: 4 !important;
 }
 
 .border-5 {
-  border-width: 5px;
+  border-width: 5px !important;
 }
 
 .z-5 {
-  z-index: 5;
+  z-index: 5 !important;
 }

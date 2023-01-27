@@ -15,10 +15,10 @@
 
 @for $i from 1 through 5 {
     .border-#{$i} {
-        border-width: #{$i}px;
+        border-width: #{$i}px !important;
     }
 
     .z-#{$i} {
-        z-index: #{$i};
+        z-index: #{$i} !important;
     }
 }
