@@ -25,6 +25,7 @@
     "dependencies": {
         "bootstrap-icons": "^1.9.1",
         "dropzone": "^5.9.3",
-        "inputmask": "^5.0.7"
+        "inputmask": "^5.0.7",
+        "sweetalert2": "^11.7.1"
     }
 }

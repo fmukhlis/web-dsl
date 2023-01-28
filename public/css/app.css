@@ -9520,12 +9520,20 @@ h3 {
   z-index: 1 !important;
 }
 
+.img-size-1 {
+  width: 1rem;
+}
+
 .border-2 {
   border-width: 2px !important;
 }
 
 .z-2 {
   z-index: 2 !important;
+}
+
+.img-size-2 {
+  width: 2rem;
 }
 
 .border-3 {
@@ -9536,6 +9544,10 @@ h3 {
   z-index: 3 !important;
 }
 
+.img-size-3 {
+  width: 3rem;
+}
+
 .border-4 {
   border-width: 4px !important;
 }
@@ -9544,10 +9556,39 @@ h3 {
   z-index: 4 !important;
 }
 
+.img-size-4 {
+  width: 4rem;
+}
+
 .border-5 {
   border-width: 5px !important;
 }
 
 .z-5 {
   z-index: 5 !important;
+}
+
+.img-size-5 {
+  width: 5rem;
+}
+
+.bg-transparent {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.text-transparent {
+  color: rgba(0, 0, 0, 0) !important;
+}
+
+.toast-width {
+  width: 300px !important;
+}
+
+.obj-fit-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.content-header {
+  padding-bottom: 0;
 }

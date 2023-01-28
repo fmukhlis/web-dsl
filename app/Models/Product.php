@@ -86,4 +86,9 @@ class Product extends Model
     {
         return $this->hasMany(ProductSpecification::class, 'product_id', 'id');
     }
+
+    public function highlightedProduct()
+    {
+        return $this->hasOne(HighlightedProduct::class);
+    }
 }

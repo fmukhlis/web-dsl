@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\HighlightedProductController as HPC;
 
 // Models
 use App\Models\Product;
+use App\Models\HighlightedProduct;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,7 +49,9 @@ Route::prefix('admin')
             'products' => Product::paginate(10),
         ])->name('product');
         Route::view('/product/new', 'admin.product.add-product')->name('addProduct');
-        Route::view('/product/carousel', 'admin.product.carousel-products')->name('carouselProducts');
+        Route::view('/product/carousel', 'admin.product.carousel-products', [
+            'carouselProducts' => HighlightedProduct::where('carousel', '1')->inRandomOrder()->get(),
+        ])->name('carouselProducts');
         Route::view('/product/featured', 'admin.product.featured-products')->name('featuredProducts');
         Route::get(
             '/product/{product:slug}',
@@ -70,8 +73,9 @@ Route::prefix('admin')
         });
 
         Route::controller(HPC::class)->group(function () {
+            Route::get('/product/carousel/AJAX', 'get');
             Route::post('/product/carousel/AJAX/{product:slug}', 'store');
-            Route::delete('/product/carousel/AJAX/{product:slug}', 'destroy');
+            Route::delete('/product/carousel/AJAX/{product:slug?}', 'destroy');
         });
     });
 

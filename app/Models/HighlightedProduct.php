@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ProductSpecification extends Model
+class HighlightedProduct extends Model
 {
     use HasFactory;
 
@@ -15,9 +15,11 @@ class ProductSpecification extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'spec_key',
-        'spec_val',
+        'carousel',
+        'featured',
     ];
+
+    public $timestamps = false;
 
     public function product()
     {
