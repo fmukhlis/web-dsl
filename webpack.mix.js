@@ -23,6 +23,7 @@ mix.sass('resources/sass/app.scss', 'public/css');
 
 mix.css('resources/css/product-management.css', 'public/css');
 mix.css('resources/css/products.css', 'public/css');
+mix.css('resources/css/home.css', 'public/css');
 
 
 mix.webpackConfig({ 

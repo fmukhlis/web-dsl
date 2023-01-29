@@ -26,6 +26,7 @@ use App\Models\HighlightedProduct;
 */
 
 Route::view('/', 'home.index', [
+    'carouselItem' => HighlightedProduct::where('carousel', true)->inRandomOrder()->get(),
     'medDevices' => Product::where('category', 'Alat Kesehatan')->get(),
     'labDevices' => Product::where('category', 'Alat Laboratorium')->get(),
     'chemDevices' => Product::where('category', 'Alat Kimia')->get(),
