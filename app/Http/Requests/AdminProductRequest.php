@@ -35,6 +35,7 @@ class AdminProductRequest extends FormRequest
             'price' => preg_replace('/[^0-9]/', '', $this->input('price')), // Change Rpx.xxx to Int
             'cost' => preg_replace('/[^0-9]/', '', $this->input('cost')), // Change Rpx.xxx to Int
             'slug' => preg_replace('/\s+/', ' ', strtolower($this->input('name'))), // Remove Multiple Whitespaces To One Whitespace
+            'description' => nl2br($this->input('description')), // Replace New Line To <br>
         ]);
         $this->merge([
             'slug' => preg_replace('/[ ]/', '-', $this->input('slug')), // Create Slug Based On Product's Name

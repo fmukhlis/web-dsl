@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\File;
 
 // Controllers
 use App\Http\Controllers\Admin\ProductController as PC;
@@ -44,9 +45,13 @@ Route::view('/', 'home.index', [
     'chemDevices' => Product::where('category', 'Alat Kimia')->take(8)->inRandomOrder()->get(),
     'otherDevices' => Product::where('category', 'Lainnya')->take(8)->inRandomOrder()->get(),
 ])->name('home');
+
 Route::view('/products', 'home.products')->name('products');
 
-Route::get('/products/test-prod', [App\Http\Controllers\HomeController::class, 'product'])->name('product');
+Route::get('/products/{product:slug}', fn (Product $product) => view('home.product', [
+    'product' => $product,
+    'productImg' => File::allFiles(public_path($product->image_path)),
+]))->name('product');
 
 Route::prefix('admin')
     ->name('admin.')
@@ -62,7 +67,7 @@ Route::prefix('admin')
         Route::view('/product', 'admin.product.index', [
             'products' => Product::paginate(10),
             'carouselItem' => HighlightedProduct::inRandomOrder()->where('carousel', 1)->get(),
-            'featuredItem' => HighlightedProduct::inRandomOrder()->where('featured', 1)->take(5)->get(),
+            'featuredItem' => HighlightedProduct::inRandomOrder()->where('featured', 1)->take(6)->get(),
         ])->name('product');
         Route::view('/product/new', 'admin.product.add-product')->name('addProduct');
         Route::view('/product/carousel', 'admin.product.carousel-products', [

@@ -46,31 +46,39 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @php $num = 1; @endphp
-                                    @foreach ($products as $product)
+                                    @if ($products->count())
+                                        @php $num = 1; @endphp
+                                        @foreach ($products as $product)
+                                            <tr>
+                                                <td class="text-center p-0">{{ $num++ }}</td>
+                                                <td>
+                                                    <a href="{{ route('admin.editProduct', [$product->slug]) }}"
+                                                        class="truncate-1">
+                                                        {{ $product->name }}
+                                                    </a>
+                                                </td>
+                                                <td class="text-center">{{ $product->stock }}</td>
+                                                <td class="text-right">@numericToMoneyFormat($product->cost)</td>
+                                                <td class="text-right">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</td>
+                                                <td class="text-nowrap">
+                                                    <div class="d-flex justify-content-end">
+                                                        0 Sold
+                                                        <small class="text-success d-inline-block ml-1">
+                                                            <i class="fas fa-arrow-up"></i>
+                                                            0%
+                                                        </small>
+                                                    </div>
+                                                </td>
+                                                <td class="text-right">Rp0</td>
+                                            </tr>
+                                        @endforeach
+                                    @else
                                         <tr>
-                                            <td class="text-center p-0">{{ $num++ }}</td>
-                                            <td>
-                                                <a href="{{ route('admin.editProduct', [$product->slug]) }}"
-                                                    class="truncate-1">
-                                                    {{ $product->name }}
-                                                </a>
+                                            <td class="text-center" colspan="7">
+                                                Anda belum menambahkan produk apapun ke dalam daftar.
                                             </td>
-                                            <td class="text-center">{{ $product->stock }}</td>
-                                            <td class="text-right">@numericToMoneyFormat($product->cost)</td>
-                                            <td class="text-right">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</td>
-                                            <td class="text-nowrap">
-                                                <div class="d-flex justify-content-end">
-                                                    0 Sold
-                                                    <small class="text-success d-inline-block ml-1">
-                                                        <i class="fas fa-arrow-up"></i>
-                                                        0%
-                                                    </small>
-                                                </div>
-                                            </td>
-                                            <td class="text-right">Rp0</td>
                                         </tr>
-                                    @endforeach
+                                    @endif
                                 </tbody>
                             </table>
                         </div>
@@ -153,30 +161,47 @@
                                                         Products
                                                     </th>
                                                 </tr>
-                                                <tr>
-                                                    <th class="text-center p-0" style="width: 50%;">Name</th>
-                                                    <th class="text-center" style="width: 15%;">Stock</th>
-                                                    <th class="text-center p-0" style="width: 35%;">Sales</th>
-                                                </tr>
+                                                @if ($carouselItem->count())
+                                                    <tr>
+                                                        <th class="text-center p-0" style="width: 50%;">Name</th>
+                                                        <th class="text-center" style="width: 15%;">Stock</th>
+                                                        <th class="text-center p-0" style="width: 35%;">Sales</th>
+                                                    </tr>
+                                                @endif
                                             </thead>
                                             <tbody>
-                                                @foreach ($carouselItem as $item)
+                                                @if ($carouselItem->count())
+                                                    @foreach ($carouselItem as $item)
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                <div class="truncate-1">{{ $item->product->name }}</div>
+                                                            </td>
+                                                            <td class="text-center">{{ $item->product->stock }}</td>
+                                                            <td class="text-nowrap p-0">
+                                                                <div class="d-flex justify-content-center">
+                                                                    0 Sold
+                                                                    <small class="text-success d-inline-block ml-1">
+                                                                        <i class="fas fa-arrow-up"></i>
+                                                                        0%
+                                                                    </small>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    @endforeach
                                                     <tr>
-                                                        <td class="text-center">
-                                                            <div class="truncate-1">{{ $item->product->name }}</div>
-                                                        </td>
-                                                        <td class="text-center">{{ $item->product->stock }}</td>
-                                                        <td class="text-nowrap p-0">
-                                                            <div class="d-flex justify-content-center">
-                                                                0 Sold
-                                                                <small class="text-success d-inline-block ml-1">
-                                                                    <i class="fas fa-arrow-up"></i>
-                                                                    0%
-                                                                </small>
-                                                            </div>
+                                                        <td class="text-center" colspan="3">
+                                                            <a href="{{ route('admin.featuredProducts') }}">Lihat semua
+                                                                produk
+                                                                korsel</a>
                                                         </td>
                                                     </tr>
-                                                @endforeach
+                                                @else
+                                                    <tr>
+                                                        <td class="text-center" colspan="3">
+                                                            Anda belum menambahkan produk apapun ke dalam daftar.
+                                                        </td>
+                                                    </tr>
+                                                @endif
                                             </tbody>
                                         </table>
                                     </div>
@@ -189,36 +214,47 @@
                                                         Products
                                                     </th>
                                                 </tr>
-                                                <tr>
-                                                    <th class="text-center p-0" style="width: 50%;">Name</th>
-                                                    <th class="text-center" style="width: 15%;">Stock</th>
-                                                    <th class="text-center p-0" style="width: 35%;">Sales</th>
-                                                </tr>
+                                                @if ($featuredItem->count())
+                                                    <tr>
+                                                        <th class="text-center p-0" style="width: 50%;">Name</th>
+                                                        <th class="text-center" style="width: 15%;">Stock</th>
+                                                        <th class="text-center p-0" style="width: 35%;">Sales</th>
+                                                    </tr>
+                                                @endif
                                             </thead>
                                             <tbody>
-                                                @foreach ($featuredItem as $item)
+                                                @if ($featuredItem->count())
+                                                    @foreach ($featuredItem as $item)
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                <div class="truncate-1">{{ $item->product->name }}</div>
+                                                            </td>
+                                                            <td class="text-center">{{ $item->product->stock }}</td>
+                                                            <td class="text-nowrap p-0">
+                                                                <div class="d-flex justify-content-center">
+                                                                    0 Sold
+                                                                    <small class="text-success d-inline-block ml-1">
+                                                                        <i class="fas fa-arrow-up"></i>
+                                                                        0%
+                                                                    </small>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    @endforeach
                                                     <tr>
-                                                        <td class="text-center">
-                                                            <div class="truncate-1">{{ $item->product->name }}</div>
-                                                        </td>
-                                                        <td class="text-center">{{ $item->product->stock }}</td>
-                                                        <td class="text-nowrap p-0">
-                                                            <div class="d-flex justify-content-center">
-                                                                0 Sold
-                                                                <small class="text-success d-inline-block ml-1">
-                                                                    <i class="fas fa-arrow-up"></i>
-                                                                    0%
-                                                                </small>
-                                                            </div>
+                                                        <td class="text-center" colspan="3">
+                                                            <a href="{{ route('admin.featuredProducts') }}">Lihat semua
+                                                                produk
+                                                                unggulan</a>
                                                         </td>
                                                     </tr>
-                                                @endforeach
-                                                <tr>
-                                                    <td class="text-center" colspan="3">
-                                                        <a href="{{ route('admin.featuredProducts') }}">Lihat semua produk
-                                                            unggulan</a>
-                                                    </td>
-                                                </tr>
+                                                @else
+                                                    <tr>
+                                                        <td class="text-center" colspan="3">
+                                                            Anda belum menambahkan produk apapun ke dalam daftar.
+                                                        </td>
+                                                    </tr>
+                                                @endif
                                             </tbody>
                                         </table>
                                     </div>

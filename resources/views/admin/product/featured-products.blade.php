@@ -228,7 +228,7 @@
                                                 </div>
                                             @endforeach
                                         @else
-                                            @for ($i = 0; $i < 6; $i++)
+                                            @for ($i = 0; $i < 5; $i++)
                                                 <div class="form-row align-items-center justify-content-center mb-2">
                                                     <div
                                                         class="col-12 col-md-7 d-flex align-items-center position-relative overflow-hidden">
@@ -420,7 +420,7 @@
                                                 </div>
                                             @endforeach
                                         @else
-                                            @for ($i = 0; $i < 6; $i++)
+                                            @for ($i = 0; $i < 5; $i++)
                                                 <div class="form-row align-items-center justify-content-center mb-2">
                                                     <div
                                                         class="col-12 col-md-7 d-flex align-items-center position-relative overflow-hidden">
@@ -611,7 +611,7 @@
                                                 </div>
                                             @endforeach
                                         @else
-                                            @for ($i = 0; $i < 6; $i++)
+                                            @for ($i = 0; $i < 5; $i++)
                                                 <div class="form-row align-items-center justify-content-center mb-2">
                                                     <div
                                                         class="col-12 col-md-7 d-flex align-items-center position-relative overflow-hidden">
@@ -806,7 +806,7 @@
                                                 </div>
                                             @endforeach
                                         @else
-                                            @for ($i = 0; $i < 6; $i++)
+                                            @for ($i = 0; $i < 5; $i++)
                                                 <div class="form-row align-items-center justify-content-center mb-2">
                                                     <div
                                                         class="col-12 col-md-7 d-flex align-items-center position-relative overflow-hidden">

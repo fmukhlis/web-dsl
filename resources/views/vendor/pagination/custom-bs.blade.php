@@ -1,8 +1,8 @@
 @if ($paginator->hasPages())
-    <nav class="d-flex">
-        <ul class="pagination mb-0 ml-auto d-flex overflow-auto pb-1">
+    <nav class="d-flex justify-content-center">
+        <ul class="pagination mb-0 overflow-auto pb-1">
             {{-- Previous Page Link --}}
-            {{-- @if ($paginator->onFirstPage())
+            @if ($paginator->onFirstPage())
                 <li class="page-item disabled" aria-disabled="true" aria-label="@lang('pagination.previous')">
                     <span class="page-link" aria-hidden="true">&lsaquo;</span>
                 </li>
@@ -11,13 +11,14 @@
                     <a class="page-link text-purple" href="{{ $paginator->previousPageUrl() }}" rel="prev"
                         aria-label="@lang('pagination.previous')">&lsaquo;</a>
                 </li>
-            @endif --}}
+            @endif
 
             {{-- Pagination Elements --}}
             @foreach ($elements as $element)
                 {{-- "Three Dots" Separator --}}
                 @if (is_string($element))
-                    <li class="page-item disabled" aria-disabled="true"><span class="page-link">{{ $element }}</span>
+                    <li class="page-item disabled" aria-disabled="true"><span
+                            class="page-link">{{ $element }}</span>
                     </li>
                 @endif
 
@@ -39,7 +40,7 @@
 
 
             {{-- Next Page Link --}}
-            {{-- @if ($paginator->hasMorePages())
+            @if ($paginator->hasMorePages())
                 <li class="page-item">
                     <a class="page-link text-purple" href="{{ $paginator->nextPageUrl() }}" rel="next"
                         aria-label="@lang('pagination.next')">&rsaquo;</a>
@@ -48,7 +49,7 @@
                 <li class="page-item disabled" aria-disabled="true" aria-label="@lang('pagination.next')">
                     <span class="page-link" aria-hidden="true">&rsaquo;</span>
                 </li>
-            @endif --}}
+            @endif
         </ul>
     </nav>
 @endif

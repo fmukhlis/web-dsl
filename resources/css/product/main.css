@@ -1,14 +1,3 @@
-.bg-grad {
-    background-image: linear-gradient(190deg, #6a59ecff, rgb(120, 100, 202), rgb(51, 54, 123), rgb(20, 21, 44));
-    background-repeat: no-repeat;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -99999;
-}
-
 
 .product-container {
     /* background-image: linear-gradient(10deg, #6a59ecff, rgb(120, 100, 202), rgb(51, 54, 123)); */
@@ -165,8 +154,7 @@ h2 {
 .item-review .img-review {
     width: 5em;
     height: 5em;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     margin: .3em .3em 0 0;
 }
 .item-review .pb-star {
@@ -198,8 +186,7 @@ h2 {
     width: 100%;
     height: 100%;
     padding: .3rem;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     background-color: rgba(245, 245, 245, 1);
     border-radius: .4rem;
 }
@@ -228,8 +215,7 @@ h2 {
 
 .image-chosen-btn .img-thumbnail {
     height: 4rem;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     min-width: 6rem;
 }
 .image-chosen-btn .btn {
@@ -248,4 +234,3 @@ h2 {
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;  /* IE and Edge */
 }
-

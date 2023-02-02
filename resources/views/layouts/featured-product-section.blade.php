@@ -7,7 +7,8 @@
                     Off</span>
                 <img src="{{ asset('/') . $items[0]->product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($items[0]->product->image_path))[0]->getFileName() }}"
                     class="card-img" alt="...">
-                <a href="" class="card-img-overlay text-center text-color-dark d-block">
+                <a href="{{ route('product', [$items[0]->product->slug]) }}"
+                    class="card-img-overlay text-center text-color-dark d-block">
                     <div class="fs-3 fw-bolder mb-0 product-title mt-2 mb-3">
                         {{ $items[0]->product->name }}
                     </div>
@@ -41,14 +42,14 @@
                                 class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">{{ $item->product->discount }}%
                                 Off</span>
                             <div class="overflow-hidden">
-                                <a href="products/test-prod">
+                                <a href="{{ route('product', [$item->product->slug]) }}">
                                     <img src="{{ asset('/') . $item->product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($item->product->image_path))[0]->getFileName() }}"
                                         class="card-img-top" alt="...">
                                 </a>
                             </div>
                             <div class="card-body p-2 text-center d-flex flex-column">
                                 <div class="fs-5 mb-0 product-title">
-                                    <a href="products/test-prod">{{ $item->product->name }}
+                                    <a href="{{ route('product', [$item->product->slug]) }}">{{ $item->product->name }}
                                     </a>
                                 </div>
                                 <div class="overflow-hidden product-price">
@@ -62,7 +63,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="products/test-prod"
+                                    <a href="{{ route('product', [$item->product->slug]) }}"
                                         class="btn px-3 px-sm-5 px-md-3 px-md-3 btn-outline-dark mt-5">Lihat
                                         Detail</a>
                                 </div>
@@ -86,14 +87,14 @@
                                 class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">{{ $item->product->discount }}%
                                 Off</span>
                             <div class="overflow-hidden">
-                                <a href="products/test-prod">
+                                <a href="{{ route('product', [$item->product->slug]) }}">
                                     <img src="{{ asset('/') . $item->product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($item->product->image_path))[0]->getFileName() }}"
                                         class="card-img-top" alt="...">
                                 </a>
                             </div>
                             <div class="card-body p-2 text-center d-flex flex-column">
                                 <div class="fs-5 mb-0 product-title">
-                                    <a href="products/test-prod">{{ $item->product->name }}
+                                    <a href="{{ route('product', [$item->product->slug]) }}">{{ $item->product->name }}
                                     </a>
                                 </div>
                                 <div class="overflow-hidden product-price">
@@ -107,7 +108,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="products/test-prod"
+                                    <a href="{{ route('product', [$item->product->slug]) }}"
                                         class="btn px-3 px-sm-5 px-md-3 px-md-3 btn-outline-dark mt-5">Lihat
                                         Detail</a>
                                 </div>
@@ -132,14 +133,14 @@
                                 class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">{{ $item->product->discount }}%
                                 Off</span>
                             <div class="overflow-hidden">
-                                <a href="products/test-prod">
+                                <a href="{{ route('product', [$item->product->slug]) }}">
                                     <img src="{{ asset('/') . $item->product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($item->product->image_path))[0]->getFileName() }}"
                                         class="card-img-top" alt="...">
                                 </a>
                             </div>
                             <div class="card-body p-2 text-center d-flex flex-column">
                                 <div class="fs-5 mb-0 product-title">
-                                    <a href="products/test-prod">{{ $item->product->name }}
+                                    <a href="{{ route('product', [$item->product->slug]) }}">{{ $item->product->name }}
                                     </a>
                                 </div>
                                 <div class="overflow-hidden product-price">
@@ -153,7 +154,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="products/test-prod"
+                                    <a href="{{ route('product', [$item->product->slug]) }}"
                                         class="btn px-3 px-sm-5 px-md-3 px-md-3 btn-outline-dark mt-5">Lihat
                                         Detail</a>
                                 </div>
@@ -171,7 +172,8 @@
                     Off</span>
                 <img src="{{ asset('/') . $items[2]->product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($items[2]->product->image_path))[0]->getFileName() }}"
                     class="card-img" alt="...">
-                <a href="" class="card-img-overlay text-center text-color-dark d-block">
+                <a href="{{ route('product', [$items[2]->product->slug]) }}"
+                    class="card-img-overlay text-center text-color-dark d-block">
                     <div class="fs-3 fw-bolder mb-0 product-title mt-2 mb-3">
                         {{ $items[2]->product->name }}
                     </div>
@@ -206,14 +208,14 @@
                                 class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">{{ $item->product->discount }}%
                                 Off</span>
                             <div class="overflow-hidden">
-                                <a href="products/test-prod">
+                                <a href="{{ route('product', [$item->product->slug]) }}">
                                     <img src="{{ asset('/') . $item->product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($item->product->image_path))[0]->getFileName() }}"
                                         class="card-img-top" alt="...">
                                 </a>
                             </div>
                             <div class="card-body p-2 text-center d-flex flex-column">
                                 <div class="fs-5 mb-0 product-title">
-                                    <a href="products/test-prod">{{ $item->product->name }}
+                                    <a href="{{ route('product', [$item->product->slug]) }}">{{ $item->product->name }}
                                     </a>
                                 </div>
                                 <div class="overflow-hidden product-price">
@@ -227,7 +229,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="products/test-prod"
+                                    <a href="{{ route('product', [$item->product->slug]) }}"
                                         class="btn px-3 px-sm-5 px-md-3 px-md-3 btn-outline-dark mt-5">Lihat
                                         Detail</a>
                                 </div>
@@ -252,14 +254,14 @@
                                 class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">{{ $item->product->discount }}%
                                 Off</span>
                             <div class="overflow-hidden">
-                                <a href="products/test-prod">
+                                <a {{ route('product', [$item->product->slug]) }}">
                                     <img src="{{ asset('/') . $item->product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($item->product->image_path))[0]->getFileName() }}"
                                         class="card-img-top" alt="...">
                                 </a>
                             </div>
                             <div class="card-body p-2 text-center d-flex flex-column">
                                 <div class="fs-5 mb-0 product-title">
-                                    <a href="products/test-prod">{{ $item->product->name }}
+                                    <a href="{{ route('product', [$item->product->slug]) }}">{{ $item->product->name }}
                                     </a>
                                 </div>
                                 <div class="overflow-hidden product-price">
@@ -273,7 +275,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="products/test-prod"
+                                    <a href="{{ route('product', [$item->product->slug]) }}"
                                         class="btn px-3 px-sm-5 px-md-3 px-md-3 btn-outline-dark mt-5">Lihat
                                         Detail</a>
                                 </div>
@@ -297,14 +299,14 @@
                                 class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">{{ $item->product->discount }}%
                                 Off</span>
                             <div class="overflow-hidden">
-                                <a href="products/test-prod">
+                                <a href={{ route('product', [$item->product->slug]) }}">
                                     <img src="{{ asset('/') . $item->product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($item->product->image_path))[0]->getFileName() }}"
                                         class="card-img-top" alt="...">
                                 </a>
                             </div>
                             <div class="card-body p-2 text-center d-flex flex-column">
                                 <div class="fs-5 mb-0 product-title">
-                                    <a href="products/test-prod">{{ $item->product->name }}
+                                    <a href="{{ route('product', [$item->product->slug]) }}">{{ $item->product->name }}
                                     </a>
                                 </div>
                                 <div class="overflow-hidden product-price">
@@ -318,7 +320,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="products/test-prod"
+                                    <a href="{{ route('product', [$item->product->slug]) }}"
                                         class="btn px-3 px-sm-5 px-md-3 px-md-3 btn-outline-dark mt-5">Lihat
                                         Detail</a>
                                 </div>
@@ -335,7 +337,8 @@
                     Off</span>
                 <img src="{{ asset('/') . $items[4]->product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($items[4]->product->image_path))[0]->getFileName() }}"
                     class="card-img" alt="...">
-                <a href="" class="card-img-overlay text-center text-color-dark d-block">
+                <a href="{{ route('product', [$items[4]->product->slug]) }}"
+                    class="card-img-overlay text-center text-color-dark d-block">
                     <div class="fs-3 fw-bolder mb-0 product-title mt-2 mb-3">
                         {{ $items[4]->product->name }}
                     </div>

@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('custom_css')
-    <link href="{{ asset('css/basic-home.css') }}" rel="stylesheet">
     <link href="{{ asset('css/product.css') }}" rel="stylesheet">
 @endsection
 
@@ -16,27 +15,18 @@
             <div class="item-media">
                 <div class="sticky-container">
                     <div class="image-container">
-                        <img src="{{ asset('assets/robina-weermeijer-NIuGLCC7q54-unsplash.jpg') }}" alt=""
-                            class="product-img">
+                        <img src="{{ asset('/') . $product->image_path . '/' . $productImg[0]->getFileName() }}"
+                            alt="" class="product-img">
                     </div>
 
                     <div class="d-flex image-chosen-btn mt-auto justify-content-between">
-                        <button class="btn" value="{{ asset('assets/spencer-davis-s4_g2TCyNHM-unsplash.jpg') }}">
-                            <img src="{{ asset('assets/spencer-davis-s4_g2TCyNHM-unsplash.jpg') }}" alt=""
-                                class="img-thumbnail">
-                        </button>
-                        <button class="btn" value="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}">
-                            <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}" alt=""
-                                class="img-thumbnail">
-                        </button>
-                        <button class="btn" value="{{ asset('assets/robina-weermeijer-NIuGLCC7q54-unsplash.jpg') }}">
-                            <img src="{{ asset('assets/robina-weermeijer-NIuGLCC7q54-unsplash.jpg') }}" alt=""
-                                class="img-thumbnail">
-                        </button>
-                        <button class="btn" value="{{ asset('assets/zhen-hu-Xruf17OrkwM-unsplash.jpg') }}">
-                            <img src="{{ asset('assets/zhen-hu-Xruf17OrkwM-unsplash.jpg') }}" alt=""
-                                class="img-thumbnail">
-                        </button>
+                        @foreach ($productImg as $img)
+                            <button class="btn"
+                                value="{{ asset('/') . $product->image_path . '/' . $img->getFileName() }}">
+                                <img src="{{ asset('/') . $product->image_path . '/' . $img->getFileName() }}"
+                                    alt="" class="img-thumbnail">
+                            </button>
+                        @endforeach
                     </div>
                     <div class="slideable-effect d-none d-lg-block"></div>
                     <div class="slideable-effect d-none d-lg-block"></div>
@@ -46,12 +36,12 @@
 
 
             <div class="item-title bg-light">
-                <h1 class="product-title">Hematology Analyzer 5 Diff Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Porro, voluptatibus.</h1>
+                <h1 class="product-title">{{ $product->name }}</h1>
                 <div class="d-flex align-items-center ">
                     <a href="#rating-star-detail" class="border rounded-pill px-2 text-decoration-none stars-container">
-                        <div class="rating-stars" style="--rating: 4.3;"
-                            aria-label="Rating of this product is 4.3 out of 5."></div>
+                        <div class="rating-stars" style="--rating: 0;"
+                            aria-label="Rating of this product is 0.0 out of 5.0">
+                        </div>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 4 16 16" fill="currentColor"
                             class="logo-svg text-secondary">
                             <path
@@ -60,17 +50,17 @@
                     </a>
                     <small class="mx-2">|</small>
                     <a href="#" class="text-decoration-none">
-                        108 rating
+                        0 rating
                     </a>
                     <small class="mx-2">|</small>
                     <a href="#" class="text-decoration-none">
-                        17 diskusi
+                        0 diskusi
                     </a>
                 </div>
 
                 <hr>
 
-                <div class="price-tag ">Rp. 50.000.000 ,-</div>
+                <div class="price-tag ">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</div>
                 <a href="" class="btn btn-success px-5 py-2 me-3 my-2">
                     <div class="h5 m-0">Buy now</div>
                 </a>
@@ -81,30 +71,12 @@
                 <hr>
 
                 <div class="spec-highlight">
-                    <div class="d-flex w-100 border py-2 my-1">
-                        <strong class="col flex-grow-0 border-end px-3">Brand</strong>
-                        <span class="col px-3">Alkaline</span>
-                    </div>
-                    <div class="d-flex w-100 border py-2 my-1">
-                        <strong class="col flex-grow-0 border-end px-3">Weight</strong>
-                        <span class="col px-3">1000 g</span>
-                    </div>
-                    <div class="d-flex w-100 border py-2 my-1">
-                        <strong class="col flex-grow-0 border-end px-3">Category</strong>
-                        <span class="col px-3">Alat Kesehatan</span>
-                    </div>
-                    <div class="d-flex w-100 border py-2 my-1">
-                        <strong class="col flex-grow-0 border-end px-3"> dolor sit Blanditiis,
-                            voluptatibus.</strong>
-                        <span class="col px-3">Loremasdasdasdasda ipsum dolor sit amet consectetur adipisicing elit.
-                            Quisquam,
-                            amet! Voluptatibus ea, corrupti nobis dolor ut quibusdam non id perferendis.</span>
-                    </div>
-                    <div class="d-flex w-100 border py-2 my-1">
-                        <strong class="col flex-grow-0 border-end px-3">Lorem ipsum dolor sit amet.</strong>
-                        <span class="col px-3">Laptop, Personal Computer Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Pariatur, veniam!</span>
-                    </div>
+                    @foreach ($product->productSpecification as $spec)
+                        <div class="d-flex w-100 border py-2 my-1">
+                            <strong class="col flex-grow-0 border-end px-3">{{ $spec->spec_key }}</strong>
+                            <span class="col px-3">{{ $spec->spec_val }}</span>
+                        </div>
+                    @endforeach
                 </div>
             </div>
 
@@ -112,73 +84,7 @@
 
             <div class="item-description rounded bg-light">
                 <h2 class="product-title border-bottom pb-2 mb-3">Product Description</h2>
-                Xiaomi TV Q1E 55" menggunakan resolusi 4K ultra-tinggi menawarkan gambar yang empat kali lebih jernih
-                dibandingkan TV FHD biasanya, yang memberikan Anda gambar dengan detail tajam dan kualitas yang lebih baik*.
-                Berkat dukungan Dolby Vision® dan HDR 10+, perangkat ini menghasilkan tingkat kecerahan dan warna yang luar
-                biasa untuk gambar apa pun*.<br>
-                <br>
-                Xiaomi TV Q1E 55" Berkat sistem 6 speaker terbaru yang telah ditingkatkan, daya maksimal dari satu speaker
-                dapat mencapai hingga 15W. Speaker ini mendukung Dolby Audio + DTS yang dapat memberikan Anda pengalaman
-                sinematik yang menghanyutkan dari rumah Anda.<br>
-                <br>
-                Spesifikasi :<br>
-                <br>
-                Layar<br>
-                Tipe Layar: QLED, 4K<br>
-                Resolusi: 4k, 3840 x 2160<br>
-                Gamut warna: DCI-P3 97% (umum)<br>
-                Kedalaman warna: 1,07 miliar (8-bit + FRC)<br>
-                Refresh rate: 60Hz<br>
-                MEMC: 60Hz<br>
-                Sudut tampilan: 178°(H)/ 178°(V)<br>
-                Mendukung Dolby Vision®, HDR10+, HDR10, HLG<br>
-                <br>
-                Speaker<br>
-                Speaker (Output Suara): 15W + 15W<br>
-                Mendukung Dolby Audio™ dan DTS-HD®<br>
-                <br>
-                Sistem operasi<br>
-                Android TV™ 10<br>
-                <br>
-                Prosesor dan Penyimpanan<br>
-                MediaTek 9611<br>
-                CPU: Quad-core Cortex-A55<br>
-                GPU: ARM Mali G52<br>
-                RAM: 2GB<br>
-                Penyimpanan: 32GB<br>
-                <br>
-                Desain<br>
-                Tampilan tanpa batas, tanpa bezel<br>
-                Warna: Abu-abu<br>
-                Kaki penyangga: dua kaki penyangga dari logam<br>
-                Lampu notifikasi LED<br>
-                Tombol Mematikan Suara Mikrofon<br>
-                <br>
-                Konektivitas<br>
-                Bluetooth 5.0<br>
-                Wi-Fi 2,4Ghz/5GHz<br>
-                HDMI x 3（1 port dengan eARC)<br>
-                USB 2.0 x 2<br>
-                Composite In (AV): Ya<br>
-                Slot CI: Ya<br>
-                Ethernet (Lan): Ya<br>
-                Output Audio Digital Optik: Ya<br>
-                Jack headphone 3,5 mm x 1<br>
-                Sistem siaran: DVB-T2/C, DVB-S2<br>
-                <br>
-                Multimedia<br>
-                Format video yang didukung:<br>
-                AV1, H.265, H.264, H.263, VP8/VP9, MPEG1/2, MJPEG<br>
-                Format audio yang didukung:<br>
-                Dolby, DTS, FLAC, AAC, AC4, OGG, PCM/LPCM/ADPCM, MPEG-I/MPEG-II<br>
-                Format gambar yang didukung:<br>
-                PNG, Gif, JPG, Bmp<br>
-                <br>
-                Daya & Lingkungan pengoperasian<br>
-                Daya: 180W<br>
-                Tegangan: 100-240V, 50/60Hz<br>
-                Suhu pengoperasian: 0℃～40℃, Kelembapan 20%～80%<br>
-                Suhu penyimpanan: -15℃～45℃, Kelembapan relatif kurang dari 80%
+                {!! $product->description !!}
             </div>
 
 
@@ -187,30 +93,30 @@
                 <div class="sticky-container text-center rounded">
                     <div class="bg-light rounded pt-3 pb-2">
                         <h2 class="border-bottom pb-2 mx-3 mb-1">Rating</h2>
-                        <div class="rating-stars lg mb-1" style="--rating: 4.3;"
-                            aria-label="Rating of this product is 4.3 out of 5.">
+                        <div class="rating-stars lg mb-1" style="--rating: 0.0;"
+                            aria-label="Rating of this product is 0.0 out of 5.0">
                         </div>
-                        <div>4.3 out of 5</div>
+                        <div>0.0 out of 5.0</div>
                     </div>
                     <ul class="nav bg-light p-2 text-dark flex-column rounded mt-2 text-start">
                         <li>
                             <a href="" class="text-decoration-none d-flex align-items-center m-2">
                                 <div class="col-1">5</div>
                                 <div class="progress col-9">
-                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%;"
-                                        aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 0%;"
+                                        aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
-                                <small class="col-2 text-end">75%</small>
+                                <small class="col-2 text-end">0%</small>
                             </a>
                         </li>
                         <li>
                             <a href="" class="text-decoration-none d-flex align-items-center m-2">
                                 <div class="col-1">4</div>
                                 <div class="progress col-9">
-                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 15%;"
-                                        aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 0%;"
+                                        aria-valuenow="105" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
-                                <small class="col-2 text-end">15%</small>
+                                <small class="col-2 text-end">0%</small>
                             </a>
                         </li>
                         <li>
@@ -227,20 +133,20 @@
                             <a href="" class="text-decoration-none d-flex align-items-center m-2">
                                 <div class="col-1">2</div>
                                 <div class="progress col-9">
-                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 3%;"
-                                        aria-valuenow="3" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 0%;"
+                                        aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
-                                <small class="col-2 text-end">3%</small>
+                                <small class="col-2 text-end">0%</small>
                             </a>
                         </li>
                         <li>
                             <a href="" class="text-decoration-none d-flex align-items-center m-2">
                                 <div class="col-1">1</div>
                                 <div class="progress col-9">
-                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 7%;"
-                                        aria-valuenow="7" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 0%;"
+                                        aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
-                                <small class="col-2 text-end">7%</small>
+                                <small class="col-2 text-end">0%</small>
                             </a>
                         </li>
                     </ul>
@@ -261,7 +167,7 @@
                         <hr class="m-0">
                     </div>
                     <div class="col-12 col-lg-2 ">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-select" aria-label="select-review-star" disabled>
                             <option selected>All stars</option>
                             <option value="1">5 stars</option>
                             <option value="2">4 stars</option>
@@ -271,7 +177,7 @@
                         </select>
                     </div>
                     <div class="col-12 col-lg-3 pe-lg-2">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-select" aria-label="select-review-star" disabled>
                             <option selected>Text, image, video reviews</option>
                             <option value="1">Image & video reviews only</option>
                         </select>
@@ -283,7 +189,7 @@
                         <hr class="m-0">
                     </div>
                     <div class="col-12 col-lg-2">
-                        <select class="form-select" aria-label="Default select example" id="sort_by">
+                        <select class="form-select" aria-label="select-review-star" id="sort_by" disabled>
                             <option selected>Top reviews</option>
                             <option value="1">Latest reviews</option>
                         </select>
@@ -300,8 +206,7 @@
                             <h2 class="m-0 text-center">Customer Review</h2>
                         </div>
 
-                        <div class="col-12 border rounded p-2 p-md-3 d-flex flex-column bg-light">
-                            {{-- User's Information --}}
+                        {{-- <div class="col-12 border rounded p-2 p-md-3 d-flex flex-column bg-light">
                             <div class="d-flex align-items-start">
                                 <img src="{{ asset('assets/profile-picture.jpeg') }}" alt=""
                                     class="border border-2 rounded-circle me-2">
@@ -353,7 +258,6 @@
 
                             <hr class="my-2">
 
-                            {{-- User's Review --}}
                             <div class="d-flex">
                                 <div class="d-flex flex-column pe-2 me-2 border-end">
                                     <button class="btn btn-outline-success">
@@ -406,7 +310,6 @@
                         </div>
 
                         <div class="col-12 border rounded p-2 p-md-3 d-flex flex-column bg-light">
-                            {{-- User's Information --}}
                             <div class="d-flex align-items-start">
                                 <img src="{{ asset('assets/profile-picture.jpeg') }}" alt=""
                                     class="border border-2 rounded-circle me-2">
@@ -458,7 +361,6 @@
 
                             <hr class="my-2">
 
-                            {{-- User's Review --}}
                             <div class="d-flex">
                                 <div class="d-flex flex-column pe-2 me-2 border-end">
                                     <button class="btn btn-outline-success">
@@ -492,7 +394,15 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> 
+                        
+                        <div
+                            class="col-12 flex-wrap border rounded px-3 py-2 d-flex justify-content-center justify-content-md-between align-items-center bg-light">
+                            <div class="h5 m-md-0">
+                                <strong>Review this product</strong>
+                            </div>
+                            <a href="" class="btn btn-secondary py-1">Write a customer review</a>
+                        </div> --}}
 
                         {{-- If there's no customer review for this product yet --}}
                         <div class="col-12 border rounded p-2 d-flex flex-column bg-light">
@@ -508,13 +418,6 @@
                                 <a href="" class="btn btn-secondary py-1">Write a customer review</a>
                             </div>
                         </div>
-                        <div
-                            class="col-12 flex-wrap border rounded px-3 py-2 d-flex justify-content-center justify-content-md-between align-items-center bg-light">
-                            <div class="h5 m-md-0">
-                                <strong>Review this product</strong>
-                            </div>
-                            <a href="" class="btn btn-secondary py-1">Write a customer review</a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -528,7 +431,7 @@
                             <h2 class="border-bottom pb-2 mb-1">Product Discussion</h2>
                         </div>
 
-                        <div class="col-12 p-0 border rounded d-flex flex-column my-1">
+                        {{-- <div class="col-12 p-0 border rounded d-flex flex-column my-1">
                             <div class="d-flex flex-column">
                                 <div class="d-flex px-2 px-md-3">
                                     <div
@@ -594,7 +497,15 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> 
+                        
+                        <div
+                            class="col-12 px-3 py-2 border rounded flex-wrap justify-content-center justify-content-md-between align-items-center d-flex my-1">
+                            <div class="h5 m-md-0 text-center">
+                                <strong>Have any question for this product ?</strong>
+                            </div>
+                            <a href="" class="btn btn-secondary py-1">Ask anything about this product</a>
+                        </div> --}}
 
                         {{-- If there's no discussion for this product yet --}}
                         <div class="col-12 px-3 py-2 border rounded d-flex flex-column my-1">
@@ -609,15 +520,6 @@
                                 </div>
                                 <a href="" class="btn btn-secondary py-1">Ask anything about this product</a>
                             </div>
-                        </div>
-
-
-                        <div
-                            class="col-12 px-3 py-2 border rounded flex-wrap justify-content-center justify-content-md-between align-items-center d-flex my-1">
-                            <div class="h5 m-md-0 text-center">
-                                <strong>Have any question for this product ?</strong>
-                            </div>
-                            <a href="" class="btn btn-secondary py-1">Ask anything about this product</a>
                         </div>
                     </div>
                 </div>

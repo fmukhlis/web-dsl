@@ -29,7 +29,7 @@
             <div class="carousel-inner">
                 @if ($carouselItem->count())
                     @foreach ($carouselItem as $key => $item)
-                        <div class="carousel-item @if ($item->display_type == 'a') active @endif" data-bs-interval="5000">
+                        <div class="carousel-item @if ($key == 0) active @endif" data-bs-interval="5000">
                             <img src="{{ asset('/') . $item->product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($item->product->image_path))[0]->getFileName() }}"
                                 class="d-block carousel-image @if ($item->display_type == 'a') modified @endif"
                                 alt="...">
@@ -54,10 +54,10 @@
                                         {{ date($discEndFormat, strtotime($item->product->disc_end)) }}</div>
                                 @endif
                                 <div class="action">
-                                    <a href=""
+                                    <a href="{{ route('product', [$item->product->slug]) }}"
                                         class="@if ($item->display_type == 'a') text-light @else text-dark @endif">Learn
                                         more</a>
-                                    <a href=""
+                                    <a href="{{ route('product', [$item->product->slug]) }}"
                                         class="btn @if ($item->display_type == 'a') btn-light @else btn-dark @endif offset-md-1">Buy
                                         Now</a>
                                 </div>
@@ -215,14 +215,14 @@
                                         Off
                                     </span>
                                     <div class="overflow-hidden">
-                                        <a href="products/test-prod">
+                                        <a href="{{ route('product', [$product->slug]) }}">
                                             <img src="{{ asset('/') . $product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($product->image_path))[0]->getFileName() }}"
                                                 class="card-img-top" alt="...">
                                         </a>
                                     </div>
                                     <div class="card-body p-2 text-center d-flex flex-column">
                                         <div class="fs-5 mb-0 product-title">
-                                            <a href="products/test-prod">
+                                            <a href="{{ route('product', [$product->slug]) }}">
                                                 {{ $product->name }}
                                             </a>
                                         </div>
@@ -236,7 +236,7 @@
                                                     <div class="fs-4 fw-bold">@numericToMoneyFormatWithoutPrefix($product->price - ($product->price * $product->discount) / 100)</div>
                                                 </div>
                                             </div>
-                                            <a href="products/test-prod"
+                                            <a href="{{ route('product', [$product->slug]) }}"
                                                 class="btn px-3 px-sm-5 px-md-3 btn-dark mt-5">Lihat
                                                 Detail</a>
                                         </div>
@@ -287,14 +287,14 @@
                                         class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">{{ $product->discount }}%
                                         Off</span>
                                     <div class="overflow-hidden">
-                                        <a href="products/test-prod">
+                                        <a href="{{ route('product', [$product->slug]) }}">
                                             <img src="{{ asset('/') . $product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($product->image_path))[0]->getFileName() }}"
                                                 class="card-img-top" alt="...">
                                         </a>
                                     </div>
                                     <div class="card-body p-2 text-center d-flex flex-column">
                                         <div class="fs-5 mb-0 product-title">
-                                            <a href="products/test-prod">{{ $product->name }}
+                                            <a href="{{ route('product', [$product->slug]) }}">{{ $product->name }}
                                             </a>
                                         </div>
                                         <div class="overflow-hidden product-price">
@@ -307,7 +307,7 @@
                                                     <div class="fs-4 fw-bold">@numericToMoneyFormatWithoutPrefix($product->price - ($product->price * $product->discount) / 100)</div>
                                                 </div>
                                             </div>
-                                            <a href="products/test-prod"
+                                            <a href="{{ route('product', [$product->slug]) }}"
                                                 class="btn px-3 px-sm-5 px-md-3 btn-light mt-5">Lihat
                                                 Detail</a>
                                         </div>
@@ -358,14 +358,14 @@
                                         Off
                                     </span>
                                     <div class="overflow-hidden">
-                                        <a href="products/test-prod">
+                                        <a href="{{ route('product', [$product->slug]) }}">
                                             <img src="{{ asset('/') . $product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($product->image_path))[0]->getFileName() }}"
                                                 class="card-img-top" alt="...">
                                         </a>
                                     </div>
                                     <div class="card-body p-2 text-center d-flex flex-column">
                                         <div class="fs-5 mb-0 product-title">
-                                            <a href="products/test-prod">
+                                            <a href="{{ route('product', [$product->slug]) }}">
                                                 {{ $product->name }}
                                             </a>
                                         </div>
@@ -379,7 +379,7 @@
                                                     <div class="fs-4 fw-bold">@numericToMoneyFormatWithoutPrefix($product->price - ($product->price * $product->discount) / 100)</div>
                                                 </div>
                                             </div>
-                                            <a href="products/test-prod"
+                                            <a href="{{ route('product', [$product->slug]) }}"
                                                 class="btn px-3 px-sm-5 px-md-3 btn-dark mt-5">Lihat
                                                 Detail</a>
                                         </div>
@@ -429,14 +429,14 @@
                                         class="badge fs-6 bg-danger position-absolute disc-badge rounded-0 px-5">{{ $product->discount }}%
                                         Off</span>
                                     <div class="overflow-hidden">
-                                        <a href="products/test-prod">
+                                        <a href="{{ route('product', [$product->slug]) }}">
                                             <img src="{{ asset('/') . $product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($product->image_path))[0]->getFileName() }}"
                                                 class="card-img-top" alt="...">
                                         </a>
                                     </div>
                                     <div class="card-body p-2 text-center d-flex flex-column">
                                         <div class="fs-5 mb-0 product-title">
-                                            <a href="products/test-prod">{{ $product->name }}
+                                            <a href="{{ route('product', [$product->slug]) }}">{{ $product->name }}
                                             </a>
                                         </div>
                                         <div class="overflow-hidden product-price">
@@ -449,7 +449,7 @@
                                                     <div class="fs-4 fw-bold">@numericToMoneyFormatWithoutPrefix($product->price - ($product->price * $product->discount) / 100)</div>
                                                 </div>
                                             </div>
-                                            <a href="products/test-prod"
+                                            <a href="{{ route('product', [$product->slug]) }}"
                                                 class="btn px-3 px-sm-5 px-md-3 btn-light mt-5">Lihat
                                                 Detail</a>
                                         </div>

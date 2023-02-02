@@ -37,7 +37,7 @@ class ProductFactory extends Factory
             'name' => $itemName,
             'slug' => $itemSlug,
             'category' => $category[array_rand($category)],
-            'description' => $this->faker->paragraphs(3, true),
+            'description' => nl2br($this->faker->paragraphs(rand(5, 15), true)),
             'price' => $price,
             'discount' => $discount,
             'disc_start' => $discStart,

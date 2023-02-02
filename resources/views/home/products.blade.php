@@ -275,10 +275,10 @@
                     <div class="col-12">
                         <ul class="nav nav-tabs flex-nowrap" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link @if (!(request('medical') || request('laboratory') || request('chemical') || request('others'))) active @endif" id="tab-semua"
+                                <button class="nav-link @if (!(request('medical') || request('laboratory') || request('chemical') || request('other'))) active @endif" id="tab-semua"
                                     data-bs-toggle="tab" data-bs-target="#semua" type="button" role="tab"
                                     aria-controls="semua"
-                                    aria-selected="@if (request('medical') || request('laboratory') || request('chemical') || request('others')) false @else true @endif">Semua</button>
+                                    aria-selected="@if (request('medical') || request('laboratory') || request('chemical') || request('other')) false @else true @endif">Semua</button>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link @if (request('medical')) active @endif"
@@ -302,10 +302,10 @@
                                     Kimia</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link @if (request('others')) active @endif"
+                                <button class="nav-link @if (request('other')) active @endif"
                                     id="tab-lainnya" data-bs-toggle="tab" data-bs-target="#lainnya" type="button"
                                     role="tab" aria-controls="lainnya"
-                                    aria-selected="@if (request('others')) true @else false @endif">Lainnya</button>
+                                    aria-selected="@if (request('other')) true @else false @endif">Lainnya</button>
                             </li>
                         </ul>
                     </div>
@@ -330,7 +330,7 @@
                     </div>
 
                     <div class="tab-content">
-                        <div class="tab-pane fade @if (!(request('medical') || request('laboratory') || request('chemical') || request('others'))) show active @endif" id="semua"
+                        <div class="tab-pane fade @if (!(request('medical') || request('laboratory') || request('chemical') || request('other'))) show active @endif" id="semua"
                             role="tabpanel" aria-labelledby="tab-semua">
                             <div class="px-1">
                                 <div class="row g-2">
@@ -341,7 +341,7 @@
                                             ->condition(request('is_new'))
                                             ->price(request('min'), request('max'))
                                             ->paginate($perPage = 6, $columns = ['*'], $pageName = 'all')
-                                            ->withQueryString();
+                                            ->appends(request()->except(['all', 'medical', 'laboratory', 'chemical', 'other']));
                                     @endphp
                                     @if ($allDevices->total())
                                         @foreach ($allDevices as $product)
@@ -424,7 +424,7 @@
                                         </div>
                                     @endif
                                     @if ($allDevices->hasPages())
-                                        <div class="col-12 mt-4 d-flex overflow-auto justify-content-center">
+                                        <div class="col-12 mt-4">
                                             {{ $allDevices->onEachSide(2)->links() }}
                                         </div>
                                     @endif
@@ -444,7 +444,7 @@
                                             ->condition(request('is_new'))
                                             ->price(request('min'), request('max'))
                                             ->paginate($perPage = 6, $columns = ['*'], $pageName = 'medical')
-                                            ->withQueryString();
+                                            ->appends(request()->except(['all', 'medical', 'laboratory', 'chemical', 'other']));
                                     @endphp
                                     @if ($medDevices->total())
                                         @foreach ($medDevices as $product)
@@ -527,7 +527,7 @@
                                         </div>
                                     @endif
                                     @if ($medDevices->hasPages())
-                                        <div class="col-12 mt-5 d-flex overflow-auto justify-content-center">
+                                        <div class="col-12 mt-5">
                                             {{ $medDevices->onEachSide(2)->links() }}
                                         </div>
                                     @endif
@@ -547,7 +547,7 @@
                                             ->condition(request('is_new'))
                                             ->price(request('min'), request('max'))
                                             ->paginate($perPage = 6, $columns = ['*'], $pageName = 'laboratory')
-                                            ->withQueryString();
+                                            ->appends(request()->except(['all', 'medical', 'laboratory', 'chemical', 'other']));
                                     @endphp
                                     @if ($labDevices->total())
                                         @foreach ($labDevices as $product)
@@ -630,7 +630,7 @@
                                         </div>
                                     @endif
                                     @if ($labDevices->hasPages())
-                                        <div class="col-12 mt-5 d-flex overflow-auto justify-content-center">
+                                        <div class="col-12 mt-5">
                                             {{ $labDevices->onEachSide(2)->links() }}
                                         </div>
                                     @endif
@@ -650,7 +650,7 @@
                                             ->condition(request('is_new'))
                                             ->price(request('min'), request('max'))
                                             ->paginate($perPage = 6, $columns = ['*'], $pageName = 'chemical')
-                                            ->withQueryString();
+                                            ->appends(request()->except(['all', 'medical', 'laboratory', 'chemical', 'other']));
                                     @endphp
                                     @if ($chemDevices->total())
                                         @foreach ($chemDevices as $product)
@@ -733,14 +733,14 @@
                                         </div>
                                     @endif
                                     @if ($chemDevices->hasPages())
-                                        <div class="col-12 mt-5 d-flex overflow-auto justify-content-center">
+                                        <div class="col-12 mt-5">
                                             {{ $chemDevices->onEachSide(2)->links() }}
                                         </div>
                                     @endif
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade @if (request('others')) show active @endif" id="lainnya"
+                        <div class="tab-pane fade @if (request('other')) show active @endif" id="lainnya"
                             role="tabpanel" aria-labelledby="tab-lainnya">
                             <div class="px-1">
                                 <div class="row g-2">
@@ -751,8 +751,8 @@
                                             ->rating(request('rating'))
                                             ->condition(request('is_new'))
                                             ->price(request('min'), request('max'))
-                                            ->paginate($perPage = 6, $columns = ['*'], $pageName = 'others')
-                                            ->withQueryString();
+                                            ->paginate($perPage = 6, $columns = ['*'], $pageName = 'other')
+                                            ->appends(request()->except(['all', 'medical', 'laboratory', 'chemical', 'other']));
                                     @endphp
                                     @if ($otherDevices->total())
                                         @foreach ($otherDevices as $product)
@@ -835,7 +835,7 @@
                                         </div>
                                     @endif
                                     @if ($otherDevices->hasPages())
-                                        <div class="col-12 mt-5 d-flex overflow-auto justify-content-center">
+                                        <div class="col-12 mt-5">
                                             {{ $otherDevices->onEachSide(2)->links() }}
                                         </div>
                                     @endif
