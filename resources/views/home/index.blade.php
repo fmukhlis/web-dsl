@@ -11,15 +11,9 @@
     {{-- Carousel --}}
     <div class="container p-md-0 mb-0 mb-lg-4 mt-0 mt-lg-2">
         <div id="carousel" class="carousel carousel-light slide modified mb-3" data-bs-ride="carousel">
-<<<<<<< HEAD
             @if ($carouselItem->count())
                 {{-- Carousel Indicator --}}
                 <div class="carousel-indicators">
-=======
-            {{-- Carousel Indicator --}}
-            <div class="carousel-indicators">
-                @if ($carouselItem->count())
->>>>>>> 393629c (Memperbaiki Style dan Menampilkan Data Carousel (Halaman Home))
                     @foreach ($carouselItem as $key => $item)
                         @if ($key == 0)
                             <button type="button" data-bs-target="#carousel" data-bs-slide-to="{{ $key }}"
@@ -29,30 +23,20 @@
                                 aria-label="Slide {{ $key }}"></button>
                         @endif
                     @endforeach
-<<<<<<< HEAD
                 </div>
             @endif
-=======
-                @endif
-            </div>
->>>>>>> 393629c (Memperbaiki Style dan Menampilkan Data Carousel (Halaman Home))
             {{-- Carousel Content --}}
             <div class="carousel-inner">
                 @if ($carouselItem->count())
                     @foreach ($carouselItem as $key => $item)
                         <div class="carousel-item @if ($key == 0) active @endif" data-bs-interval="5000">
                             <img src="{{ asset('/') . $item->product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($item->product->image_path))[0]->getFileName() }}"
-<<<<<<< HEAD
                                 class="d-block carousel-image @if ($item->display_type == 'a') modified @endif"
                                 alt="...">
                             <div class="carousel-caption @if ($item->display_type == 'a') light @else dark @endif">
-=======
-                                class="d-block carousel-image @if ($key % 2 == 0) modified @endif"
-                                alt="...">
-                            <div class="carousel-caption @if ($key % 2 == 0) light @else dark @endif">
->>>>>>> 393629c (Memperbaiki Style dan Menampilkan Data Carousel (Halaman Home))
                                 <h1 class="title">{{ $item->product->name }}</h1>
-                                <div class="description">{{ Str::limit($item->product->description, 200) }}</div>
+                                <div class="description">{{ Str::limit($item->product->description, 200) }}
+                                </div>
                                 @if ($item->product->disc_start && $item->product->disc_start)
                                     @php
                                         $discStart = strtotime($item->product->disc_start);
@@ -71,9 +55,9 @@
                                         {{ date($discEndFormat, strtotime($item->product->disc_end)) }}</div>
                                 @endif
                                 <div class="action">
-<<<<<<< HEAD
                                     <a href="{{ route('product', [$item->product->slug]) }}"
-                                        class="@if ($item->display_type == 'a') text-light @else text-dark @endif">Learn
+                                        class="@if ($item->display_type == 'a') text-light @else text-dark @endif">
+                                        Learn
                                         more</a>
                                     <a href="{{ route('product', [$item->product->slug]) }}"
                                         class="btn @if ($item->display_type == 'a') btn-light @else btn-dark @endif offset-md-1">Buy
@@ -89,8 +73,10 @@
                             class="d-block carousel-image" alt="...">
                         <div class="carousel-caption light bg-transparent">
                             <h1 class="title">Lorem ipsum dolor sit amet.</h1>
-                            <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
-                                consectetur. Quod veritatis optio asperiores voluptatem alias quam provident quas similique
+                            <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Ducimus,
+                                consectetur. Quod veritatis optio asperiores voluptatem alias quam provident quas
+                                similique
                                 ea.</div>
                             <div class="description-small">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
                             <div class="action">
@@ -105,9 +91,11 @@
                         <div class="carousel-caption dark bg-transparent">
                             <h1 class="title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam,
                                 blanditiis.</h1>
-                            <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+                            <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Ducimus,
                                 consectetuea.</div>
-                            <div class="description-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis.
+                            <div class="description-small">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Omnis.
                             </div>
                             <div class="action">
                                 <a href="" class="text-dark">Lorem, ipsum.</a>
@@ -115,50 +103,6 @@
                             </div>
                         </div>
                     </div>
-=======
-                                    <a href=""
-                                        class="@if ($key % 2 == 0) text-light @else text-dark @endif">Learn
-                                        more</a>
-                                    <a href=""
-                                        class="btn @if ($key % 2 == 0) btn-light @else btn-dark @endif offset-md-1">Buy
-                                        Now</a>
-                                </div>
-                            </div>
-                        </div>
-                        {{-- Currently Unused Template --}}
-                        {{-- <div class="carousel-item" data-bs-interval="50000">
-                            <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                                class="d-block carousel-image" alt="...">
-                            <div class="carousel-caption light bg-transparent">
-                                <h1 class="title">Galaxy Z Flip 3</h1>
-                                <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
-                                    consectetur.
-                                    Quod veritatis optio asperiores voluptatem alias quam provident quas similique ea.</div>
-                                <div class="description-small">Device Period : 1-31 October 2022</div>
-                                <div class="action">
-                                    <a href="" class="text-light">Learn more</a>
-                                    <a href="" class="btn btn-light offset-md-1">Buy Now</a>
-                                </div>
-                            </div>
-                        </div> 
-                        <div class="carousel-item" data-bs-interval="5000">
-                            <img src="{{ asset('assets/zhen-hu-Xruf17OrkwM-unsplash.jpg') }}" class="d-block carousel-image"
-                                alt="...">
-                            <div class="carousel-caption dark bg-transparent">
-                                <h1 class="title">Galaxy Z Flip 3</h1>
-                                <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
-                                    consectetur.
-                                    Quod veritatis optio asperiores voluptatem alias quam provident quas similique ea.</div>
-                                <div class="description-small">Device Period : 1-31 October 2022</div>
-                                <div class="action">
-                                    <a href="" class="text-dark">Learn more</a>
-                                    <a href="" class="btn btn-dark offset-md-1">Buy Now</a>
-                                </div>
-                            </div>
-                        </div> --}}
-                    @endforeach
-                @else
->>>>>>> 393629c (Memperbaiki Style dan Menampilkan Data Carousel (Halaman Home))
                 @endif
             </div>
             {{-- Button Prev & Next  --}}
@@ -204,13 +148,15 @@
                                 Laboratorium</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="tab-alat-kimia" data-bs-toggle="tab" data-bs-target="#alat-kimia"
-                                type="button" role="tab" aria-controls="alat-kimia" aria-selected="false">Alat
+                            <button class="nav-link" id="tab-alat-kimia" data-bs-toggle="tab"
+                                data-bs-target="#alat-kimia" type="button" role="tab" aria-controls="alat-kimia"
+                                aria-selected="false">Alat
                                 Kimia</button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="tab-lainnya" data-bs-toggle="tab" data-bs-target="#lainnya"
-                                type="button" role="tab" aria-controls="lainnya" aria-selected="false">Lainnya</button>
+                                type="button" role="tab" aria-controls="lainnya"
+                                aria-selected="false">Lainnya</button>
                         </li>
                     </ul>
 
