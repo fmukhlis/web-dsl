@@ -23,7 +23,7 @@
     <div class="content">
         <div class="container">
             <hr>
-            <form action="asdasd" method="post" id="carousel-form">
+            <form action="" id="carousel-form">
                 @csrf
                 @if (count($carouselProducts))
                     @foreach ($carouselProducts as $cp)

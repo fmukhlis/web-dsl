@@ -130,8 +130,8 @@
                                                                 height="96" fill="currentColor" class="bi bi-1-circle"
                                                                 viewBox="0 0 16 16">
                                                                 <path
-                                                                    d="M 8.0683328,0.76695437 0.16210936,2.8281456 0.84840545,13.265374 8.2963304,15.225232 15.5485,12.334959 15.794921,2.63239 Z M 8.0820093,1.0410478 11.246129,1.7980639 4.2832168,3.8620186 0.7098717,2.9614013 Z m 3.5000087,0.8505947 3.621952,0.850477 -6.9629117,2.1837111 -3.580875,-0.913154 z m 3.941609,1.0928245 -0.216304,9.098243 -6.9303516,2.749753 0.02303,-9.6002968 z M 0.44066729,3.2228104 8.1324625,5.2129273 8.0947402,14.884617 1.0141161,13.01656 Z M 14.961233,3.9589221 11.872901,4.9307912 V 6.84459 L 14.961233,5.6700564 Z M 14.654934,4.4494626 V 4.9814573 L 13.69458,5.3476354 V 4.7511566 Z M 5.9725964,7.1186479 3.5521359,10.474129 2.665478,8.5211792 2.0643932,9.6519566 3.5728628,11.584178 6.884587,8.8942664 Z m 8.2654916,3.7671651 -2.977787,1.077807 -0.01155,0.251583 3.026152,-1.163018 z m -3.380814,1.273563 -1.7641032,0.575751 -0.011521,0.253886 1.8124672,-0.663266 z m 1.71574,0.135878 -3.4798432,1.236715 -0.011521,0.253885 3.5282072,-1.32423 z"
-                                                                    </svg>
+                                                                    d="M 8.0683328,0.76695437 0.16210936,2.8281456 0.84840545,13.265374 8.2963304,15.225232 15.5485,12.334959 15.794921,2.63239 Z M 8.0820093,1.0410478 11.246129,1.7980639 4.2832168,3.8620186 0.7098717,2.9614013 Z m 3.5000087,0.8505947 3.621952,0.850477 -6.9629117,2.1837111 -3.580875,-0.913154 z m 3.941609,1.0928245 -0.216304,9.098243 -6.9303516,2.749753 0.02303,-9.6002968 z M 0.44066729,3.2228104 8.1324625,5.2129273 8.0947402,14.884617 1.0141161,13.01656 Z M 14.961233,3.9589221 11.872901,4.9307912 V 6.84459 L 14.961233,5.6700564 Z M 14.654934,4.4494626 V 4.9814573 L 13.69458,5.3476354 V 4.7511566 Z M 5.9725964,7.1186479 3.5521359,10.474129 2.665478,8.5211792 2.0643932,9.6519566 3.5728628,11.584178 6.884587,8.8942664 Z m 8.2654916,3.7671651 -2.977787,1.077807 -0.01155,0.251583 3.026152,-1.163018 z m -3.380814,1.273563 -1.7641032,0.575751 -0.011521,0.253886 1.8124672,-0.663266 z m 1.71574,0.135878 -3.4798432,1.236715 -0.011521,0.253885 3.5282072,-1.32423 z" />
+                                                            </svg>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -139,7 +139,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                         <div class="card-body table-responsive p-0">
@@ -155,12 +154,29 @@
                                                     </th>
                                                 </tr>
                                                 <tr>
-                                                    <th style="width: 45%;">Name</th>
-                                                    <th style="width: 15%;">Stock</th>
-                                                    <th class="text-center" style="width: 40%;">Sales</th>
+                                                    <th class="text-center p-0" style="width: 50%;">Name</th>
+                                                    <th class="text-center" style="width: 15%;">Stock</th>
+                                                    <th class="text-center p-0" style="width: 35%;">Sales</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach ($carouselItem as $item)
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <div class="truncate-1">{{ $item->product->name }}</div>
+                                                        </td>
+                                                        <td class="text-center">{{ $item->product->stock }}</td>
+                                                        <td class="text-nowrap p-0">
+                                                            <div class="d-flex justify-content-center">
+                                                                0 Sold
+                                                                <small class="text-success d-inline-block ml-1">
+                                                                    <i class="fas fa-arrow-up"></i>
+                                                                    0%
+                                                                </small>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>
@@ -174,12 +190,35 @@
                                                     </th>
                                                 </tr>
                                                 <tr>
-                                                    <th style="width: 45%;">Name</th>
-                                                    <th style="width: 15%;">Stock</th>
-                                                    <th class="text-center" style="width: 40%;">Sales</th>
+                                                    <th class="text-center p-0" style="width: 50%;">Name</th>
+                                                    <th class="text-center" style="width: 15%;">Stock</th>
+                                                    <th class="text-center p-0" style="width: 35%;">Sales</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach ($featuredItem as $item)
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <div class="truncate-1">{{ $item->product->name }}</div>
+                                                        </td>
+                                                        <td class="text-center">{{ $item->product->stock }}</td>
+                                                        <td class="text-nowrap p-0">
+                                                            <div class="d-flex justify-content-center">
+                                                                0 Sold
+                                                                <small class="text-success d-inline-block ml-1">
+                                                                    <i class="fas fa-arrow-up"></i>
+                                                                    0%
+                                                                </small>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
+                                                <tr>
+                                                    <td class="text-center" colspan="3">
+                                                        <a href="{{ route('admin.featuredProducts') }}">Lihat semua produk
+                                                            unggulan</a>
+                                                    </td>
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>

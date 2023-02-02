@@ -4,7 +4,7 @@ require('bootstrap');
 // Enable tooltips everywhere
 $(function () {
     $('[data-toggle="tooltip"]').tooltip({trigger: "hover"});
-    
+
     // $(document).on("keydown", ":input:not(textarea)", function(event){
     //     return event.key != "Enter";
     //   });
@@ -12,4 +12,4 @@ $(function () {
 
 
 // App Javascript
-require('./product-carousel/main');
+require('./product-featured/main');

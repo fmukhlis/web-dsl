@@ -9589,6 +9589,6 @@ h3 {
      object-fit: cover;
 }
 
-.content-header {
-  padding-bottom: 0;
+.overflow-visible {
+  overflow: visible !important;
 }

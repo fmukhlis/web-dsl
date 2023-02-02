@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Database\Eloquent\Builder;
 
 // Controllers
 use App\Http\Controllers\Admin\ProductController as PC;
@@ -47,12 +48,43 @@ Route::prefix('admin')
         // Product
         Route::view('/product', 'admin.product.index', [
             'products' => Product::paginate(10),
+            'carouselItem' => HighlightedProduct::inRandomOrder()->where('carousel', 1)->get(),
+            'featuredItem' => HighlightedProduct::inRandomOrder()->where('featured', 1)->take(5)->get(),
         ])->name('product');
         Route::view('/product/new', 'admin.product.add-product')->name('addProduct');
         Route::view('/product/carousel', 'admin.product.carousel-products', [
             'carouselProducts' => HighlightedProduct::where('carousel', '1')->inRandomOrder()->get(),
         ])->name('carouselProducts');
-        Route::view('/product/featured', 'admin.product.featured-products')->name('featuredProducts');
+        Route::view('/product/featured', 'admin.product.featured-products', [
+            'medDevices' => HighlightedProduct::with('product')
+                ->where('featured', '1')
+                ->inRandomOrder()
+                ->whereHas('product', function (Illuminate\Database\Eloquent\Builder $query) {
+                    $query->where('category', 'Alat Kesehatan');
+                })
+                ->get(),
+            'labDevices' => HighlightedProduct::with('product')
+                ->where('featured', '1')
+                ->inRandomOrder()
+                ->whereHas('product', function (Illuminate\Database\Eloquent\Builder $query) {
+                    $query->where('category', 'Alat Laboratorium');
+                })
+                ->get(),
+            'chemDevices' => HighlightedProduct::with('product')
+                ->where('featured', '1')
+                ->inRandomOrder()
+                ->whereHas('product', function (Illuminate\Database\Eloquent\Builder $query) {
+                    $query->where('category', 'Alat Kimia');
+                })
+                ->get(),
+            'otherDevices' => HighlightedProduct::with('product')
+                ->where('featured', '1')
+                ->inRandomOrder()
+                ->whereHas('product', function (Illuminate\Database\Eloquent\Builder $query) {
+                    $query->where('category', 'Lainnya');
+                })
+                ->get(),
+        ])->name('featuredProducts');
         Route::get(
             '/product/{product:slug}',
             fn (Product $product) =>
@@ -73,9 +105,12 @@ Route::prefix('admin')
         });
 
         Route::controller(HPC::class)->group(function () {
-            Route::get('/product/carousel/AJAX', 'get');
-            Route::post('/product/carousel/AJAX/{product:slug}', 'store');
-            Route::delete('/product/carousel/AJAX/{product:slug?}', 'destroy');
+            Route::get('/product/carousel/async', 'getCarousel');
+            Route::post('/product/carousel/async/{product:slug}', 'storeCarousel');
+            Route::delete('/product/carousel/async/{product:slug?}', 'destroyCarousel');
+
+            Route::get('/product/featured/async', 'getFeatured');
+            Route::post('/product/featured/async', 'storeFeatured')->name('featuredProductsAsync');
         });
     });
 

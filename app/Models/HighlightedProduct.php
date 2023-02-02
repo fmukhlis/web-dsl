@@ -17,6 +17,7 @@ class HighlightedProduct extends Model
     protected $fillable = [
         'carousel',
         'featured',
+        'display_type',
     ];
 
     public $timestamps = false;

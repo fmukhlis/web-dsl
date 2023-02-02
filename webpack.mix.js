@@ -15,6 +15,7 @@ mix.js('resources/js/admin/product-management.js', 'public/js/admin');
 mix.js('resources/js/admin/dashboard.js', 'public/js/admin');
 mix.js('resources/js/admin/products.js', 'public/js/admin');
 mix.js('resources/js/admin/product-carousel.js', 'public/js/admin');
+mix.js('resources/js/admin/product-featured.js', 'public/js/admin');
 
 mix.js('resources/js/products.js', 'public/js');
 

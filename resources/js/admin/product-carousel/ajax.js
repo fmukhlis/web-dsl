@@ -1,5 +1,3 @@
-import { DOMSelector } from "./constants";
-
 export class AJAX {
     get(token, productKeyword){
         return new Promise(function(resolve, reject){
@@ -15,7 +13,7 @@ export class AJAX {
                 } 
             };
     
-            httpRequest.open('GET', 'carousel/AJAX?keyword=' + productKeyword , true);
+            httpRequest.open('GET', 'carousel/async?keyword=' + productKeyword , true);
     
             // Send the proper header information along with the request
             httpRequest.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
@@ -40,7 +38,7 @@ export class AJAX {
                 } 
             };
     
-            httpRequest.open('POST', 'carousel/AJAX/' + slug, true);
+            httpRequest.open('POST', 'carousel/async/' + slug, true);
     
             // Send the proper header information along with the request
             httpRequest.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
@@ -65,7 +63,7 @@ export class AJAX {
                 } 
             };
     
-            httpRequest.open('DELETE', 'carousel/AJAX/' + slug, true);
+            httpRequest.open('DELETE', 'carousel/async/' + slug, true);
     
             // Send the proper header information along with the request
             httpRequest.setRequestHeader('X-Requested-With', 'XMLHttpRequest');

@@ -1,4 +1,3 @@
-import { createElement } from "dropzone";
 import { DOMSelector } from "./constants";
 import Swal from 'sweetalert2';
 
@@ -18,8 +17,7 @@ export class SetProduct {
 
         Toast.fire({
             icon: 'success',
-            title: name,
-            text: 'Product added successfully!',
+            title: 'Product added successfully!',
         });
     }
 
@@ -60,6 +58,9 @@ export class SetProduct {
     }
 
     addNewList(formElement){
+        const inputElements = DOMSelector.CAROUSEL_FORM.children;
+        if (inputElements.length > 6) return;
+
         const html = document.createElement('div');
         html.className = 'form-row align-items-center mb-3';
         html.innerHTML = `

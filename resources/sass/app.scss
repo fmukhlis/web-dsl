@@ -43,7 +43,6 @@
     object-fit: cover;
 }
 
-// Override AdminLTE Classes
-.content-header {
-    padding-bottom: 0;
+.overflow-visible {
+    overflow: visible !important;
 }

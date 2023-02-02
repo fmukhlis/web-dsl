@@ -3,6 +3,7 @@
     "/js/admin/dashboard.js": "/js/admin/dashboard.js",
     "/js/admin/products.js": "/js/admin/products.js",
     "/js/admin/product-carousel.js": "/js/admin/product-carousel.js",
+    "/js/admin/product-featured.js": "/js/admin/product-featured.js",
     "/js/products.js": "/js/products.js",
     "/js/manifest.js": "/js/manifest.js",
     "/css/products.css": "/css/products.css",

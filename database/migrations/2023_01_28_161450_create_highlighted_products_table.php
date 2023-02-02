@@ -18,6 +18,7 @@ class CreateHighlightedProductsTable extends Migration
             $table->foreignId('product_id');
             $table->boolean('carousel');
             $table->boolean('featured');
+            $table->string('display_type', 1);
         });
     }
 
