@@ -27,10 +27,22 @@ use App\Models\HighlightedProduct;
 
 Route::view('/', 'home.index', [
     'carouselItem' => HighlightedProduct::where('carousel', true)->inRandomOrder()->get(),
-    'medDevices' => Product::where('category', 'Alat Kesehatan')->get(),
-    'labDevices' => Product::where('category', 'Alat Laboratorium')->get(),
-    'chemDevices' => Product::where('category', 'Alat Kimia')->get(),
-    'otherDevices' => Product::where('category', 'Lainnya')->get(),
+    'featuredMed' => HighlightedProduct::where('featured', true)->whereHas('product', function (Builder $query) {
+        $query->where('category', 'Alat Kesehatan');
+    })->inRandomOrder()->get(),
+    'featuredLab' => HighlightedProduct::where('featured', true)->whereHas('product', function (Builder $query) {
+        $query->where('category', 'Alat Laboratorium');
+    })->inRandomOrder()->get(),
+    'featuredChem' => HighlightedProduct::where('featured', true)->whereHas('product', function (Builder $query) {
+        $query->where('category', 'Alat Kimia');
+    })->inRandomOrder()->get(),
+    'featuredOther' => HighlightedProduct::where('featured', true)->whereHas('product', function (Builder $query) {
+        $query->where('category', 'Lainnya');
+    })->inRandomOrder()->get(),
+    'medDevices' => Product::where('category', 'Alat Kesehatan')->take(8)->inRandomOrder()->get(),
+    'labDevices' => Product::where('category', 'Alat Laboratorium')->take(8)->inRandomOrder()->get(),
+    'chemDevices' => Product::where('category', 'Alat Kimia')->take(8)->inRandomOrder()->get(),
+    'otherDevices' => Product::where('category', 'Lainnya')->take(8)->inRandomOrder()->get(),
 ])->name('home');
 Route::view('/products', 'home.products')->name('products');
 
