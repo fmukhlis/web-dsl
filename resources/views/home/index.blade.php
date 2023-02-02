@@ -31,11 +31,10 @@
                     @foreach ($carouselItem as $key => $item)
                         <div class="carousel-item @if ($key == 0) active @endif" data-bs-interval="5000">
                             <img src="{{ asset('/') . $item->product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($item->product->image_path))[0]->getFileName() }}"
-                                class="d-block carousel-image @if ($item->display_type == 'a') modified @endif"
-                                alt="...">
+                                class="d-block carousel-image modified" alt="...">
                             <div class="carousel-caption @if ($item->display_type == 'a') light @else dark @endif">
-                                <h1 class="title">{{ $item->product->name }}</h1>
-                                <div class="description">{{ Str::limit($item->product->description, 200) }}
+                                <h1 class="title">{{ Str::limit($item->product->name, 40) }}</h1>
+                                <div class="description">{{ Str::limit(strip_tags($item->product->description), 200) }}
                                 </div>
                                 @if ($item->product->disc_start && $item->product->disc_start)
                                     @php
