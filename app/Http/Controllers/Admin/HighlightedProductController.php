@@ -67,7 +67,7 @@ class HighlightedProductController extends Controller
     public function destroyCarousel(Product $product = null)
     {
         if ($product) {
-            $product->highlightedProduct()->delete();
+            $product->highlightedProduct()->where('carousel', 1)->delete();
         }
         return response()->json($product);
     }
