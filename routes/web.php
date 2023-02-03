@@ -132,12 +132,6 @@ Route::prefix('admin')
         });
     });
 
-// Route::get('/admin/dashboard', [App\Http\Controllers\Admin\AdminController::class, 'index'])->name('admin.index');
-// Route::get('/admin/products', [App\Http\Controllers\Admin\AdminController::class, 'products'])->name('admin.products');
-// Route::get('/admin/products/slug-product', [App\Http\Controllers\Admin\AdminController::class, 'product'])->name('admin.product');
-// Route::get('/admin/dashboard-content', [App\Http\Controllers\Admin\AdminController::class, 'dashboardView'])->name('admin.dashboardView');
-
-
 
 $options = [
     'login' => true,

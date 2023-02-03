@@ -218,14 +218,20 @@
             </form>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link search-nav-btn d-block"
+                    <a href="javascript:void(0)" class="nav-link search-nav-btn d-block"
                         onclick="document.querySelector('#search-form').submit()">Search</a>
                 </li>
+                @guest
+                    <li class="nav-item ms-lg-2">
+                        <a class="nav-link search-nav-btn d-block" href="{{ route('login') }}">Sign
+                            In</a>
+                    </li>
+                @endguest
                 @auth
                     @if (Auth::user()->email_verified_at)
                         <hr class="d-block d-lg-none">
                         <li
-                            class="navbar-profile-container nav-item d-flex align-items-center ms-lg-3 rounded-pill ps-3 p-1 p-lg-0">
+                            class="navbar-profile-container nav-item d-flex align-items-center rounded-pill ps-3 p-1 p-lg-0">
                             <a class="navbar-profile nav-link d-flex align-items-center p-0 ps-lg-3"
                                 href="{{ route('home') }}">
                                 <div class="navbar-pp-name me-auto text-truncate">
@@ -236,7 +242,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link logout-nav-btn d-block pe-0" href="#"
+                            <a class="nav-link logout-nav-btn d-block px-0 ps-lg-2 pb-2" href="#"
                                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="post">
                                 @csrf

@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <link href="{{ asset('js/bootstrap/bootstrap.min.js') }}" rel="stylesheet">
     <script src="{{ asset('js/authentication.js') }}" defer></script>
 
     <!-- Fonts -->
@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/authentication.css') }}" rel="stylesheet">
 
 </head>

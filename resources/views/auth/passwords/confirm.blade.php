@@ -8,8 +8,7 @@
                 <div class="row">
                     <div class="col-12 text-center mb-4">
                         <a href="{{ route('home') }}">
-                            <img class="logo-md rounded-pill border border-4" src="{{ asset('assets/auth-logo.jpg') }}"
-                                alt="Logo Perusahaan">
+                            <img class="logo-md" src="{{ asset('assets/Logo-DSL.png') }}" alt="Logo Perusahaan">
                         </a>
                     </div>
                 </div>
@@ -17,15 +16,15 @@
                 <form method="POST" action="{{ route('password.confirm') }}">
                     @csrf
 
-                    <div class="row mx-3 mx-sm-0 py-5 bg-light-2 rounded justify-content-center">
+                    <div class="row mx-3 mx-sm-0 py-4 bg-light rounded justify-content-center">
 
                         <div class="col-12 text-center mb-4">
-                            <h1>
+                            <h1 class="fw-bold">
                                 {{ __('Confirm Password') }}
                             </h1>
                         </div>
 
-                        <div class="col-12 col-sm-11 col-md-10 mb-3">
+                        <div class="col-12 col-sm-11 mb-3">
                             <div class="text-center mb-2">
                                 {{ __('Please confirm your password before continuing.') }}
                             </div>
@@ -43,14 +42,14 @@
                             </div>
                         </div>
 
-                        <div class="col-12 col-sm-11 col-md-10 text-center">
+                        <div class="col-12 col-sm-11 text-center">
                             <button type="submit" class="btn btn-primary">
                                 {{ __('Confirm Password') }}
                             </button>
                         </div>
 
                         @if (Route::has('password.request'))
-                            <div class="col-10">
+                            <div class="col-11">
                                 <hr>
                             </div>
 

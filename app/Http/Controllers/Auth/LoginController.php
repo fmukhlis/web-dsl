@@ -46,4 +46,14 @@ class LoginController extends Controller
             'password' => 'required|string',
         ]);
     }
+
+    /**
+     * Get the login username to be used by the controller.
+     *
+     * @return string
+     */
+    public function username()
+    {
+        return 'user_email';
+    }
 }

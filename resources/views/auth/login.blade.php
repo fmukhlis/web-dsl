@@ -5,33 +5,29 @@
         <div class="row justify-content-center">
             <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5">
 
-                <div class="row">
-                    <div class="col-12 text-center mb-4">
-                        <a href="{{ route('home') }}">
-                            <img class="logo-md rounded-pill border border-4" src="{{ asset('assets/auth-logo.jpg') }}"
-                                alt="Logo Perusahaan">
-                        </a>
-                    </div>
+                <div class="d-flex justify-content-center mb-4">
+                    <a href="{{ route('home') }}">
+                        <img class="logo-md" src="{{ asset('assets/Logo-DSL.png') }}" alt="Logo Perusahaan">
+                    </a>
                 </div>
-
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
-                    <div class="row mx-3 mx-sm-0 py-5 bg-light-2 rounded justify-content-center">
+                    <div class="row mx-3 mx-sm-0 py-4 bg-light rounded justify-content-center">
 
                         <div class="col-12 text-center mb-4">
-                            <h1>
+                            <h1 class="fw-bold">
                                 {{ __('Login') }}
                             </h1>
                         </div>
 
-                        <div class="col-12 col-sm-11 col-md-10 mb-3">
+                        <div class="col-12 col-sm-11 mb-3">
                             <div class="form-floating">
                                 <input type="email" class="form-control @error('email') is-invalid @enderror"
-                                    id="floatingInput" placeholder="{{ __('Email Address') }}" value="{{ old('email') }}"
-                                    name="email" required autocomplete="email">
-                                <label for="floatingInput"
-                                    class="@error('email') invalid-label @enderror">{{ __('Email Address') }}</label>
-                                @error('email')
+                                    id="user_email" placeholder="{{ __('Email Address') }}" value="{{ old('user_email') }}"
+                                    name="user_email" required autocomplete="email">
+                                <label for="user_email"
+                                    class="@error('user_email') invalid-label @enderror">{{ __('Email Address') }}</label>
+                                @error('user_email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -39,7 +35,7 @@
                             </div>
                         </div>
 
-                        <div class="col-12 col-sm-11 col-md-10 mb-3">
+                        <div class="col-12 col-sm-11 mb-3">
                             <div class="form-floating">
                                 <input type="password" class="form-control @error('password') is-invalid @enderror"
                                     id="floatingInput" placeholder="{{ __('Password') }}" name="password" required
@@ -65,7 +61,7 @@
                             </div>
                         </div>
 
-                        <div class="col-5 col-sm-4 mb-3 text-end">
+                        <div class="col-5 col-sm-5 mb-3 text-end">
                             <button type="submit" class="btn btn-primary">
                                 {{ __('Login') }}
                             </button>

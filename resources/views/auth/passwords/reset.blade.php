@@ -5,31 +5,28 @@
         <div class="row justify-content-center">
             <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5">
 
-                <div class="row">
-                    <div class="col-12 text-center mb-4">
-                        <a href="{{ route('home') }}">
-                            <img class="logo-md rounded-pill border border-4" src="{{ asset('assets/auth-logo.jpg') }}"
-                                alt="Logo Perusahaan">
-                        </a>
-                    </div>
+                <div class="d-flex justify-content-center mb-4">
+                    <a href="{{ route('home') }}">
+                        <img class="logo-md" src="{{ asset('assets/Logo-DSL.png') }}" alt="Logo Perusahaan">
+                    </a>
                 </div>
 
                 <form method="POST" action="{{ route('password.update') }}">
                     @csrf
 
-                    <div class="row mx-3 mx-sm-0 py-5 bg-light-2 rounded justify-content-center">
+                    <div class="row mx-3 mx-sm-0 py-4 bg-light rounded justify-content-center">
 
                         <div class="col-12 text-center mb-4">
-                            <h1>
+                            <h1 class="fw-bold">
                                 {{ __('Reset Password') }}
                             </h1>
                         </div>
 
-                        <div class="col-12 col-sm-11 col-md-10 text-center">
+                        <div class="col-12 col-sm-11 text-center">
                             <input type="hidden" name="token" value="{{ $token }}">
                         </div>
 
-                        <div class="col-12 col-sm-11 col-md-10 mb-3">
+                        <div class="col-12 col-sm-11 mb-3">
                             <div class="form-floating">
                                 <input type="email" class="form-control @error('email') is-invalid @enderror"
                                     id="email" placeholder="{{ __('Email Address') }}" value="{{ old('email') }}"
@@ -44,7 +41,7 @@
                             </div>
                         </div>
 
-                        <div class="col-12 col-sm-11 col-md-10 mb-3">
+                        <div class="col-12 col-sm-11 mb-3">
                             <div class="form-floating">
                                 <input type="password" class="form-control @error('password') is-invalid @enderror"
                                     id="password" placeholder="{{ __('Password') }}" name="password" required
@@ -59,7 +56,7 @@
                             </div>
                         </div>
 
-                        <div class="col-12 col-sm-11 col-md-10 mb-3">
+                        <div class="col-12 col-sm-11 mb-3">
                             <div class="form-floating">
                                 <input type="password"
                                     class="form-control @error('password_confirmation') is-invalid @enderror"
@@ -75,7 +72,7 @@
                             </div>
                         </div>
 
-                        <div class="col-12 col-sm-11 col-md-10 text-center">
+                        <div class="col-12 col-sm-11 text-center">
                             <button type="submit" class="btn btn-primary">
                                 {{ __('Reset Password') }}
                             </button>
