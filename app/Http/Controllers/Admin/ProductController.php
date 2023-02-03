@@ -104,6 +104,9 @@ class ProductController extends Controller
 
             // Remove temporary file record on db
             TempProductImage::where('directory_path', $validated['directory_path'])->delete();
+
+            // Modify image path
+            $validated['image_path'] = 'storage/product-images/' . $validated['directory_path'];
         }
 
         // (Optional) 
@@ -137,6 +140,15 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        // Delete Product Images
+        Storage::deleteDirectory('public/product-images/' . str_replace('storage/product-images/', '', $product->image_path));
+
+        // Delete Product Spec Record
+        $product->productSpecification()->delete();
+
+        // Delete Product Record
+        $product->delete();
+
+        return redirect()->route('admin.product');
     }
 }

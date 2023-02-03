@@ -68,8 +68,7 @@
                 @else
                     {{-- Currently Unused Template --}}
                     <div class="carousel-item active" data-bs-interval="50000">
-                        <img src="{{ asset('assets/robina-weermeijer-3KGF9R_0oHs-unsplash.jpg') }}"
-                            class="d-block carousel-image" alt="...">
+                        <img src="{{ asset('assets/Logo-DSL.png') }}" class="d-block carousel-image" alt="...">
                         <div class="carousel-caption light bg-transparent">
                             <h1 class="title">Lorem ipsum dolor sit amet.</h1>
                             <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -85,8 +84,7 @@
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="5000">
-                        <img src="{{ asset('assets/zhen-hu-Xruf17OrkwM-unsplash.jpg') }}" class="d-block carousel-image"
-                            alt="...">
+                        <img src="{{ asset('assets/Logo-DSL.png') }}" class="d-block carousel-image" alt="...">
                         <div class="carousel-caption dark bg-transparent">
                             <h1 class="title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam,
                                 blanditiis.</h1>

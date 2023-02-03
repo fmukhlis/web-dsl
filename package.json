@@ -23,9 +23,12 @@
         "sass-loader": "^11.0.1"
     },
     "dependencies": {
+        "admin-lte": "3.1",
         "bootstrap-icons": "^1.9.1",
         "dropzone": "^5.9.3",
         "inputmask": "^5.0.7",
+        "jquery": "^3.6.3",
+        "popper.js": "^1.16.1",
         "sweetalert2": "^11.7.1"
     }
 }

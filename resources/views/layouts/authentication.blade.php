@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <link href="{{ asset('js/bootstrap/bootstrap.min.js') }}" rel="stylesheet">
+    <script srd="{{ asset('js/bootstrap/bootstrap.min.js') }}" defer></script>
     <script src="{{ asset('js/authentication.js') }}" defer></script>
 
     <!-- Fonts -->

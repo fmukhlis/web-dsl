@@ -233,12 +233,18 @@
                         <li
                             class="navbar-profile-container nav-item d-flex align-items-center rounded-pill ps-3 p-1 p-lg-0">
                             <a class="navbar-profile nav-link d-flex align-items-center p-0 ps-lg-3"
-                                href="{{ route('home') }}">
+                                href="{{ route('admin.dashboard') }}">
                                 <div class="navbar-pp-name me-auto text-truncate">
-                                    Hello, Fajar Mukhlis Imanandaasdasdasdiaasdasdasasdasdasdasd
+                                    Hello, {{ auth()->user()->name }}
                                 </div>
-                                <img class="navbar-pp rounded-circle" src="{{ asset('assets/profile-picture.jpeg') }}"
-                                    alt="">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                    fill="currentColor" viewBox="0 0 16 16">
+                                    <path
+                                        d="m 7.955078,0.39843925 a 7.6897864,7.6897864 0 0 0 -7.68945,7.68945305 7.6897864,7.6897864 0 0 0 7.68945,7.6894497 7.6897864,7.6897864 0 0 0 7.68945,-7.6894497 7.6897864,7.6897864 0 0 0 -7.68945,-7.68945305 z m -0.0781,1.90429705 a 2.7730265,2.7730265 0 0 1 2.77148,2.773436 2.7730265,2.7730265 0 0 1 -2.77148,2.77344 2.7730265,2.7730265 0 0 1 -2.77344,-2.77344 2.7730265,2.7730265 0 0 1 2.77344,-2.773436 z m 2.19336,5.134766 a 4.9192732,4.61538 0 0 1 2.77149,4.0468697 6.60968,6.60968 0 0 1 -4.89063,2.17774 6.60968,6.60968 0 0 1 -4.92578,-2.21289 4.9192732,4.61538 0 0 1 2.69727,-3.9706997 3.2288666,3.2288666 0 0 0 2.15429,0.82812 3.2288666,3.2288666 0 0 0 2.19336,-0.86914 z" />
+                                </svg>
+                                {{-- <img class="navbar-pp rounded-circle" src="{{ asset('assets/icons/1-profile.svg') }}"
+                                    alt=""> --}}
                             </a>
                         </li>
                         <li class="nav-item">

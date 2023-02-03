@@ -308,7 +308,7 @@
                                             pm</span>
                                     </div>
                                     <!-- /.direct-chat-infos -->
-                                    <img class="direct-chat-img" src="{{ asset('') . 'assets/profile-picture.jpeg' }}"
+                                    <img class="direct-chat-img" src="{{ asset('') . 'assets/icons/1-profile.svg' }}"
                                         alt="User Avatar">
                                     <!-- /.direct-chat-img -->
                                     <div class="direct-chat-text">
@@ -325,7 +325,7 @@
                                             pm</span>
                                     </div>
                                     <!-- /.direct-chat-infos -->
-                                    <img class="direct-chat-img" src="{{ asset('') . 'assets/profile-picture.jpeg' }}"
+                                    <img class="direct-chat-img" src="{{ asset('') . 'assets/icons/1-profile.svg' }}"
                                         alt="User Avatar">
                                     <!-- /.direct-chat-img -->
                                     <div class="direct-chat-text">
@@ -342,7 +342,7 @@
                                             pm</span>
                                     </div>
                                     <!-- /.direct-chat-infos -->
-                                    <img class="direct-chat-img" src="{{ asset('') . 'assets/profile-picture.jpeg' }}"
+                                    <img class="direct-chat-img" src="{{ asset('') . 'assets/icons/1-profile.svg' }}"
                                         alt="User Avatar">
                                     <!-- /.direct-chat-img -->
                                     <div class="direct-chat-text">
@@ -359,7 +359,7 @@
                                             pm</span>
                                     </div>
                                     <!-- /.direct-chat-infos -->
-                                    <img class="direct-chat-img" src="{{ asset('') . 'assets/profile-picture.jpeg' }}"
+                                    <img class="direct-chat-img" src="{{ asset('') . 'assets/icons/1-profile.svg' }}"
                                         alt="User Avatar">
                                     <!-- /.direct-chat-img -->
                                     <div class="direct-chat-text">
@@ -376,7 +376,7 @@
                                             pm</span>
                                     </div>
                                     <!-- /.direct-chat-infos -->
-                                    <img class="direct-chat-img" src="{{ asset('') . 'assets/profile-picture.jpeg' }}"
+                                    <img class="direct-chat-img" src="{{ asset('') . 'assets/icons/1-profile.svg' }}"
                                         alt="User Avatar">
                                     <!-- /.direct-chat-img -->
                                     <div class="direct-chat-text">
@@ -393,7 +393,7 @@
                                             pm</span>
                                     </div>
                                     <!-- /.direct-chat-infos -->
-                                    <img class="direct-chat-img" src="{{ asset('') . 'assets/profile-picture.jpeg' }}"
+                                    <img class="direct-chat-img" src="{{ asset('') . 'assets/icons/1-profile.svg' }}"
                                         alt="User Avatar">
                                     <!-- /.direct-chat-img -->
                                     <div class="direct-chat-text">
@@ -410,7 +410,7 @@
                                         pm</span>
                                     </div>
                                     <!-- /.direct-chat-infos -->
-                                    <img class="direct-chat-img" src="{{ asset('') . 'assets/profile-picture.jpeg' }}"
+                                    <img class="direct-chat-img" src="{{ asset('') . 'assets/icons/1-profile.svg' }}"
                                         alt="User Avatar">
                                     <!-- /.direct-chat-img -->
                                     <div class="direct-chat-text">
@@ -427,7 +427,7 @@
                                             pm</span>
                                     </div>
                                     <!-- /.direct-chat-infos -->
-                                    <img class="direct-chat-img" src="{{ asset('') . 'assets/profile-picture.jpeg' }}"
+                                    <img class="direct-chat-img" src="{{ asset('') . 'assets/icons/1-profile.svg' }}"
                                         alt="User Avatar">
                                     <!-- /.direct-chat-img -->
                                     <div class="direct-chat-text">
@@ -445,7 +445,7 @@
                                     <li>
                                         <a href="#" class="d-flex align-items-center">
                                             <img class="contacts-list-img"
-                                                src="{{ asset('') . 'assets/profile-picture.jpeg' }}" alt="User Avatar">
+                                                src="{{ asset('') . 'assets/icons/1-profile.svg' }}" alt="User Avatar">
 
                                             <div class="contacts-list-info mx-2 flex-fill d-flex flex-column">
                                                 <span class="contacts-list-name">
@@ -462,7 +462,7 @@
                                     <li>
                                         <a href="#" class="d-flex align-items-center">
                                             <img class="contacts-list-img"
-                                                src="{{ asset('') . 'assets/profile-picture.jpeg' }}" alt="User Avatar">
+                                                src="{{ asset('') . 'assets/icons/1-profile.svg' }}" alt="User Avatar">
 
                                             <div class="contacts-list-info mx-2 flex-fill d-flex flex-column">
                                                 <span class="contacts-list-name">
@@ -520,62 +520,62 @@
                         <div class="card-body p-0">
                             <ul class="users-list mb-0 clearfix">
                                 <li>
-                                    <img src="{{ asset('') . 'assets/profile-picture.jpeg' }}" alt="User Image">
+                                    <img src="{{ asset('') . 'assets/icons/1-profile.svg' }}" alt="User Image">
                                     <a class="users-list-name" href="#">Alexander Pierce</a>
                                     <span class="users-list-date">Today</span>
                                 </li>
                                 <li>
-                                    <img src="{{ asset('') . 'assets/profile-picture.jpeg' }}" alt="User Image">
+                                    <img src="{{ asset('') . 'assets/icons/1-profile.svg' }}" alt="User Image">
                                     <a class="users-list-name" href="#">Norman</a>
                                     <span class="users-list-date">Yesterday</span>
                                 </li>
                                 <li>
-                                    <img src="{{ asset('') . 'assets/profile-picture.jpeg' }}" alt="User Image">
+                                    <img src="{{ asset('') . 'assets/icons/1-profile.svg' }}" alt="User Image">
                                     <a class="users-list-name" href="#">Jane</a>
                                     <span class="users-list-date">12 Jan</span>
                                 </li>
                                 <li>
-                                    <img src="{{ asset('') . 'assets/profile-picture.jpeg' }}" alt="User Image">
+                                    <img src="{{ asset('') . 'assets/icons/1-profile.svg' }}" alt="User Image">
                                     <a class="users-list-name" href="#">John</a>
                                     <span class="users-list-date">12 Jan</span>
                                 </li>
                                 <li>
-                                    <img src="{{ asset('') . 'assets/profile-picture.jpeg' }}" alt="User Image">
+                                    <img src="{{ asset('') . 'assets/icons/1-profile.svg' }}" alt="User Image">
                                     <a class="users-list-name" href="#">Alexander</a>
                                     <span class="users-list-date">13 Jan</span>
                                 </li>
                                 <li>
-                                    <img src="{{ asset('') . 'assets/profile-picture.jpeg' }}" alt="User Image">
+                                    <img src="{{ asset('') . 'assets/icons/1-profile.svg' }}" alt="User Image">
                                     <a class="users-list-name" href="#">Sarah</a>
                                     <span class="users-list-date">14 Jan</span>
                                 </li>
                                 <li>
-                                    <img src="{{ asset('') . 'assets/profile-picture.jpeg' }}" alt="User Image">
+                                    <img src="{{ asset('') . 'assets/icons/1-profile.svg' }}" alt="User Image">
                                     <a class="users-list-name" href="#">Nora</a>
                                     <span class="users-list-date">15 Jan</span>
                                 </li>
                                 <li>
-                                    <img src="{{ asset('') . 'assets/profile-picture.jpeg' }}" alt="User Image">
+                                    <img src="{{ asset('') . 'assets/icons/1-profile.svg' }}" alt="User Image">
                                     <a class="users-list-name" href="#">Nadia</a>
                                     <span class="users-list-date">15 Jan</span>
                                 </li>
                                 <li>
-                                    <img src="{{ asset('') . 'assets/profile-picture.jpeg' }}" alt="User Image">
+                                    <img src="{{ asset('') . 'assets/icons/1-profile.svg' }}" alt="User Image">
                                     <a class="users-list-name" href="#">Nadia</a>
                                     <span class="users-list-date">15 Jan</span>
                                 </li>
                                 <li>
-                                    <img src="{{ asset('') . 'assets/profile-picture.jpeg' }}" alt="User Image">
+                                    <img src="{{ asset('') . 'assets/icons/1-profile.svg' }}" alt="User Image">
                                     <a class="users-list-name" href="#">Alexander</a>
                                     <span class="users-list-date">13 Jan</span>
                                 </li>
                                 <li>
-                                    <img src="{{ asset('') . 'assets/profile-picture.jpeg' }}" alt="User Image">
+                                    <img src="{{ asset('') . 'assets/icons/1-profile.svg' }}" alt="User Image">
                                     <a class="users-list-name" href="#">Sarah</a>
                                     <span class="users-list-date">14 Jan</span>
                                 </li>
                                 <li>
-                                    <img src="{{ asset('') . 'assets/profile-picture.jpeg' }}" alt="User Image">
+                                    <img src="{{ asset('') . 'assets/icons/1-profile.svg' }}" alt="User Image">
                                     <a class="users-list-name" href="#">Nora</a>
                                     <span class="users-list-date">15 Jan</span>
                                 </li>

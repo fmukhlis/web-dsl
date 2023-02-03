@@ -63,12 +63,12 @@ return [
     |
     */
 
-    'logo' => '<b>DSL</b> Dashboard',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
-    'logo_img_class' => 'brand-image img-circle elevation-3',
+    'logo' => 'Admin Area',
+    'logo_img' => 'assets/Logo-DSL.png',
+    'logo_img_class' => 'brand-image elevation-3 mr-4',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'Admin Logo',
+    'logo_img_alt' => 'DSL Logo',
 
     /*
     |--------------------------------------------------------------------------
@@ -109,11 +109,11 @@ return [
     'preloader' => [
         'enabled' => true,
         'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
-            'alt' => 'AdminLTE Preloader Image',
+            'path' => 'assets/Logo-DSL.png',
+            'alt' => 'DSL Preloader Image',
             'effect' => 'animation__shake',
             'width' => 60,
-            'height' => 60,
+            'height' => 'auto',
         ],
     ],
 
@@ -129,7 +129,7 @@ return [
     |
     */
 
-    'usermenu_enabled' => true,
+    'usermenu_enabled' => false,
     'usermenu_header' => false,
     'usermenu_header_class' => 'bg-primary',
     'usermenu_image' => false,
@@ -253,7 +253,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'admin',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -294,6 +294,7 @@ return [
         [
             'type'         => 'navbar-search',
             'text'         => 'Search',
+            'classes' => 'w-100',
             'topnav_right' => true,
         ],
         [
@@ -301,15 +302,15 @@ return [
             'id'           => 'my-notification',      // An ID attribute (required).
             'icon'         => 'far fa-bell',          // A font awesome icon (required).
             'icon_color'   => 'warning',              // The initial icon color (optional).
-            'label'        => false,                      // The initial label for the badge (optional).
+            'label'        => false,                  // The initial label for the badge (optional).
             'label_color'  => 'danger',               // The initial badge color (optional).
             'url'          => 'notifications/show',   // The url to access all notifications/elements (required).
             'topnav_right' => true,                   // Or "topnav => true" to place on the left (required).
             'dropdown_mode'   => true,                // Enables the dropdown mode (optional).
             'dropdown_flabel' => 'All notifications', // The label for the dropdown footer link (optional).
             'update_cfg'   => [
-                'url' => 'notifications/get',         // The url to periodically fetch new data (optional).
-                'period' => 30,                       // The update period for get new data (in seconds, optional).
+                'url' => 'admin/notifications/get',  // The url to periodically fetch new data (optional).
+                'period' => 300,                       // The update period for get new data (in seconds, optional).
             ],
         ],
         [

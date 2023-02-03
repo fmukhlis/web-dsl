@@ -55,13 +55,16 @@ Route::get('/products/{product:slug}', fn (Product $product) => view('home.produ
 
 Route::prefix('admin')
     ->name('admin.')
+    ->middleware('auth', 'verified')
     ->group(function () {
 
         // Admin
+        Route::get('/', fn () => redirect()->route('admin.dashboard'));
+
         // Dashboard
         Route::view('/dashboard', 'admin.dashboard.index', [
             'products' => Product::paginate(7),
-        ])->name('dashboardView');
+        ])->name('dashboard');
 
         // Product
         Route::view('/product', 'admin.product.index', [
@@ -115,6 +118,7 @@ Route::prefix('admin')
         Route::controller(PC::class)->group(function () {
             Route::post('/product/new', 'store');
             Route::patch('/product/{product:slug}', 'update');
+            Route::delete('/product/{product:slug}', 'destroy')->name('deleteProduct');
         });
 
         Route::controller(DzC::class)->group(function () {
@@ -130,6 +134,12 @@ Route::prefix('admin')
             Route::get('/product/featured/async', 'getFeatured');
             Route::post('/product/featured/async', 'storeFeatured')->name('featuredProductsAsync');
         });
+
+        // Miscellaneous
+        Route::get(
+            'notifications/get',
+            [App\Http\Controllers\NotificationsController::class, 'getNotificationsData']
+        )->name('notifications.get');
     });
 
 

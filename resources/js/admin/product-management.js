@@ -1,5 +1,5 @@
 // Vendor Libraries
-require('bootstrap');
+// require('bootstrap');
 require('dropzone');
 require('inputmask');
 

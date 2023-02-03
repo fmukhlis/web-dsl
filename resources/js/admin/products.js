@@ -1,5 +1,5 @@
 // Vendor Libraries
-require('bootstrap');
+// require('bootstrap');
 
 // Enable tooltips everywhere
 $(function () {

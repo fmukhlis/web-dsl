@@ -26,7 +26,7 @@
             @csrf
             @method('patch')
             <input type="hidden" name="directory_path" readonly
-                value="{{ str_replace('public/product-images/', '', $product->image_path) }}">
+                value="{{ str_replace('storage/product-images/', '', $product->image_path) }}">
             <div class="container-fluid">
                 <div class="row">
                     {{-- Alert --}}
@@ -266,7 +266,7 @@
                                     <div class="col-md-12 mb-3">
                                         <label for="description">Product's Description</label>
                                         <textarea class="@error('description') is-invalid @enderror form-control mh-medium" id="description"
-                                            name="description" placeholder="Write description..." required>{{ old('description', $product->description) }}</textarea>
+                                            name="description" placeholder="Write description..." required>{{ strip_tags(old('description', $product->description)) }}</textarea>
                                         @error('description')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
@@ -593,7 +593,8 @@
 
                     <div class="col-lg-12 mb-3">
                         <div class="d-flex">
-                            <button class="btn btn-danger mr-auto" type="button">
+                            <button class="btn btn-danger mr-auto" type="button" data-toggle="modal"
+                                data-target="#modal-confirm-delete">
                                 <i class="fa fa-trash"></i>
                             </button>
                             <button class="btn btn-secondary mr-3" type="reset">
@@ -604,9 +605,33 @@
                             </button>
                         </div>
                     </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="modal-confirm-delete" tabindex="-1"
+                        aria-labelledby="modal-confirm-delete-Label" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content py-2">
+                                <div class="modal-header justify-content-center border-0 pb-2">
+                                    <h5 class="modal-title font-weight-bold" id="modal-confirm-delete-Label">Yakin Ingin
+                                        Menghapus Produk
+                                        Ini?</h5>
+                                </div>
+                                <div class="modal-footer justify-content-center border-0 pt-0">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal"
+                                        onclick="document.querySelector('#delete-form').submit()">Ok</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- /.row -->
                 </div>
             </div>
+        </form>
+        <form action="{{ route('admin.deleteProduct', [$product]) }}" method="post" id="delete-form">
+            @method('delete')
+            @csrf
         </form>
         <!-- /.container-fluid -->
     </div>

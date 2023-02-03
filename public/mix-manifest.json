@@ -6,10 +6,11 @@
     "/js/admin/product-featured.js": "/js/admin/product-featured.js",
     "/js/products.js": "/js/products.js",
     "/js/manifest.js": "/js/manifest.js",
-    "/css/home.css": "/css/home.css",
     "/css/product.css": "/css/product.css",
     "/css/products.css": "/css/products.css",
     "/css/product-management.css": "/css/product-management.css",
+    "/css/home.css": "/css/home.css",
     "/css/app.css": "/css/app.css",
+    "/vendor/adminlte/dist/css/adminlte.min.css": "/vendor/adminlte/dist/css/adminlte.min.css",
     "/js/vendor.js": "/js/vendor.js"
 }

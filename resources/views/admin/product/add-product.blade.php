@@ -216,7 +216,7 @@
                                     <div class="col-md-12 mb-3">
                                         <label for="description">Product's Description</label>
                                         <textarea class="@error('description') is-invalid @enderror form-control mh-medium" id="description"
-                                            name="description" placeholder="Write description..." required>{{ old('description') }}</textarea>
+                                            name="description" placeholder="Write description..." required>{{ strip_tags(old('description')) }}</textarea>
                                         @error('description')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
@@ -496,10 +496,7 @@
 
                     <div class="col-lg-12 mb-3">
                         <div class="d-flex">
-                            <button class="btn btn-danger mr-auto" type="button">
-                                <i class="fa fa-trash"></i>
-                            </button>
-                            <button class="btn btn-secondary mr-3" type="reset">
+                            <button class="btn btn-secondary ml-auto mr-3" type="reset">
                                 <i class="fa fa-sync"></i>
                             </button>
                             <button class="btn btn-success" type="submit">

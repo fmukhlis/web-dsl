@@ -20,6 +20,7 @@ mix.js('resources/js/admin/product-featured.js', 'public/js/admin');
 mix.js('resources/js/products.js', 'public/js');
 
 mix.sass('resources/sass/app.scss', 'public/css');
+mix.sass('resources/sass/adminlte.min.scss', 'public/vendor/adminlte/dist/css');
 
 mix.css('resources/css/product-management.css', 'public/css');
 mix.css('resources/css/products.css', 'public/css');

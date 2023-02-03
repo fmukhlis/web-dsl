@@ -59,17 +59,21 @@ class AdminProductRequest extends FormRequest
     public function rules()
     {
         $slugRule = 'required|string';
+        $directoryPathRule = 'required|string';
         $isExists = (bool) $this->route('product');
 
         if ($this->input('slug') != ($isExists ? $this->route('product')->slug : null)) {
             $slugRule .= '|unique:App\Models\Product,slug';
+        }
+        if ($this->input('slug') != ($isExists ? $this->route('product')->directory_path : null)) {
+            $directoryPathRule .= '|unique:products,image_path';
         }
 
         return [
             'is_available' => 'required|boolean',
             'is_new' => 'required|boolean',
             'slug' => $slugRule,
-            'directory_path' => "required|unique:products,image_path",
+            'directory_path' => "required",
             'name' => "required|string|max:255",
             'category' => "required|in:Alat Kesehatan,Alat Laboratorium,Alat Kimia,Lainnya",
             'description' => "required|string|max:4000",
