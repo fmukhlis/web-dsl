@@ -348,13 +348,14 @@
                                             <div class="col-12 col-lg-6">
                                                 <div class="card">
                                                     <div class="row g-0">
-                                                        <a href="{{ route('product') }}"
+                                                        <a href="{{ route('product', [$product->slug]) }}"
                                                             class="col-4 rounded-start product-thumbnail"
                                                             style="background-image: url('../{{ $product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($product->image_path))[0]->getFileName() }}');">
                                                         </a>
                                                         <div class="col-8">
                                                             <div class="card-body products-info d-flex flex-column py-2">
-                                                                <a href="{{ route('product') }}" class="card-link">
+                                                                <a href="{{ route('product', [$product->slug]) }}"
+                                                                    class="card-link">
                                                                     <h5 class="card-title truncate-2 mb-0">
                                                                         {{ $product->name }}
                                                                     </h5>
@@ -376,7 +377,7 @@
                                                                     <span class="total-price">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</span>
                                                                 </div>
                                                                 <a class="text-center mt-auto btn btn-outline-primary btn-sm"
-                                                                    href="{{ route('product') }}">Lihat
+                                                                    href="{{ route('product', [$product->slug]) }}">Lihat
                                                                     Lebih
                                                                     Detail
                                                                 </a>
@@ -451,13 +452,14 @@
                                             <div class="col-12 col-lg-6">
                                                 <div class="card">
                                                     <div class="row g-0">
-                                                        <a href="{{ route('product') }}"
+                                                        <a href="{{ route('product', [$product->slug]) }}"
                                                             class="col-4 rounded-start product-thumbnail"
                                                             style="background-image: url('../{{ $product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($product->image_path))[0]->getFileName() }}');">
                                                         </a>
                                                         <div class="col-8">
                                                             <div class="card-body products-info d-flex flex-column py-2">
-                                                                <a href="{{ route('product') }}" class="card-link">
+                                                                <a href="{{ route('product', [$product->slug]) }}"
+                                                                    class="card-link">
                                                                     <h5 class="card-title truncate-2 mb-0">
                                                                         {{ $product->name }}
                                                                     </h5>
@@ -479,7 +481,7 @@
                                                                     <span class="total-price">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</span>
                                                                 </div>
                                                                 <a class="text-center mt-auto btn btn-outline-primary btn-sm"
-                                                                    href="{{ route('product') }}">Lihat
+                                                                    href="{{ route('product', [$product->slug]) }}">Lihat
                                                                     Lebih
                                                                     Detail
                                                                 </a>
@@ -554,13 +556,14 @@
                                             <div class="col-12 col-lg-6">
                                                 <div class="card">
                                                     <div class="row g-0">
-                                                        <a href="{{ route('product') }}"
+                                                        <a href="{{ route('product', [$product->slug]) }}"
                                                             class="col-4 rounded-start product-thumbnail"
                                                             style="background-image: url('../{{ $product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($product->image_path))[0]->getFileName() }}');">
                                                         </a>
                                                         <div class="col-8">
                                                             <div class="card-body products-info d-flex flex-column py-2">
-                                                                <a href="{{ route('product') }}" class="card-link">
+                                                                <a href="{{ route('product', [$product->slug]) }}"
+                                                                    class="card-link">
                                                                     <h5 class="card-title truncate-2 mb-0">
                                                                         {{ $product->name }}
                                                                     </h5>
@@ -582,7 +585,7 @@
                                                                     <span class="total-price">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</span>
                                                                 </div>
                                                                 <a class="text-center mt-auto btn btn-outline-primary btn-sm"
-                                                                    href="{{ route('product') }}">Lihat
+                                                                    href="{{ route('product', [$product->slug]) }}">Lihat
                                                                     Lebih
                                                                     Detail
                                                                 </a>
@@ -657,13 +660,14 @@
                                             <div class="col-12 col-lg-6">
                                                 <div class="card">
                                                     <div class="row g-0">
-                                                        <a href="{{ route('product') }}"
+                                                        <a href="{{ route('product', [$product->slug]) }}"
                                                             class="col-4 rounded-start product-thumbnail"
                                                             style="background-image: url('../{{ $product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($product->image_path))[0]->getFileName() }}');">
                                                         </a>
                                                         <div class="col-8">
                                                             <div class="card-body products-info d-flex flex-column py-2">
-                                                                <a href="{{ route('product') }}" class="card-link">
+                                                                <a href="{{ route('product', [$product->slug]) }}"
+                                                                    class="card-link">
                                                                     <h5 class="card-title truncate-2 mb-0">
                                                                         {{ $product->name }}
                                                                     </h5>
@@ -685,7 +689,7 @@
                                                                     <span class="total-price">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</span>
                                                                 </div>
                                                                 <a class="text-center mt-auto btn btn-outline-primary btn-sm"
-                                                                    href="{{ route('product') }}">Lihat
+                                                                    href="{{ route('product', [$product->slug]) }}">Lihat
                                                                     Lebih
                                                                     Detail
                                                                 </a>
@@ -759,13 +763,14 @@
                                             <div class="col-12 col-lg-6">
                                                 <div class="card">
                                                     <div class="row g-0">
-                                                        <a href="{{ route('product') }}"
+                                                        <a href="{{ route('product', [$product->slug]) }}"
                                                             class="col-4 rounded-start product-thumbnail"
                                                             style="background-image: url('../{{ $product->image_path . '/' . \Illuminate\Support\Facades\File::allFiles(public_path($product->image_path))[0]->getFileName() }}');">
                                                         </a>
                                                         <div class="col-8">
                                                             <div class="card-body products-info d-flex flex-column py-2">
-                                                                <a href="{{ route('product') }}" class="card-link">
+                                                                <a href="{{ route('product', [$product->slug]) }}"
+                                                                    class="card-link">
                                                                     <h5 class="card-title truncate-2 mb-0">
                                                                         {{ $product->name }}
                                                                     </h5>
@@ -787,7 +792,7 @@
                                                                     <span class="total-price">@numericToMoneyFormat($product->price - ($product->price * $product->discount) / 100)</span>
                                                                 </div>
                                                                 <a class="text-center mt-auto btn btn-outline-primary btn-sm"
-                                                                    href="{{ route('product') }}">Lihat
+                                                                    href="{{ route('product', [$product->slug]) }}">Lihat
                                                                     Lebih
                                                                     Detail
                                                                 </a>

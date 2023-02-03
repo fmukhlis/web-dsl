@@ -61,7 +61,7 @@
                         <strong>Telepon :</strong> 021-50861682
                     </div>
                     <div class="col-12 col-md-6 text-md-end">
-                        <strong>WhatsApp :</strong> 081380341785
+                        <strong>No. HP :</strong> 081380341785
                     </div>
                 </div>
             </div>

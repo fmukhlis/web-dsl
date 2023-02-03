@@ -129,7 +129,7 @@
         <div class="container category">
             <div class="row mb-1">
                 <div class="col-12 category-title">
-                    <h2>Produk Unggulan</h2>
+                    <h2 id="featured-product">Produk Unggulan</h2>
                     <small>Dapatkan info terbaru untuk produk unggulan kami disini</small>
                 </div>
                 <div class="col-12 my-2">
@@ -204,7 +204,7 @@
         <div class="container category">
             <div class="row pb-3 border-bottom border-3">
                 <div class="col-12 category-title text-light">
-                    <h2>Alat Kesehatan</h2>
+                    <h2 id="medical-devices">Alat Kesehatan</h2>
                     <small>Temukan produk terbaru dalam etalase alat kesehatan disini</small>
                 </div>
             </div>
@@ -277,7 +277,7 @@
         <div class="container category">
             <div class="row pb-3 border-bottom border-3 border-secondary">
                 <div class="col-12 category-title">
-                    <h2>Alat Laboratorium</h2>
+                    <h2 id="laboratory-devices">Alat Laboratorium</h2>
                     <small>Temukan produk terbaru dalam etalase alat laboratorium disini</small>
                 </div>
             </div>
@@ -347,7 +347,7 @@
         <div class="container category">
             <div class="row pb-3 border-bottom border-3">
                 <div class="col-12 category-title text-light">
-                    <h2>Alat Kimia</h2>
+                    <h2 id="chemical-devices">Alat Kimia</h2>
                     <small>Temukan produk terbaru dalam etalase alat kimia disini</small>
                 </div>
             </div>
@@ -419,8 +419,7 @@
         <div class="container category">
             <div class="row pb-3  border-bottom border-3 border-secondary">
                 <div class="col-12 category-title">
-                    <h2>Lainnya</h2>
-                    <small>Temukan produk terbaru dalam etalase lainnya disini</small>
+                    <h2 id="others">Lainnya</h2>
                 </div>
             </div>
 
@@ -480,7 +479,7 @@
 
 
 
-    <div class="container mt-5 pt-3">
+    <div class="container my-5 pt-3">
         <div class="row justify-content-center">
             <div class="col-12 category-title text-light">
                 <h2>Ingin cari produk lainnya?</h2>
@@ -496,7 +495,7 @@
                                     d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                             </svg>
                         </button>
-                        <input type="text" class="form-control border-0 rounded-0" placeholder="Search"
+                        <input type="text" class="form-control border-0 rounded-0 bg-light" placeholder="Search"
                             name="search">
                     </div>
                 </form>
