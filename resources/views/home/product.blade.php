@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Product | Dharma Sejahtera Lestari')
+
 @section('custom_css')
     <link href="{{ asset('css/product.css') }}" rel="stylesheet">
 @endsection

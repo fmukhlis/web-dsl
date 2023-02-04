@@ -1,5 +1,7 @@
 @extends('layouts.authentication')
 
+@section('title', 'Register | Dharma Sejahtera Lestari')
+
 @section('content')
     <div class="container">
         <div class="row justify-content-center">

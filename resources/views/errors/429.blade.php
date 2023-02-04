@@ -1,5 +1,7 @@
 @extends('layouts.error')
 
+@section('title', 'Error | Dharma Sejahtera Lestari')
+
 @section('content')
     <div class="container">
         <div class="row">

@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Featured Product | Dharma Sejahtera Lestari')
+@section('title', 'Featured Product | Admin Area')
 
 @section('content_header')
     <div class="container-fluid">

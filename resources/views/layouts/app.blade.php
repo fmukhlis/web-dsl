@@ -8,7 +8,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>
+        @yield('title', config('app.name', 'PT Dharma Sejahtera Lestari'))
+    </title>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
@@ -32,6 +34,7 @@
         @yield('custom_css')
     @endif
 
+    <link rel="icon" href="{{ asset('favicons/favicon.ico') }}">
 </head>
 
 <body class="d-flex flex-column h-100">

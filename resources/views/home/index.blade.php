@@ -1,11 +1,13 @@
 @extends('layouts.app')
 
+@section('title', 'Home | Dharma Sejahtera Lestari')
+
 @section('custom_css')
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
-@endsection
+@stop
 
 @section('custom_js')
-@endsection
+@stop
 
 @section('content')
     {{-- Carousel --}}

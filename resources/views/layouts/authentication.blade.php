@@ -8,7 +8,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>
+        @yield('title', config('app.name', 'PT Dharma Sejahtera Lestari'))
+    </title>
 
     <!-- Scripts -->
     <script srd="{{ asset('js/bootstrap/bootstrap.min.js') }}" defer></script>
@@ -22,6 +24,7 @@
     <link href="{{ asset('css/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/authentication.css') }}" rel="stylesheet">
 
+    <link rel="icon" href="{{ asset('favicons/favicon.ico') }}">
 </head>
 
 <body>

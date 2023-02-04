@@ -1,5 +1,7 @@
 @extends('layouts.authentication')
 
+@section('title', 'Verify Email | Dharma Sejahtera Lestari')
+
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -25,15 +27,15 @@
                         <div class="col-12 col-sm-11 text-center">
                             @if (session('resent'))
                                 <div class="alert alert-success" role="alert">
-                                    {{ __('A fresh verification link has been sent to your email address.') }}
+                                    {{ __('A fresh verification link has been sent to admin email address.') }}
                                 </div>
                             @endif
 
-                            {{ __('Before proceeding, please check your email for a verification link.') }}
+                            {{ __('Before proceeding, please notify our admin to check his email for a verification link.') }}
 
                             <hr>
 
-                            {{ __('If you did not receive the email') }},
+                            {{ __('If your account still not verified') }},
                             <button type="submit" class="btn btn-link">{{ __('Click here to request another!') }}</button>
                         </div>
 
