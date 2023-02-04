@@ -11,6 +11,10 @@
     <title>
         @yield('title', config('app.name', 'PT Dharma Sejahtera Lestari'))
     </title>
+    @section('title', 'Product | Dharma Sejahtera Lestari')
+    <meta name="keywords" content="@yield('meta_keywords', 'pt dharma sejahtera lestari, dharma sejahtera lestari, pt dsl, dsl, dharmasejahteralestari, distributor alkes, distributor alat kesehatan, distributor alat kimia, distributor alat lab, distributor alat laboratorium')">
+    <meta name="description" content="@yield('meta_description', 'PT Dharma Sejahtera Lestari adalah sebuah perusahaan yang bergerak di bidang distribusi alat kesehatan, alat laboratorium, alat kimia, dan lainnya.')">
+    <link rel="canonical" href="{{ url()->current() }}" />
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
